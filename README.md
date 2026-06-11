@@ -15,5 +15,7 @@ Day1       |     09/06/26         |  Basic Java Questions.
 
 Day2       |     10/06/26         |  Basic C Questions.
 
+Day3       |     11/06/26         |  Basic Array Questions using java.
+
 
 Everything mention above is uploaded by day name in my repository.
