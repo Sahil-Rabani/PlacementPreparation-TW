@@ -17,5 +17,6 @@ Day2       |     10/06/26         |  Basic C Questions.
 
 Day3       |     11/06/26         |  Basic Array Questions using java.
 
+Day4       |     13/06/26         |  Basic Algorithms practice using java.
 
 Everything mention above is uploaded by day name in my repository.
