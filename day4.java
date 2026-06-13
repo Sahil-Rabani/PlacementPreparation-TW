@@ -6,7 +6,7 @@
 // Intersection of arrays
 // Union of arrays
 // Left rotate array by 1
-// Right rotate array by K.....
+// Right rotate array by K
 
 public class array2 {
     public static void main(String [] args){
