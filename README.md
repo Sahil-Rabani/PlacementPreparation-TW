@@ -19,4 +19,6 @@ Day3       |     11/06/26         |  Basic Array Questions using java.
 
 Day4       |     13/06/26         |  Basic Algorithms practice using java.
 
+Day5       |     14/06/26         | Solving some While loop question using C.
+
 Everything mention above is uploaded by day name in my repository.
