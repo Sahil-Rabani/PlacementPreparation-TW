@@ -16,18 +16,6 @@
 // 15.​Check whether the given number is an Armstrong number.
 // 16.​Check whether the given number is a Perfect number.
 // 17.​Print all prime numbers between 1 and 100.
-// 18.​Check whether the given number is a prime number.
-// 19.​Print the Fibonacci series up to n terms.
-// 20.​Find and print the sum of the Fibonacci series up to n terms.
-// 21.​Print the square of each number from 1 to n.
-// 22.​Print the cube of each number from 1 to n.
-// 23.​Print all numbers between a and b that are divisible by 7.
-// 24.​Print all factors of the given number.
-// 25.​Find and print the sum of all factors of the given number.
-// 26.​Find the HCF (Highest Common Factor) of two given numbers.
-// 27.​Find the LCM (Least Common Multiple) of two given numbers.
-// 28.​Find the smallest digit in the given number.
-// 29.​Find the largest digit in the given number.
 
 #include <stdio.h>
 
@@ -167,6 +155,62 @@ void sumDigit(int num){
     printf("Sum of digits = %d", sum);
 }
 
-void main(){
+void armstrong(int num){
+    int pow= 0, sum = 0, temp = num, ogNum = num;
+    while(temp != 0){
+        pow++;
+        temp/=10;
+    }
 
+    while(num!=0){
+        int digit = num % 10;
+        int i = 1;
+        while (i != 3)
+        {
+            digit*= digit;
+        }
+        sum+=digit;
+    }
+    if(ogNum == sum){
+        printf("Given number is armstrong number.");
+    }else{
+        printf("Given number is not an armstrong number.");
+    }
+}
+
+void perfect(int num){
+    int i = 1, sum =0;
+    while(i < num){
+        if(num % i == 0){
+            sum+=i;
+        }
+    }
+    if(sum == num){
+        printf("Given number is perfect number.");
+    }else{
+        printf("Given number is not a perfect number.");
+    }
+}
+
+void prime(){
+    int i = 1;
+    if(i == 2) printf("%d", i);
+    while(i <= 100){
+        int flag =1, j = 3;
+        while(j < i){
+            if(i % j == 0){
+                flag = 0;
+                break;
+            }
+            j++;
+        }
+        if(flag){
+            printf("%d ", i);
+        }
+        i++;
+    }
+}
+
+void main(){
+    prime();
 }
