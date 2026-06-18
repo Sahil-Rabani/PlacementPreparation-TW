@@ -23,4 +23,6 @@ Day5       |     14/06/26         |  Solving some While loop question using C.
 
 Day6       |     17/06/26         |  Solving some numerical pattern using C.
 
+Day7       |     18/06/26         |  Solving some star pattern using C.
+
 Everything mention above is uploaded by day name in my repository.
