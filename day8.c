@@ -48,3 +48,21 @@
 // 5 7 8 9 0 1
 // 2 3 4 5 6 7 8
 
+#include <stdio.h>
+
+void pyramid(int row){
+    for(int i = 1; i <= row; i++){
+        for(int j = row; j > i; j--){
+            printf(" ");
+        }
+        for(int k = 1; k < i*2; k++){
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+void main(){
+    pyramid(5);
+    printf("\n\n");
+}
