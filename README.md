@@ -25,4 +25,6 @@ Day6       |     17/06/26         |  Solving some numerical pattern using C.
 
 Day7       |     18/06/26         |  Solving some star pattern using C.
 
+Day8       |     19/06/26         |  Solving some more star and alphabetical pattern using C.
+
 Everything mention above is uploaded by day name in my repository.
