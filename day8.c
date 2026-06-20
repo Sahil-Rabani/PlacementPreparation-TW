@@ -62,7 +62,72 @@ void pyramid(int row){
     }
 }
 
+void spaceAltering(int row){
+    for(int i = 1; i <= row; i++){
+        for(int j = 1; j < row-i; j++){
+            printf("b");
+        }
+        for(int k = 1; k <= i; k++){
+            printf("*");
+
+            if( k < i){
+                printf("b");
+            }
+        }
+        printf("\n");
+    }
+}
+
+void increasingNumber(int row){
+    for(int i = 1; i <= row; i++){
+        for(int j = 1; j <= i; j++){
+            printf("%d", j);
+        }
+        printf("\n");
+    }
+}
+
+void repetetingNumber(int row){
+    for(int i = 1; i <= row; i++){
+        for(int j = 1; j <= i; j++){
+            printf("%d", i);
+        }
+        printf("\n");
+    }
+}
+
+void continuousTriangle(int row){
+    int num = 1;
+    for(int i = 1; i <= row; i++){
+        for(int j =1 ; j <= i; j++){
+            printf("%d ", num);
+            num++;
+        }
+        printf("\n");
+    }
+}
+
+void floydTriangle(int row){
+    int num = 1;
+    for(int i = 1; i <= row; i++){
+        for(int j = 1; j <= i; j++){
+            printf("%d ", num%10);
+            num++;
+        }
+        printf("\n");
+    }
+}
+
 void main(){
     pyramid(5);
     printf("\n\n");
+    spaceAltering(5);
+    printf("\n\n");
+    increasingNumber(5);
+    printf("\n\n");
+    repetetingNumber(5);
+    printf("\n");
+    continuousTriangle(5);
+    printf("\n\n");
+    floydTriangle(5);
 }
