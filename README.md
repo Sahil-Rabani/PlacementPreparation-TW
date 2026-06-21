@@ -27,6 +27,6 @@ Day7       |     18/06/26         |  Solving some star pattern using C.
 
 Day8       |     19/06/26         |  Solving some more star and alphabetical pattern using C.
 
-Day9       |     20/06/26         |  Updating day8 pattern.
+Day9       |     21/06/26         |  Solving some string based pattern using C.
 
 Everything mention above is uploaded by day name in my repository.
