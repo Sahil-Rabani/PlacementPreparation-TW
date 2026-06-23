@@ -11,23 +11,25 @@ I am going to upload everything, I praticed daily.
 Day by Day routine:-
 
 
-Day1       |     09/06/26         |  Basic Java Questions.
+Day01       |     09/06/26         |  Basic Java Questions.
 
-Day2       |     10/06/26         |  Basic C Questions.
+Day02       |     10/06/26         |  Basic C Questions.
 
-Day3       |     11/06/26         |  Basic Array Questions using java.
+Day03       |     11/06/26         |  Basic Array Questions using java.
 
-Day4       |     13/06/26         |  Basic Algorithms practice using java.
+Day04       |     13/06/26         |  Basic Algorithms practice using java.
 
-Day5       |     14/06/26         |  Solving some While loop question using C.
+Day05       |     14/06/26         |  Solving some While loop question using C.
 
-Day6       |     17/06/26         |  Solving some numerical pattern using C.
+Day06       |     17/06/26         |  Solving some numerical pattern using C.
 
-Day7       |     18/06/26         |  Solving some star pattern using C.
+Day07       |     18/06/26         |  Solving some star pattern using C.
 
-Day8       |     19/06/26         |  Solving some more star and alphabetical pattern using C.
+Day08       |     19/06/26         |  Solving some more star and alphabetical pattern using C.
 
-Day9       |     21/06/26         |  Solving some string based pattern using C.
+Day09       |     21/06/26         |  Solving some string based pattern using C.
+
+Day10       |     21/06/26         |  Starting everything from scratch, using ai prompt, If you want can also start from scratch from my prompt.
 
 Everything mention above is uploaded by day name in my repository.
 
