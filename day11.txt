@@ -55,7 +55,7 @@ printf("Hello World");
 Program 2
 
 ```c
-printf("My Name is CRAZY");
+printf("My Name is SAHIL");
 ```
 
 Program 3
