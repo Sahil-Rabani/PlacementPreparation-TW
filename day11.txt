@@ -1,0 +1,135 @@
+# DAY 1 TASKS
+
+Total Time: ~2 Hours 30 Minutes
+
+## Session 1 (45 Minutes)
+
+### Learn
+
+1. What is Programming?
+2. What is C Language?
+3. History of C
+4. Applications of C
+5. Compilation Process
+
+Understand:
+
+Source Code → Compiler → Executable Program
+
+---
+
+## Session 2 (45 Minutes)
+
+### Learn Structure of C Program
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello World");
+    return 0;
+}
+```
+
+Understand:
+
+* #include
+* stdio.h
+* main()
+* printf()
+* return 0
+
+---
+
+## Session 3 (30 Minutes)
+
+### Coding Exercises
+
+Program 1
+
+```c
+printf("Hello World");
+```
+
+Program 2
+
+```c
+printf("My Name is CRAZY");
+```
+
+Program 3
+
+Print:
+
+```
+Name: CRAZY
+Course: Diploma CSE
+Goal: Software Developer
+```
+
+---
+
+## Session 4 (20 Minutes)
+
+### Aptitude
+
+Solve:
+
+1. 25% of 200 = ?
+2. 10% of 500 = ?
+3. 50% of 80 = ?
+4. 75% of 400 = ?
+5. 12.5% of 160 = ?
+
+---
+
+## Session 5 (10 Minutes)
+
+### Logical Reasoning
+
+Find next number:
+
+1. 2, 4, 6, 8, ?
+2. 3, 6, 9, 12, ?
+3. 5, 10, 15, 20, ?
+4. 1, 4, 7, 10, ?
+5. 11, 22, 33, 44, ?
+
+---
+
+# Homework
+
+### C
+
+Write a short note:
+
+1. What is C?
+2. Why is C called the mother language?
+3. Difference between Compiler and Interpreter.
+
+### Practice
+
+Write 3 different programs using `printf()`.
+
+---
+
+# Initial Readiness Score
+
+| Area                | Score  |
+| ------------------- | ------ |
+| C Programming       | 5/100  |
+| Aptitude            | 10/100 |
+| Reasoning           | 10/100 |
+| Coding Ability      | 15/100 |
+| Interview Readiness | 5/100  |
+
+### Overall STEP Readiness
+
+**9/100**
+
+This is your baseline. We will increase it steadily through daily practice, quizzes, projects, and mock interviews.
+
+Tomorrow, when you finish today's work, type:
+
+**Task Complete**
