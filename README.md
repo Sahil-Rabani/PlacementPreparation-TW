@@ -31,6 +31,8 @@ Day09       |     21/06/26         |  Solving some string based pattern using C.
 
 Day10       |     21/06/26         |  Starting everything from scratch, using ai prompt, If you want can also start from scratch from my prompt.
 
+Day11       |     24/06/26         |  Completing first task given AI.
+
 Everything mention above is uploaded by day name in my repository.
 
 If there is date missing between file upload, Which means I am working on previous file on upload missing date.
