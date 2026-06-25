@@ -31,7 +31,9 @@ Day09       |     21/06/26         |  Solving some string based pattern using C.
 
 Day10       |     21/06/26         |  Starting everything from scratch, using ai prompt, If you want can also start from scratch from my prompt.
 
-Day11       |     24/06/26         |  Completing first task given AI.
+Day11       |     24/06/26         |  Completing first task given by AI.
+
+Day12       |     25/06/26         |  Completing second task given by AI.
 
 Everything mention above is uploaded by day name in my repository.
 
