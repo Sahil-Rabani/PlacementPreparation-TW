@@ -1,0 +1,245 @@
+Great work completing Day 1. I reviewed your submission. 
+
+# Day 1 Evaluation
+
+## C Programming
+
+### Programs
+
+✅ Program 1 completed
+
+✅ Program 2 completed
+
+✅ Program 3 completed
+
+Your code:
+
+```c
+#include <stdio.h>
+void main(){
+    printf("Hello World");
+    ...
+}
+```
+
+### Feedback
+
+Good start.
+
+One improvement:
+
+Instead of:
+
+```c
+void main()
+```
+
+Prefer:
+
+```c
+int main()
+{
+    return 0;
+}
+```
+
+This is the standard and recommended form in C.
+
+---
+
+## Aptitude
+
+Your Answers:
+
+1. 25% of 200 = 50 ✅
+2. 10% of 500 = 50 ✅
+3. 50% of 80 = 40 ✅
+4. 75% of 400 = 260 ❌
+5. 12.5% of 160 = 12 ❌
+
+### Correct Answers
+
+4. 75% of 400 = 300
+
+5. 12.5% of 160 = 20
+
+### Score
+
+3/5
+
+---
+
+## Logical Reasoning
+
+1. 2,4,6,8,10 ✅
+2. 3,6,9,12,15 ✅
+3. 5,10,15,20,25 ✅
+4. 1,4,7,10,13 ✅
+5. 11,22,33,44,55 ✅
+
+### Score
+
+5/5
+
+Excellent.
+
+---
+
+## Theory
+
+### What is C?
+
+Partially correct.
+
+Better definition:
+
+> C is a general-purpose, procedural programming language developed by Dennis Ritchie at Bell Labs in 1972. It is widely used for system programming, embedded systems, operating systems, and application development.
+
+### Why is C called Mother Language?
+
+✅ Good answer.
+
+### Compiler vs Interpreter
+
+✅ Concept understood correctly.
+
+---
+
+# Progress Update
+
+| Area           | Previous | Current |
+| -------------- | -------: | ------: |
+| C Programming  |        5 |       8 |
+| Aptitude       |       10 |      12 |
+| Reasoning      |       10 |      18 |
+| Coding Ability |       15 |      18 |
+| Consistency    |        0 |      10 |
+
+### Updated STEP Readiness Score
+
+**13/100** ↑
+
+Good improvement for Day 1.
+
+---
+
+# Day 2 Tasks
+
+Total Time: 2 Hours 30 Minutes
+
+## Session 1 (50 Minutes)
+
+### Topic: Variables in C
+
+Learn:
+
+* What is a Variable?
+* Rules for naming variables
+* Declaration
+* Initialization
+
+Examples:
+
+```c
+int age = 18;
+float marks = 92.5;
+char grade = 'A';
+```
+
+Understand:
+
+* Declaration
+* Assignment
+* Memory storage
+
+---
+
+## Session 2 (40 Minutes)
+
+### Topic: Data Types
+
+Study:
+
+* int
+* float
+* char
+* double
+
+Learn:
+
+```c
+sizeof(int)
+sizeof(float)
+sizeof(char)
+```
+
+Understand the purpose of each data type.
+
+---
+
+## Session 3 (35 Minutes)
+
+### Coding Exercises
+
+### Program 1
+
+Store and print:
+
+* Name
+* Age
+* Marks
+
+### Program 2
+
+Input a number and print it.
+
+Example:
+
+```
+Enter Number: 25
+You entered: 25
+```
+
+### Program 3
+
+Input two numbers and print their sum.
+
+---
+
+## Session 4 (15 Minutes)
+
+### Aptitude
+
+Solve:
+
+1. 20% of 250
+2. 15% of 400
+3. 30% of 500
+4. 40% of 750
+5. 5% of 900
+
+---
+
+## Session 5 (10 Minutes)
+
+### Logical Reasoning
+
+Find next number:
+
+1. 1, 2, 4, 8, 16, ?
+2. 5, 10, 20, 40, ?
+3. 2, 5, 8, 11, ?
+4. 7, 14, 21, 28, ?
+5. 100, 90, 80, 70, ?
+
+---
+
+# Homework
+
+Write short notes on:
+
+1. Variable
+2. Data Type
+3. Difference between int, float, and char
+
+---
