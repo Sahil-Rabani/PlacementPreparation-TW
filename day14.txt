@@ -1,0 +1,125 @@
+# Updated STEP Readiness
+
+| Area              | Previous | Current |
+| ----------------- | -------: | ------: |
+| C Programming     |       12 |  **18** |
+| Aptitude          |       16 |  **24** |
+| Logical Reasoning |       24 |  **30** |
+| Coding Ability    |       22 |  **28** |
+| Consistency       |       20 |  **30** |
+
+## Overall STEP Readiness
+
+**26/100** ⬆️ (+7)
+
+You're ahead of the planned pace for the first week.
+
+---
+
+# Day 4 Tasks
+
+**Total Time:** 2 Hours 30 Minutes
+
+## Session 1 (50 Minutes)
+
+### Topic: Input and Output in C
+
+Study:
+
+* `printf()`
+* `scanf()`
+* Format specifiers:
+
+  * `%d`
+  * `%f`
+  * `%c`
+  * `%s`
+
+Understand why each format specifier is used.
+
+---
+
+## Session 2 (40 Minutes)
+
+### Topic: Type Casting
+
+Learn:
+
+```c
+int a = 5, b = 2;
+float result = (float)a / b;
+printf("%f", result);
+```
+
+Understand:
+
+* Implicit type casting
+* Explicit type casting
+
+---
+
+## Session 3 (40 Minutes)
+
+### Coding Exercises
+
+1. Input:
+
+   * Name
+   * Age
+   * Height (float)
+
+   Print all details.
+
+2. Input two integers and print:
+
+   * Integer division
+   * Floating-point division
+
+3. Input an ASCII value and print its corresponding character.
+
+**Example:**
+
+```
+Input: 65
+Output: A
+```
+
+---
+
+## Session 4 (10 Minutes)
+
+### Aptitude (Percentages & Ratios)
+
+Solve:
+
+1. 15% of 600
+2. 80% of 250
+3. 12.5% of 400
+4. If the ratio of boys to girls is 3:2 and there are 30 boys, how many girls are there?
+5. Divide ₹900 in the ratio 2:3.
+
+---
+
+## Session 5 (10 Minutes)
+
+### Logical Reasoning
+
+Find the next term:
+
+1. 2, 3, 5, 8, 12, ?
+2. 1, 8, 27, 64, ?
+3. A, C, E, G, ?
+4. Z, X, V, T, ?
+5. 9, 18, 36, 72, ?
+
+---
+
+# Homework
+
+Write short notes on:
+
+1. `printf()`
+2. `scanf()`
+3. Implicit vs Explicit Type Casting
+
+---
