@@ -1,0 +1,126 @@
+# Updated STEP Readiness
+
+| Area              | Previous | Current |
+| ----------------- | -------: | ------: |
+| C Programming     |       18 |  **25** |
+| Aptitude          |       24 |  **30** |
+| Logical Reasoning |       30 |  **36** |
+| Coding Ability    |       28 |  **34** |
+| Consistency       |       30 |  **40** |
+
+## Overall STEP Readiness
+
+**33/100** ⬆️ (+7)
+
+You're progressing well. If you keep this pace, you'll comfortably finish the Phase 1 syllabus before the 15 August target.
+
+---
+
+# Day 5 Tasks
+
+**Total Time:** ~2 Hours 30 Minutes
+
+## Session 1 (50 Minutes)
+
+### Topic: Conditional Statements (`if`, `if-else`)
+
+Study:
+
+* `if`
+* `if-else`
+* Comparison using relational operators
+
+Example:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int age;
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    if (age >= 18) {
+        printf("Eligible to vote");
+    } else {
+        printf("Not eligible to vote");
+    }
+
+    return 0;
+}
+```
+
+Understand:
+
+* Condition
+* True block
+* False block
+
+---
+
+## Session 2 (35 Minutes)
+
+### Topic: Nested `if` (Introduction)
+
+Study how one `if` statement can be placed inside another.
+
+---
+
+## Session 3 (40 Minutes)
+
+### Coding Exercises
+
+1. Input a number and check whether it is:
+
+   * Positive
+   * Negative
+   * Zero
+
+2. Input two numbers and print the larger number.
+
+3. Input marks (0–100) and print:
+
+   * Pass (≥ 33)
+   * Fail (< 33)
+
+**Challenge:** Print `"Invalid Marks"` if the input is less than 0 or greater than 100.
+
+---
+
+## Session 4 (15 Minutes)
+
+### Aptitude
+
+1. Find 18% of 450.
+2. A product costs ₹800. It is sold at a 10% profit. Find the selling price.
+3. Divide ₹700 in the ratio 2:5.
+4. The ratio of boys to girls is 5:3. If there are 40 boys, how many girls are there?
+5. Find 25% of 960.
+
+---
+
+## Session 5 (10 Minutes)
+
+### Logical Reasoning
+
+Find the next term:
+
+1. 5, 9, 13, 17, ?
+2. 1, 4, 9, 16, 25, ?
+3. B, D, F, H, ?
+4. 81, 27, 9, 3, ?
+5. 2, 5, 10, 17, 26, ?
+
+---
+
+# Homework
+
+Write short notes on:
+
+1. `if` statement
+2. `if-else` statement
+3. Difference between `if` and `if-else`
+
+### Bonus Challenge (Optional)
+
+Write a program that inputs **three numbers** and prints the **largest** using only `if` and `else` statements. This is a very common interview question and a great way to practice conditional logic.
