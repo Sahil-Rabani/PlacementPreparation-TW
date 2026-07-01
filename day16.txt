@@ -1,0 +1,136 @@
+# Updated STEP Readiness
+
+| Area              | Previous | Current |
+| ----------------- | -------: | ------: |
+| C Programming     |       25 |  **31** |
+| Aptitude          |       30 |  **36** |
+| Logical Reasoning |       36 |  **42** |
+| Coding Ability    |       34 |  **40** |
+| Consistency       |       40 |  **50** |
+
+## Overall STEP Readiness
+
+**39/100** ⬆️ (+6)
+
+---
+
+# Coach's Feedback
+
+You're showing clear improvement in:
+
+* ✅ Programming logic
+* ✅ Aptitude
+* ✅ Reasoning
+* ✅ Consistency
+
+Your main areas to focus on now are:
+
+* Compiler errors (e.g., variable redefinition)
+* Logical operators (`&&` vs `||`)
+* Writing standard-compliant C (`int main()`)
+
+These are common interview topics, so mastering them early will help.
+
+---
+
+# Day 6 Tasks
+
+**Total Time:** ~2 Hours 30 Minutes
+
+## Session 1 (50 Minutes)
+
+### Topic: Logical Operators
+
+Study:
+
+* `&&` (AND)
+* `||` (OR)
+* `!` (NOT)
+
+Understand their truth tables and how they combine conditions.
+
+Examples:
+
+```c
+if (age >= 18 && age <= 60)
+```
+
+```c
+if (marks < 0 || marks > 100)
+```
+
+---
+
+## Session 2 (35 Minutes)
+
+### Topic: `else if` Ladder
+
+Learn when to use multiple conditions.
+
+Example:
+
+* Grade A
+* Grade B
+* Grade C
+* Fail
+
+---
+
+## Session 3 (40 Minutes)
+
+### Coding Exercises
+
+1. Input marks and print:
+
+   * A (90–100)
+   * B (75–89)
+   * C (60–74)
+   * D (33–59)
+   * F (0–32)
+   * Invalid (<0 or >100)
+
+2. Input a year and check if it is a leap year.
+
+3. Input three numbers and print:
+
+   * Largest
+   * Smallest
+
+Handle equal numbers where possible.
+
+---
+
+## Session 4 (15 Minutes)
+
+### Aptitude
+
+1. 35% of 800
+2. 12% of 250
+3. A shopkeeper buys an item for ₹500 and sells it for ₹575. Find the profit percentage.
+4. Divide ₹960 in the ratio 5:3.
+5. The ratio of men to women is 7:5. If there are 56 men, how many women are there?
+
+---
+
+## Session 5 (10 Minutes)
+
+### Logical Reasoning
+
+Find the next term:
+
+1. 2, 4, 7, 11, 16, ?
+2. 64, 32, 16, 8, ?
+3. C, F, I, L, ?
+4. 3, 9, 27, 81, ?
+5. 1, 2, 6, 24, ?
+
+---
+
+# Homework
+
+Write short notes on:
+
+1. `&&` operator
+2. `||` operator
+3. `!` operator
+4. Difference between `&&` and `||`
