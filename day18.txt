@@ -1,0 +1,199 @@
+Excellent! It's time for your **Week 1 Assessment**. This test covers everything you've studied so far. Don't use notes or previous code while answering.
+
+**Instructions:**
+
+* Time limit: **75 minutes**
+* Total Marks: **100**
+* Answer all questions.
+* For coding questions, write complete C programs using `int main()`.
+
+---
+
+# SECTION A – C Programming Theory (20 Marks)
+
+**Q1.** What is the difference between a Compiler and an Interpreter? (4 marks)
+
+**Q2.** Explain the following data types with one example each:
+
+* `int`
+* `float`
+* `char`
+* `double`
+  (4 marks)
+
+**Q3.** Differentiate between:
+
+* `=` and `==`
+* `&&` and `||`
+  (4 marks)
+
+**Q4.** What is type casting? Explain implicit and explicit type casting with one example each. (4 marks)
+
+**Q5.** What is the purpose of `printf()` and `scanf()`? Explain the role of format specifiers `%d`, `%f`, `%c`, and `%s`. (4 marks)
+
+---
+
+# SECTION B – Output Prediction (15 Marks)
+
+Predict the output.
+
+### Q6.
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    int b = 3;
+
+    printf("%d\n", a / b);
+    printf("%d", a % b);
+
+    return 0;
+}
+```
+
+---
+
+### Q7.
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 25;
+
+    if (x >= 18 && x <= 60)
+        printf("Eligible");
+    else
+        printf("Not Eligible");
+
+    return 0;
+}
+```
+
+---
+
+### Q8.
+
+```c
+#include <stdio.h>
+
+int main() {
+    int marks = 95;
+
+    if (marks >= 90)
+        printf("A");
+    else if (marks >= 75)
+        printf("B");
+    else
+        printf("C");
+
+    return 0;
+}
+```
+
+---
+
+# SECTION C – Find the Errors (15 Marks)
+
+### Q9.
+
+Find and correct all mistakes.
+
+```c
+#include <stdio.h>
+
+void main()
+{
+    Int age;
+
+    printf("Enter age");
+    scanf("%d", age);
+
+    if(age = 18)
+        printf("Adult");
+}
+```
+
+---
+
+### Q10.
+
+Find the logical error.
+
+```c
+if(marks >= 90 || marks <= 100)
+```
+
+Explain why it is wrong and write the correct condition.
+
+---
+
+# SECTION D – Coding (30 Marks)
+
+### Q11. Grade Calculator (10 marks)
+
+Write a C program that:
+
+* Inputs marks (0–100)
+* Prints:
+
+  * A (90–100)
+  * B (75–89)
+  * C (60–74)
+  * D (33–59)
+  * F (0–32)
+  * Invalid Marks (less than 0 or greater than 100)
+
+---
+
+### Q12. Largest of Three Numbers (10 marks)
+
+Write a C program to input three integers and print the largest.
+
+Also print `"All numbers are equal"` if all three are equal.
+
+---
+
+### Q13. Student Information (10 marks)
+
+Input:
+
+* Name
+* Age
+* Height
+
+Print them in a neat format.
+
+---
+
+# SECTION E – Aptitude (10 Marks)
+
+1. Find **35% of 640**.
+2. Divide **₹960** in the ratio **7:5**.
+3. A shopkeeper buys an item for **₹600** and sells it for **₹720**. Find the profit percentage.
+4. Boys : Girls = **4 : 3**. If boys = **48**, how many girls are there?
+5. Find **12.5% of 560**.
+
+---
+
+# SECTION F – Logical Reasoning (10 Marks)
+
+Find the next term.
+
+1. 2, 6, 12, 20, 30, ?
+2. 5, 10, 20, 40, 80, ?
+3. A, D, G, J, ?
+4. 100, 90, 81, 73, 66, ?
+5. 1, 2, 6, 24, 120, ?
+
+---
+
+## Scoring
+
+* **90–100:** Excellent – Ready to move confidently to loops.
+* **75–89:** Good – Minor revision needed.
+* **60–74:** Fair – Review weak topics before continuing.
+* **Below 60:** Strengthen fundamentals before moving ahead.
+
