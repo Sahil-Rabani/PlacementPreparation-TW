@@ -45,6 +45,8 @@ Day16       |     01/07/26         |  Completing sixth task given by AI.
 
 Day17       |     02/07/26         |  Completing seventh task given by AI.
 
+Day18       |     03/07/26         |  Completing weekly assignment 1 given by AI.
+
 Everything mention above is uploaded by day name in my repository.
 
 If there is date missing between file upload, Which means I am working on previous file on upload missing date.
