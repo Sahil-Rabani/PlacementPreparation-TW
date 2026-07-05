@@ -1,0 +1,254 @@
+# Week 2 – Day 1
+
+**Total Study Time:** 2 Hours 30 Minutes
+
+---
+
+# Session 1 (25 Minutes)
+
+## Revision: Logical Operators (`&&`, `||`, `!`)
+
+### Learn
+
+### AND (`&&`)
+
+Returns true **only if both conditions are true**.
+
+Example:
+
+```c
+if(age >= 18 && age <= 60)
+```
+
+This means the age must be **between 18 and 60**.
+
+---
+
+### OR (`||`)
+
+Returns true if **at least one condition is true**.
+
+Example:
+
+```c
+if(marks < 0 || marks > 100)
+```
+
+This checks whether the marks are **invalid**.
+
+---
+
+### NOT (`!`)
+
+Reverses the result.
+
+Example:
+
+```c
+if(!(age >= 18))
+```
+
+Equivalent to:
+
+```c
+if(age < 18)
+```
+
+---
+
+## Practice
+
+Tell whether these are **Correct** or **Incorrect**, and if incorrect, write the corrected condition.
+
+1.
+
+```c
+if(age >= 18 || age <= 60)
+```
+
+2.
+
+```c
+if(marks >= 0 && marks <= 100)
+```
+
+3.
+
+```c
+if(number < 0 || number > 100)
+```
+
+4.
+
+```c
+if(age < 18 && age > 60)
+```
+
+---
+
+# Session 2 (45 Minutes)
+
+## Topic: `while` Loop
+
+### Syntax
+
+```c
+while(condition)
+{
+    // statements
+}
+```
+
+### Flow
+
+1. Check the condition.
+2. If true, execute the loop body.
+3. Repeat until the condition becomes false.
+
+### Example
+
+Print numbers from 1 to 5.
+
+```c
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+
+    while(i <= 5) {
+        printf("%d ", i);
+        i++;
+    }
+
+    return 0;
+}
+```
+
+**Output:**
+
+```text
+1 2 3 4 5
+```
+
+---
+
+# Session 3 (50 Minutes)
+
+## Coding Exercises
+
+### Program 1
+
+Print numbers from **1 to 20** using a `while` loop.
+
+---
+
+### Program 2
+
+Print all **even numbers from 2 to 20**.
+
+---
+
+### Program 3
+
+Input a number `N` and print numbers from **1 to N**.
+
+Example:
+
+```
+Input:
+7
+
+Output:
+1 2 3 4 5 6 7
+```
+
+---
+
+### Program 4 (Challenge)
+
+Input a number `N` and calculate the **sum of numbers from 1 to N**.
+
+Example:
+
+```
+Input:
+5
+
+Output:
+15
+```
+
+---
+
+# Session 4 (15 Minutes)
+
+## Aptitude
+
+1. Find **18% of 750**.
+2. Find **45% of 320**.
+3. Divide **₹1200** in the ratio **5:7**.
+4. A shopkeeper buys an item for **₹900** and sells it for **₹1080**. Find the profit percentage.
+5. Boys : Girls = **8 : 5**. If there are **64 boys**, how many girls are there?
+
+---
+
+# Session 5 (15 Minutes)
+
+## Logical Reasoning
+
+Find the next term:
+
+1. 1, 2, 4, 7, 11, ?
+2. 5, 15, 45, 135, ?
+3. 100, 50, 25, 12, ?
+4. A, C, F, J, ?
+5. 3, 6, 11, 18, 27, ?
+
+---
+
+# Homework
+
+Write short notes on:
+
+1. `while` loop
+2. Difference between `if` and `while`
+3. Infinite loop (What is it? Why does it happen?)
+
+---
+
+# Debugging Challenge
+
+Without compiling, find and correct the errors in this program:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+
+    while(i <= 5)
+        printf("%d ", i);
+
+    i++;
+
+    return 0;
+}
+```
+
+Explain:
+
+* What is the mistake?
+* What will happen if this program runs?
+* Write the corrected program.
+
+---
+
+## 🎯 Today's Goal
+
+By the end of today, you should be able to:
+
+* ✅ Explain how a `while` loop works.
+* ✅ Write programs using `while` loops.
+* ✅ Differentiate between `if` and `while`.
+* ✅ Avoid infinite loops.
+* ✅ Use logical operators correctly in conditions.
