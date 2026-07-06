@@ -1,0 +1,230 @@
+# Updated STEP Readiness
+
+| Area                | Previous | Current |
+| ------------------- | -------: | ------: |
+| C Programming       |       52 |  **56** |
+| Aptitude            |       56 |  **59** |
+| Logical Reasoning   |       62 |  **65** |
+| Coding Ability      |       60 |  **65** |
+| Consistency         |       75 |  **80** |
+| Interview Readiness |       18 |  **22** |
+
+## Overall STEP Readiness
+
+# **63/100** ⬆️
+
+# Week 2 – Day 2
+
+**Total Study Time:** 2 Hours 30 Minutes
+
+---
+
+# Session 1 (45 Minutes)
+
+## Topic: `for` Loop
+
+### What is a `for` Loop?
+
+A `for` loop is used when you know **how many times** a loop should execute.
+
+### Syntax
+
+```c
+for(initialization; condition; update)
+{
+    // statements
+}
+```
+
+### Example
+
+Print numbers from 1 to 10.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i;
+
+    for(i = 1; i <= 10; i++)
+    {
+        printf("%d ", i);
+    }
+
+    return 0;
+}
+```
+
+### Flow
+
+```
+Initialization
+      ↓
+ Check Condition
+      ↓
+ Execute Body
+      ↓
+    Update
+      ↓
+Back to Condition
+```
+
+---
+
+# Session 2 (35 Minutes)
+
+## `while` vs `for`
+
+| while                            | for                            |
+| -------------------------------- | ------------------------------ |
+| Initialization outside           | Initialization inside          |
+| Update inside loop               | Update in header               |
+| Best when iterations are unknown | Best when iterations are known |
+
+### Example
+
+### while
+
+```c
+int i = 1;
+
+while(i <= 5)
+{
+    printf("%d ", i);
+    i++;
+}
+```
+
+### for
+
+```c
+for(int i = 1; i <= 5; i++)
+{
+    printf("%d ", i);
+}
+```
+
+---
+
+# Session 3 (50 Minutes)
+
+## Coding Exercises
+
+### Program 1
+
+Print numbers from **1 to 50** using a `for` loop.
+
+---
+
+### Program 2
+
+Print all **odd numbers from 1 to 50**.
+
+---
+
+### Program 3
+
+Input a number `N` and print its multiplication table.
+
+Example:
+
+```
+Input:
+7
+
+Output:
+7 × 1 = 7
+7 × 2 = 14
+...
+7 × 10 = 70
+```
+
+---
+
+### Program 4
+
+Input a number and calculate the **sum of all even numbers from 1 to N**.
+
+Example:
+
+```
+Input:
+10
+
+Output:
+30
+```
+
+(2 + 4 + 6 + 8 + 10 = 30)
+
+---
+
+# Session 4 (15 Minutes)
+
+## Aptitude
+
+1. Find **25% of 880**.
+2. Divide **₹1500** in the ratio **2 : 3**.
+3. A product is bought for **₹750** and sold for **₹900**. Find the profit percentage.
+4. Boys : Girls = **9 : 7**. If there are **63 boys**, how many girls are there?
+5. Find **15% of 460**.
+
+---
+
+# Session 5 (15 Minutes)
+
+## Logical Reasoning
+
+Find the next term:
+
+1. 4, 7, 11, 16, 22, ?
+2. 2, 8, 18, 32, 50, ?
+3. Z, W, T, Q, ?
+4. 243, 81, 27, 9, ?
+5. 1, 4, 10, 20, 35, ?
+
+---
+
+# Homework
+
+Write short notes on:
+
+1. `for` loop
+2. Difference between `while` and `for`
+3. Advantages of the `for` loop
+
+---
+
+# Debugging Challenge
+
+Find and correct the errors in this program:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i;
+
+    for(i = 1; i <= 10; i--)
+
+    {
+        printf("%d ", i);
+    }
+
+    return 0;
+}
+```
+
+Answer these questions:
+
+1. What is the error?
+2. What will happen if this program runs?
+3. Write the corrected program.
+
+---
+
+## Bonus Challenge (Optional)
+
+Write a program that prints all numbers from **100 to 1** in reverse order using a `for` loop.
