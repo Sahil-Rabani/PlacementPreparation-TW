@@ -1,0 +1,273 @@
+# Updated STEP Readiness
+
+| Area                | Previous | Current |
+| ------------------- | -------: | ------: |
+| C Programming       |       56 |  **62** |
+| Aptitude            |       59 |  **65** |
+| Logical Reasoning   |       65 |  **70** |
+| Coding Ability      |       65 |  **72** |
+| Consistency         |       80 |  **85** |
+| Interview Readiness |       22 |  **27** |
+
+## Overall STEP Readiness
+
+# **68/100** ⬆️ (+5)
+
+You're making excellent progress. At this pace, you're on track to complete the C programming foundation comfortably before **15 August 2026**.
+
+---
+
+# ⭐ Achievement Unlocked
+
+🏅 **First 95%+ Daily Score**
+
+This shows that you're not just completing tasks—you are understanding the concepts.
+
+Keep this standard for the rest of Week 2, and we'll be ready to tackle more interview-style problems involving nested loops and pattern printing.
+
+---
+
+# Session 1 (45 Minutes)
+
+## Topic: `do-while` Loop
+
+### What is a `do-while` Loop?
+
+A `do-while` loop executes the loop body **at least once**, even if the condition is false.
+
+### Syntax
+
+```c
+do
+{
+    // statements
+} while(condition);
+```
+
+### Flow
+
+```
+Execute Body
+      ↓
+Check Condition
+      ↓
+True → Repeat
+False → Exit
+```
+
+### Example
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i = 1;
+
+    do
+    {
+        printf("%d ", i);
+        i++;
+    } while(i <= 5);
+
+    return 0;
+}
+```
+
+**Output:**
+
+```
+1 2 3 4 5
+```
+
+---
+
+## Session 2 (35 Minutes)
+
+## Difference Between `for`, `while`, and `do-while`
+
+| Feature                         | for | while | do-while |
+| ------------------------------- | --- | ----- | -------- |
+| Condition checked before loop   | ✅   | ✅     | ❌        |
+| Executes at least once          | ❌   | ❌     | ✅        |
+| Best for known iterations       | ✅   | ⚠️    | ❌        |
+| Best for menus/input validation | ❌   | ⚠️    | ✅        |
+
+### Example
+
+```c
+int i = 10;
+
+while(i < 5)
+{
+    printf("%d", i);
+}
+```
+
+Output:
+
+```
+Nothing
+```
+
+Now:
+
+```c
+int i = 10;
+
+do
+{
+    printf("%d", i);
+} while(i < 5);
+```
+
+Output:
+
+```
+10
+```
+
+---
+
+# Session 3 (55 Minutes)
+
+## Coding Exercises
+
+### Program 1
+
+Print numbers from **1 to 10** using a `do-while` loop.
+
+---
+
+### Program 2
+
+Print all **even numbers from 2 to 20** using a `do-while` loop.
+
+---
+
+### Program 3
+
+Input a number `N` and calculate the **factorial** using a `do-while` loop.
+
+Example:
+
+```
+Input:
+5
+
+Output:
+120
+```
+
+---
+
+### Program 4
+
+Input a number and reverse its digits.
+
+Example:
+
+```
+Input:
+12345
+
+Output:
+54321
+```
+
+---
+
+### ⭐ Challenge Program
+
+Input a number and count how many digits it contains.
+
+Example:
+
+```
+Input:
+987654
+
+Output:
+6
+```
+
+---
+
+# Session 4 (15 Minutes)
+
+## Aptitude
+
+1. Find **35% of 720**.
+2. Divide **₹1800** in the ratio **4 : 5**.
+3. A product costs **₹850** and is sold for **₹1020**. Find the profit percentage.
+4. Boys : Girls = **11 : 9**. If boys = **77**, how many girls are there?
+5. Find **12.5% of 960**.
+
+---
+
+# Session 5 (15 Minutes)
+
+## Logical Reasoning
+
+Find the next term:
+
+1. 1, 3, 6, 10, 15, ?
+2. 2, 6, 18, 54, ?
+3. B, E, H, K, ?
+4. 256, 128, 64, 32, ?
+5. 2, 5, 11, 23, 47, ?
+
+---
+
+# Homework
+
+Write short notes on:
+
+1. `do-while` loop
+2. Difference between `while` and `do-while`
+3. One real-world application of a `do-while` loop
+
+---
+
+# Debugging Challenge
+
+Find and correct the errors:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i = 1;
+
+    do
+    {
+        printf("%d ", i);
+        i++;
+    }
+
+    while(i < =10);
+
+    return 0;
+}
+```
+
+Answer:
+
+1. What is the error?
+2. Why does it occur?
+3. Write the corrected program.
+
+---
+
+# 🎯 Interview Challenge (New)
+
+Without using Google or notes, answer these:
+
+1. Why would you choose a `for` loop instead of a `while` loop?
+2. Can every `for` loop be converted into a `while` loop? Explain.
+3. Which loop guarantees at least one execution? Why?
+
+---
+
+## Current STEP Readiness: **68/100**
