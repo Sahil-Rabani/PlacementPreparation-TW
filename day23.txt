@@ -1,0 +1,213 @@
+# Updated STEP Readiness
+
+| Area                | Previous | Current |
+| ------------------- | -------: | ------: |
+| C Programming       |       62 |  **67** |
+| Aptitude            |       65 |  **70** |
+| Logical Reasoning   |       70 |  **75** |
+| Coding Ability      |       72 |  **77** |
+| Consistency         |       85 |  **90** |
+| Interview Readiness |       27 |  **32** |
+
+## Overall STEP Readiness
+
+# **72/100** ⬆️ (+4)
+
+You're making excellent progress. Your fundamentals are becoming solid, which will make later topics like functions, arrays, and pointers much easier.
+
+---
+
+# Week 2 – Day 4 Tasks
+
+**Total Study Time:** 2 Hours 30 Minutes
+
+## Session 1 (45 Minutes)
+
+### Topic: Nested Loops
+
+Learn:
+
+* What is a nested loop?
+* `for` inside `for`
+* `while` inside `while`
+
+Example:
+
+```c
+for(int i = 1; i <= 3; i++)
+{
+    for(int j = 1; j <= 3; j++)
+    {
+        printf("* ");
+    }
+    printf("\n");
+}
+```
+
+Understand:
+
+* Outer loop controls rows.
+* Inner loop controls columns.
+
+---
+
+## Session 2 (45 Minutes)
+
+### Pattern Printing
+
+Study how nested loops create patterns.
+
+Example 1:
+
+```
+*
+**
+***
+****
+*****
+```
+
+Example 2:
+
+```
+*****
+****
+***
+**
+*
+```
+
+---
+
+## Session 3 (45 Minutes)
+
+### Coding Exercises
+
+**Program 1**
+Print:
+
+```
+*
+**
+***
+****
+*****
+```
+
+---
+
+**Program 2**
+Print:
+
+```
+*****
+****
+***
+**
+*
+```
+
+---
+
+**Program 3**
+Print:
+
+```
+1
+12
+123
+1234
+12345
+```
+
+---
+
+**Program 4 (Challenge)**
+
+Print:
+
+```
+1
+22
+333
+4444
+55555
+```
+
+---
+
+## Session 4 (15 Minutes)
+
+### Aptitude
+
+1. Find **45% of 840**.
+2. Divide **₹2100** in the ratio **3:4**.
+3. A product costs **₹960** and sells for **₹1200**. Find the profit percentage.
+4. Boys : Girls = **5:4**. If there are **75 boys**, how many girls are there?
+5. Find **22.5% of 800**.
+
+---
+
+## Session 5 (15 Minutes)
+
+### Logical Reasoning
+
+Find the next term:
+
+1. 1, 4, 9, 16, 25, ?
+2. 3, 7, 15, 31, 63, ?
+3. A, D, H, M, ?
+4. 200, 180, 162, 146, ?
+5. 2, 4, 8, 16, 32, ?
+
+---
+
+## Homework
+
+Write short notes on:
+
+1. Nested loops
+2. Pattern printing
+3. Difference between the outer loop and inner loop
+
+---
+
+## Debugging Challenge
+
+Find and correct the errors:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i, j;
+
+    for(i = 1; i <= 5; i++)
+    {
+        for(j = 1; j <= i; j--)
+
+        {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+Answer:
+
+1. What is the error?
+2. What will happen if this program runs?
+3. Write the corrected program.
+
+---
+
+### 🎯 Interview Challenge
+
+1. Why are nested loops commonly used for pattern printing?
+2. How many times will the inner loop execute if the outer loop runs 5 times and the inner loop runs from 1 to 3?
+3. What is the time complexity of two nested loops where both run `n` times?
