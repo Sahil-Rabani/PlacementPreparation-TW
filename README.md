@@ -55,7 +55,9 @@ Day21       |     06/07/26         |  Completing week 2 second task given by AI.
 
 Day22       |     07/07/26         |  Completing week 2 third task given by AI.
 
-Day23       |     08/07/26         |  Completing week 3 forth task given by AI.
+Day23       |     08/07/26         |  Completing week 2 forth task given by AI.
+
+Day24       |     09/07/26         |  Completing week 2 fifth task given by AI.
 
 Everything mention above is uploaded by day name in my repository.
 
