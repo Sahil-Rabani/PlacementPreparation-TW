@@ -1,0 +1,201 @@
+# Updated STEP Readiness
+
+| Area                | Previous | Current |
+| ------------------- | -------: | ------: |
+| C Programming       |       67 |  **72** |
+| Aptitude            |       70 |  **75** |
+| Logical Reasoning   |       75 |  **80** |
+| Coding Ability      |       77 |  **82** |
+| Consistency         |       90 |  **92** |
+| Interview Readiness |       32 |  **38** |
+
+## Overall STEP Readiness
+
+# **76/100** ⬆️ (+4)
+
+You're well on track for your **15 August C Programming milestone**.
+
+---
+
+# Week 2 – Day 5 Tasks
+
+**Total Study Time:** 2 Hours 30 Minutes
+
+## Session 1 (45 Minutes)
+
+### Topic: Advanced Pattern Printing
+
+Understand how spaces and stars work together.
+
+Study these patterns:
+
+Pattern 1:
+
+```text
+    *
+   **
+  ***
+ ****
+*****
+```
+
+Pattern 2:
+
+```text
+*****
+ ****
+  ***
+   **
+    *
+```
+
+---
+
+## Session 2 (45 Minutes)
+
+### Coding Exercises
+
+### Program 1
+
+Print:
+
+```text
+*****
+*****
+*****
+*****
+*****
+```
+
+---
+
+### Program 2
+
+Print:
+
+```text
+    *
+   ***
+  *****
+ *******
+*********
+```
+
+(Hint: Use spaces and stars with two nested loops.)
+
+---
+
+### Program 3
+
+Print:
+
+```text
+12345
+1234
+123
+12
+1
+```
+
+---
+
+### Program 4 (Challenge)
+
+Print:
+
+```text
+A
+AB
+ABC
+ABCD
+ABCDE
+```
+
+---
+
+## Session 3 (30 Minutes)
+
+### Loop Practice
+
+Write programs to:
+
+1. Print all multiples of **7** from **1 to 100**.
+2. Find the sum of all odd numbers from **1 to N**.
+3. Print numbers from **100 to 1** using a `while` loop.
+
+---
+
+## Session 4 (15 Minutes)
+
+### Aptitude
+
+1. Find **32% of 750**.
+2. Divide **₹2800** in the ratio **5:9**.
+3. A product costs **₹640** and sells for **₹800**. Find the profit percentage.
+4. Boys : Girls = **7:4**. If boys = **84**, how many girls are there?
+5. Find **18.75% of 640**.
+
+---
+
+## Session 5 (15 Minutes)
+
+### Logical Reasoning
+
+Find the next term:
+
+1. 2, 5, 10, 17, 26, ?
+2. 1, 8, 27, 64, 125, ?
+3. B, F, J, N, ?
+4. 500, 250, 125, 62, ?
+5. 3, 5, 9, 17, 33, ?
+
+---
+
+## Homework
+
+Write short notes on:
+
+1. Pattern printing using nested loops.
+2. Advantages of nested loops.
+3. Real-world applications of nested loops.
+
+---
+
+## Debugging Challenge
+
+Find and correct the errors:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i, j;
+
+    for(i = 1; i <= 5; i++)
+    {
+        for(j = 1; j <= 5; j++)
+        {
+            printf("*")
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+Answer:
+
+1. Identify the syntax error.
+2. Explain why the program doesn't compile.
+3. Write the corrected program.
+
+---
+
+## 🎯 Interview Challenge
+
+1. What is the difference between a **triangle pattern** and a **pyramid pattern**?
+2. Why do pyramid patterns require printing spaces?
+3. If the outer loop runs `n` times and the inner loop runs `i` times (`i` is the current row), what is the overall time complexity?
