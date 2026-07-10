@@ -59,6 +59,8 @@ Day23       |     08/07/26         |  Completing week 2 forth task given by AI.
 
 Day24       |     09/07/26         |  Completing week 2 fifth task given by AI.
 
+Day25       |     10/07/26         |  Completing week 2 sixth task given by AI.
+
 Everything mention above is uploaded by day name in my repository.
 
 If there is date missing between file upload, Which means I am working on previous file on upload missing date.
