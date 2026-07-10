@@ -1,0 +1,185 @@
+# Updated STEP Readiness
+
+| Area                | Previous | Current |
+| ------------------- | -------: | ------: |
+| C Programming       |       72 |  **77** |
+| Aptitude            |       75 |  **80** |
+| Logical Reasoning   |       80 |  **84** |
+| Coding Ability      |       82 |  **86** |
+| Consistency         |       92 |  **94** |
+| Interview Readiness |       38 |  **43** |
+
+# Overall STEP Readiness
+
+## **80/100** ⬆️
+
+🎉 **Milestone reached:** You've crossed **80/100** readiness. You're now moving from beginner to an intermediate foundation in C.
+
+---
+
+# Week 2 – Day 6 Tasks
+
+**Total Study Time:** 2 Hours 30 Minutes
+
+## Session 1 (45 Minutes)
+
+### Topic: Number-Based Problems with Loops
+
+Learn how to solve problems using loops and arithmetic.
+
+Study:
+
+* Sum of digits
+* Reverse of a number
+* Palindrome number
+* Armstrong number (3-digit)
+
+Understand the algorithm before coding.
+
+---
+
+## Session 2 (45 Minutes)
+
+### Coding Exercises
+
+### Program 1
+
+Write a program to find the **sum of digits** of a number.
+
+Example:
+
+```text
+Input: 1234
+Output: 10
+```
+
+---
+
+### Program 2
+
+Write a program to check whether a number is a **palindrome**.
+
+Example:
+
+```text
+Input: 121
+Output: Palindrome
+```
+
+---
+
+### Program 3
+
+Write a program to check whether a **3-digit number is an Armstrong number**.
+
+Example:
+
+```text
+153 = 1³ + 5³ + 3³ = 153
+```
+
+Print:
+
+* Armstrong
+* Not Armstrong
+
+---
+
+### Program 4 (Challenge)
+
+Write a program to find the **largest digit** in a number.
+
+Example:
+
+```text
+Input: 94825
+Output: 9
+```
+
+---
+
+## Session 3 (20 Minutes)
+
+### Algorithm Practice
+
+Before coding, write the algorithm (step-by-step) for:
+
+1. Reverse a number.
+2. Sum of digits.
+3. Palindrome check.
+
+---
+
+## Session 4 (15 Minutes)
+
+### Aptitude
+
+1. Find **28% of 650**.
+2. Divide **₹3600** in the ratio **7:5**.
+3. A product costs **₹720** and sells for **₹900**. Find the profit percentage.
+4. Boys : Girls = **8:7**. If boys = **64**, how many girls are there?
+5. Find **37.5% of 480**.
+
+---
+
+## Session 5 (15 Minutes)
+
+### Logical Reasoning
+
+Find the next term:
+
+1. 5, 11, 23, 47, 95, ?
+2. 1, 2, 5, 10, 17, ?
+3. C, G, K, O, ?
+4. 729, 243, 81, 27, ?
+5. 2, 3, 5, 8, 12, ?
+
+---
+
+## Homework
+
+Write short notes on:
+
+1. Palindrome number.
+2. Armstrong number.
+3. Algorithm vs Program.
+
+---
+
+## Debugging Challenge
+
+Find and correct the errors:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int num = 123;
+    int sum = 0;
+
+    while(num > 0)
+    {
+        sum = num % 10;
+        num = num / 10;
+    }
+
+    printf("%d", sum);
+
+    return 0;
+}
+```
+
+Answer:
+
+1. What is the logical error?
+2. What output will this program produce?
+3. Write the corrected program.
+
+---
+
+## 🎯 Interview Challenge
+
+1. What is the difference between an algorithm and a program?
+2. Can every algorithm be converted into a program?
+3. Why is dry-running (tracing a program by hand) useful before compiling?
