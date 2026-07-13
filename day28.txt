@@ -1,0 +1,454 @@
+Excellent. Since you scored **98/100** in Week 2 and your overall STEP Readiness is **91/100**, you're no longer following the beginner track.
+
+From today, you're on the **Accelerated STEP Track**.
+
+**New Daily Structure (2.5–3 Hours):**
+
+* ⏱️ 90 min – C Programming (Core + Interview)
+* ⏱️ 35 min – Aptitude (CBSE Class 10 + Placement Level)
+* ⏱️ 20 min – Logical Reasoning
+* ⏱️ 15 min – Interview/Debugging
+
+---
+
+# 🚀 Week 3 – Day 1
+
+## Topic: Functions + Switch Statement
+
+These are extremely common in campus interviews.
+
+---
+
+# Session 1 (45 Minutes)
+
+## Functions in C
+
+Study these concepts:
+
+### 1. What is a Function?
+
+* Why functions are used
+* Advantages of functions
+* Modular programming
+
+---
+
+### 2. Function Components
+
+Understand:
+
+* Function Prototype
+* Function Definition
+* Function Call
+
+Example:
+
+```c
+#include <stdio.h>
+
+void greet();
+
+int main()
+{
+    greet();
+    return 0;
+}
+
+void greet()
+{
+    printf("Welcome to STEP");
+}
+```
+
+---
+
+### 3. Four Types of Functions
+
+#### Type 1
+
+No Arguments, No Return Value
+
+---
+
+#### Type 2
+
+Arguments, No Return Value
+
+---
+
+#### Type 3
+
+No Arguments, Return Value
+
+---
+
+#### Type 4
+
+Arguments, Return Value
+
+Know when to use each.
+
+---
+
+# Session 2 (35 Minutes)
+
+# Switch Statement
+
+Study
+
+```c
+switch(choice)
+{
+case 1:
+    ...
+    break;
+
+case 2:
+    ...
+    break;
+
+default:
+    ...
+}
+```
+
+Understand
+
+* break
+* default
+* fall-through
+* Difference between switch and if-else
+
+---
+
+# Session 3 (60 Minutes)
+
+# Coding Practice
+
+## Easy
+
+### Program 1
+
+Create a function
+
+```text
+void welcome()
+```
+
+Print
+
+```
+Welcome to Thoughtworks STEP
+```
+
+---
+
+## Medium
+
+### Program 2
+
+Create a function
+
+```text
+int square(int n)
+```
+
+Return square of a number.
+
+---
+
+### Program 3
+
+Create
+
+```text
+int max(int a,int b)
+```
+
+Return larger number.
+
+---
+
+## Medium+
+
+### Program 4
+
+Calculator using
+
+```
+switch
+```
+
+Operations
+
+* *
+* *
+* *
+* /
+* %
+
+---
+
+## ⭐ Interview Question
+
+### Program 5
+
+Create
+
+```text
+int isPrime(int n)
+```
+
+Return
+
+```
+1 → Prime
+
+0 → Not Prime
+```
+
+Use function.
+
+No global variables.
+
+---
+
+# Debugging Challenge
+
+Find every mistake.
+
+```c
+#include <stdio.h>
+
+int add(int a,int b);
+
+int main()
+{
+    int ans;
+
+    ans = add(10);
+
+    printf("%d",ans);
+
+    return 0;
+}
+
+int add(int a,int b)
+{
+    return a+b;
+}
+```
+
+Questions
+
+1. Compiler error?
+
+2. Logical error?
+
+3. Correct program.
+
+---
+
+# Aptitude (Placement Level)
+
+Today's topic:
+
+## Ages
+
+### Q1
+
+Father is **30 years older** than his son.
+
+After **8 years**, father's age will be **twice** the son's age.
+
+Find present ages.
+
+---
+
+### Q2
+
+The ratio of A's age to B's age is **5 : 7**.
+
+After **10 years**, the ratio becomes **7 : 9**.
+
+Find present ages.
+
+---
+
+### Q3
+
+A train **240 m** long crosses a pole in **12 seconds**.
+
+Find its speed in km/h.
+
+---
+
+### Q4
+
+A man walks **12 km** in **2 hours 24 minutes**.
+
+Find speed in **m/s**.
+
+---
+
+### Q5
+
+A train running at **72 km/h** crosses a **180 m** bridge in **18 seconds**.
+
+Find the train's length.
+
+---
+
+# Logical Reasoning (Placement Level)
+
+## Coding-Decoding
+
+### Q1
+
+If
+
+```
+APPLE → BQQMF
+```
+
+Then
+
+```
+HOUSE → ?
+```
+
+---
+
+### Q2
+
+If
+
+```
+DELHI = 45231
+```
+
+```
+HIDE = ?
+```
+
+---
+
+## Blood Relation
+
+### Q3
+
+A is the brother of B.
+
+B is the mother of C.
+
+C is the sister of D.
+
+How is A related to D?
+
+---
+
+## Direction
+
+### Q4
+
+A person walks
+
+```
+10 m North
+
+15 m East
+
+10 m South
+```
+
+How far is he from the starting point?
+
+---
+
+## Seating
+
+### Q5
+
+Five friends
+
+```
+A B C D E
+```
+
+sit in one row.
+
+* A is left of B.
+* C is right of D.
+* E is between A and D.
+
+Arrange them.
+
+---
+
+# Homework
+
+Write short notes on
+
+1. Function Prototype
+2. Function Definition
+3. Function Call
+4. Switch Statement
+5. Difference between switch and if-else
+
+---
+
+# Interview Round
+
+Answer these without searching:
+
+### 1.
+
+Why should we use functions instead of writing everything inside `main()`?
+
+---
+
+### 2.
+
+Can one function call another function?
+
+Explain with an example.
+
+---
+
+### 3.
+
+Why can't `switch` use `float` as its expression in C?
+
+---
+
+### 4.
+
+What is recursion?
+
+Explain in your own words (don't code it yet).
+
+---
+
+## 🎯 Stretch Goal (Optional)
+
+Implement a **menu-driven calculator** using:
+
+* Functions
+* `switch`
+* Loops
+
+Menu:
+
+```
+1 Addition
+
+2 Subtraction
+
+3 Multiplication
+
+4 Division
+
+5 Exit
+```
+
+The program should keep running until the user chooses **Exit**.
