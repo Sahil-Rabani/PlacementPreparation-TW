@@ -1,0 +1,136 @@
+# Updated STEP Readiness
+
+| Area                | Previous | Current |
+| ------------------- | -------: | ------: |
+| C Programming       |       92 |  **94** |
+| Aptitude            |       92 |  **94** |
+| Logical Reasoning   |       94 |  **95** |
+| Coding Ability      |       96 |  **97** |
+| Consistency         |       99 |  **99** |
+| Interview Readiness |       68 |  **74** |
+
+# Overall STEP Readiness
+
+# **93/100** 🚀
+
+You're now at a level where the focus shifts from learning syntax to **writing efficient, interview-quality code**.
+
+---
+
+# Week 3 – Day 2 Tasks (Accelerated Track)
+
+## 🎯 Main Topic: Recursion + Storage Classes
+
+### Session 1 (60 min): Recursion
+
+Study:
+
+* What is recursion?
+* Base case
+* Recursive case
+* Call stack
+* Advantages and disadvantages
+
+Write recursive functions for:
+
+1. Factorial
+2. Sum of first `N` numbers
+3. Fibonacci (recursive version)
+
+---
+
+### Session 2 (45 min): Storage Classes
+
+Study:
+
+* `auto`
+* `register`
+* `static`
+* `extern`
+
+Understand:
+
+* Scope
+* Lifetime
+* Default values
+
+Write one small program demonstrating each.
+
+---
+
+### Session 3 (60 min): Coding Practice
+
+1. Recursive factorial.
+2. Recursive power (`a^b`).
+3. Recursive GCD using Euclid's algorithm.
+4. Menu-driven program:
+
+   * Factorial
+   * Fibonacci
+   * Prime check
+   * Exit
+
+Use **functions**, **switch**, and **recursion** where appropriate.
+
+---
+
+### Aptitude (Placement Level)
+
+Today's topics:
+
+1. **Time & Work**
+
+   * A can complete a job in 12 days, B in 18 days. Working together, how many days will they take?
+
+2. **Time & Work**
+
+   * A completes 40% of a task in 8 days. How many more days are needed to finish the remaining work at the same rate?
+
+3. **Speed, Time & Distance**
+
+   * A car travels 180 km in 3 hours and then 120 km in 2 hours. Find the average speed.
+
+4. **Relative Speed**
+
+   * Two trains travel in the same direction at 72 km/h and 54 km/h. If the faster train is 180 m long, how long will it take to completely pass the slower train?
+
+5. **Ages**
+
+   * Five years ago, a father's age was three times his son's age. After ten years, the father's age will be twice the son's age. Find their present ages.
+
+---
+
+### Logical Reasoning (Placement Level)
+
+1. Number series:
+
+   * 2, 7, 15, 26, 40, ?
+
+2. Coding-Decoding:
+
+   * If **MANGO → NZOH P** (each letter shifted by +1), encode **TRAIN**.
+
+3. Blood Relation:
+
+   * P is the sister of Q. Q is the father of R. R is the brother of S. How is P related to S?
+
+4. Direction Sense:
+
+   * A person walks 8 m east, 6 m north, 8 m west. How far and in which direction is the person from the starting point?
+
+5. Analytical Puzzle:
+
+   * Three friends—A, B, and C—like different fruits: Apple, Mango, and Orange.
+
+     * A doesn't like Apple.
+     * B likes Mango.
+     * C doesn't like Orange.
+       Determine who likes which fruit.
+
+---
+
+### Interview Challenge
+
+1. Explain recursion to a non-programmer using a real-life example.
+2. Why is every recursive function required to have a base case?
+3. Compare recursion and iteration. When would you choose one over the other?
