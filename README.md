@@ -67,7 +67,7 @@ Day27       |     12/07/26         |  Completing weekly assignment 2 given by AI
 
 Day28       |     13/07/26         |  Completing week 3 first task given by AI.
 
------       |     14/07/26         |  Not doing anything today due to an emergency.
+-----       |     14/04/26         |  Not doing anything due to some work.
 
 Day29       |     15/07/26         |  Completing week 3 second task given by AI.
 
