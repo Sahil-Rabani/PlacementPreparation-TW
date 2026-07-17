@@ -1,0 +1,333 @@
+# Session 1 (45 min)
+
+## Dry-Run Practice (Most Important)
+
+Before writing any code, manually trace these recursive calls.
+
+### Q1
+
+```c
+factorial(4)
+```
+
+Write every function call until it returns.
+
+Example:
+
+```
+factorial(4)
+
+↓
+
+4 × factorial(3)
+
+↓
+
+4 × 3 × factorial(2)
+
+...
+```
+
+---
+
+### Q2
+
+Dry-run
+
+```c
+power(2,5)
+```
+
+---
+
+### Q3
+
+Dry-run
+
+```c
+gcd(48,18)
+```
+
+using the **correct** Euclid algorithm.
+
+---
+
+### Q4
+
+Dry-run
+
+```c
+fibonacci(6)
+```
+
+Draw the recursion tree.
+
+---
+
+# Session 2 (60 min)
+
+## Coding Practice
+
+### Easy
+
+### Program 1
+
+Recursive Sum
+
+```text
+sum(10)
+
+Output
+
+55
+```
+
+---
+
+### Program 2
+
+Recursive Reverse Number
+
+(No loops allowed.)
+
+---
+
+### Medium
+
+### Program 3
+
+Recursive Digit Count
+
+```
+12345
+
+↓
+
+5
+```
+
+---
+
+### Program 4
+
+Recursive Sum of Digits
+
+---
+
+### ⭐ Interview
+
+### Program 5
+
+Recursive Decimal to Binary
+
+Example
+
+```
+13
+
+↓
+
+1101
+```
+
+**No arrays.**
+
+---
+
+# Session 3 (45 min)
+
+## Hard Problems
+
+### Program 6
+
+Recursive LCM
+
+(Hint: Use GCD.)
+
+---
+
+### Program 7
+
+Recursive Palindrome
+
+(No loops.)
+
+---
+
+### ⭐⭐ Interview Challenge
+
+Write
+
+```c
+int isSorted(int arr[], int n);
+```
+
+using recursion.
+
+*(We'll introduce a tiny array only for this interview-style problem because recursion is the focus, not arrays.)*
+
+---
+
+# Debugging Round
+
+Find every mistake.
+
+```c
+int sum(int n)
+{
+    if(n==0);
+
+    return n+sum(n-1);
+}
+```
+
+Questions:
+
+1. Why doesn't recursion stop?
+2. Compiler error?
+3. Logical error?
+4. Correct code.
+
+---
+
+# Aptitude (Placement Level)
+
+## Ages
+
+### Q1
+
+The sum of the ages of a father and son is **60 years**.
+
+Five years ago, the father was **five times** as old as the son.
+
+Find their present ages.
+
+---
+
+### Q2
+
+A is **6 years older** than B.
+
+Five years ago, A's age was **twice** B's age.
+
+Find their present ages.
+
+---
+
+## Time & Work
+
+### Q3
+
+A can finish a job in **15 days**.
+
+B can finish the same job in **20 days**.
+
+After working together for **4 days**, A leaves.
+
+How many more days will B need to finish the remaining work?
+
+---
+
+## Speed & Distance
+
+### Q4
+
+A train **180 m** long crosses a pole in **9 seconds**.
+
+Find its speed in km/h.
+
+---
+
+### Q5
+
+A man covers **240 km**.
+
+He travels the first **120 km** at **40 km/h** and the remaining **120 km** at **60 km/h**.
+
+Find the average speed.
+
+---
+
+# Logical Reasoning (Interview Level)
+
+## Number Series
+
+1.
+
+```
+1, 2, 6, 24, 120, ?
+```
+
+---
+
+2.
+
+```
+2, 3, 5, 9, 17, 33, ?
+```
+
+---
+
+## Coding-Decoding
+
+If
+
+```
+COMPUTER
+
+↓
+
+DPNQVUFS
+```
+
+Encode
+
+```
+ENGINEER
+```
+
+---
+
+## Blood Relation
+
+A woman introduces a man:
+
+> "He is the son of my grandfather's only son."
+
+Who is the man?
+
+---
+
+## Puzzle
+
+Five students:
+
+A B C D E
+
+* A sits left of C.
+* D sits right of B.
+* E sits between C and D.
+
+Arrange them.
+
+---
+
+# Interview Round
+
+1. What happens inside memory during recursion?
+2. Why does recursion use more memory than iteration?
+3. What is **Stack Overflow**?
+4. Can every recursive solution be converted into an iterative one? Explain.
+
+---
+
+# Homework
+
+Write short notes on:
+
+* Tail recursion
+* Head recursion
+* Direct recursion
+* Indirect recursion
+
+Read about them only—we'll study them tomorrow.
