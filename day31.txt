@@ -1,0 +1,460 @@
+# 🚀 Week 3 – Day 4
+
+# Recursion Mastery (Visual Thinking)
+
+**Estimated Time:** 3 Hours
+
+---
+
+# Session 1 (40 Minutes)
+
+## Dry Run Practice (Most Important)
+
+**Don't write code first.**
+
+Draw every recursive call.
+
+---
+
+### Q1
+
+```c
+fun(5)
+
+void fun(int n)
+{
+    if(n==0)
+        return;
+
+    printf("%d ",n);
+
+    fun(n-1);
+}
+```
+
+Write
+
+* Function Calls
+* Return Order
+* Output
+
+---
+
+### Q2
+
+```c
+fun(5)
+
+void fun(int n)
+{
+    if(n==0)
+        return;
+
+    fun(n-1);
+
+    printf("%d ",n);
+}
+```
+
+Same questions.
+
+---
+
+### Q3
+
+```c
+fun(3)
+
+void fun(int n)
+{
+    if(n==0)
+        return;
+
+    printf("%d ",n);
+
+    fun(n-1);
+
+    printf("%d ",n);
+}
+```
+
+This question is asked in interviews.
+
+---
+
+### Q4
+
+Dry run
+
+```c
+factorial(4)
+```
+
+Don't write code.
+
+Only write
+
+```
+factorial(4)
+
+↓
+
+factorial(3)
+
+↓
+
+factorial(2)
+```
+
+until the answer returns.
+
+---
+
+# Session 2 (60 Minutes)
+
+## Coding
+
+### Program 1
+
+Print
+
+```
+5 4 3 2 1
+```
+
+using recursion.
+
+No loops.
+
+---
+
+### Program 2
+
+Print
+
+```
+1 2 3 4 5
+```
+
+using recursion.
+
+---
+
+### Program 3
+
+Find
+
+```
+Sum of odd numbers
+
+1...
+
+N
+```
+
+using recursion.
+
+---
+
+### Program 4
+
+Find
+
+```
+Product of digits
+```
+
+Example
+
+```
+234
+
+↓
+
+24
+```
+
+---
+
+### ⭐ Interview
+
+### Program 5
+
+Reverse a number
+
+```
+1234
+
+↓
+
+4321
+```
+
+**No loops.**
+
+Hint:
+
+Think about
+
+```
+last digit
+
+remaining digits
+```
+
+instead of reversing the whole number at once.
+
+---
+
+# Session 3 (50 Minutes)
+
+## Recursion Pattern Building
+
+Write recursive functions for
+
+### Q1
+
+Print
+
+```
+*
+**
+***
+****
+```
+
+---
+
+### Q2
+
+Print
+
+```
+****
+***
+**
+*
+```
+
+---
+
+### ⭐⭐⭐ Interview
+
+### Q3
+
+Recursive Binary Conversion
+
+```
+15
+
+↓
+
+1111
+```
+
+No arrays
+
+No loops
+
+---
+
+# Debugging
+
+Find every mistake.
+
+```c
+int fact(int n)
+{
+    if(n==1)
+        return;
+
+    return n*fact(n-1);
+}
+```
+
+Questions
+
+1. Compiler error?
+2. Runtime error?
+3. Base case?
+4. Correct code.
+
+---
+
+# Aptitude (Harder – Placement Level)
+
+## Ages
+
+### Q1
+
+A father is **4 times** as old as his son.
+
+After **12 years**, he will be **twice** as old.
+
+Find their present ages.
+
+---
+
+## Speed & Distance
+
+### Q2
+
+A train **150 m** long crosses a **350 m** platform in **25 seconds**.
+
+Find the speed.
+
+---
+
+## Relative Speed
+
+### Q3
+
+Two trains
+
+Length
+
+```
+120m
+
+180m
+```
+
+Running opposite direction
+
+```
+54 km/h
+
+72 km/h
+```
+
+Time to cross?
+
+---
+
+## Time & Work
+
+### Q4
+
+A can do a work in **24 days**.
+
+B in **36 days**.
+
+C in **72 days**.
+
+How many days together?
+
+---
+
+### Q5
+
+A completes **25%** work in **5 days**.
+
+How long for the complete work?
+
+---
+
+# Logical Reasoning (Company Level)
+
+### Number Series
+
+1.
+
+```
+5
+9
+17
+33
+65
+?
+```
+
+---
+
+2.
+
+```
+1
+4
+9
+16
+25
+?
+```
+
+---
+
+### Coding-Decoding
+
+If
+
+```
+WORLD
+
+↓
+
+XPSME
+```
+
+Encode
+
+```
+LOGIC
+```
+
+---
+
+### Blood Relation
+
+Pointing to a girl, Rahul says,
+
+> "She is the daughter of the only daughter of my mother."
+
+Who is the girl?
+
+---
+
+### Seating Puzzle
+
+Six friends
+
+```
+A B C D E F
+```
+
+sit in a row.
+
+* A is left of C.
+* B is right of E.
+* D is between A and E.
+* F is right of C.
+
+Arrange them.
+
+---
+
+# Interview Questions
+
+1. What is the difference between **tail recursion** and **head recursion**?
+
+2. Which uses more memory?
+
+* Loop
+* Recursion
+
+Why?
+
+3. Why can recursion cause **Stack Overflow**?
+
+4. Where is recursion actually used in real software?
+
+---
+
+# 🎯 Special Challenge
+
+I don't want you to memorize recursion.
+
+For **every recursive function**, submit **three things**:
+
+1. Algorithm (steps in English)
+2. Dry run on one example
+3. C code
