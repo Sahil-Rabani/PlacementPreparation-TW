@@ -1,1 +1,106 @@
-Creating day32 file.
+| Area                | Previous |   Current |
+| ------------------- | -------: | --------: |
+| C Programming       |       95 | **96** ⬆️ |
+| Coding Ability      |       98 |    **98** |
+| Aptitude            |       95 | **96** ⬆️ |
+| Logical Reasoning   |       96 | **97** ⬆️ |
+| Debugging           |       91 | **92** ⬆️ |
+| Interview Readiness |       78 | **81** ⬆️ |
+| Consistency         |       99 |    **99** |
+
+🎯 STEP Readiness: 96/100
+
+---
+
+# Week 3 – Day 5
+
+## Arrays — Part 1 + Recursion Revision
+
+**Total: ~2 hours 50 minutes**
+
+### C Programming — 100 minutes
+
+Study **1D arrays**: declaration, initialization, indexing, traversal, input/output, contiguous memory, array bounds, and why indexing starts from zero.
+
+Then solve these programs:
+
+1. Read 10 integers into an array and print them.
+2. Find the **sum and average** of `N` array elements.
+3. Find the **largest and smallest** element.
+4. Reverse an array **in-place** (do not create a second array).
+5. **Interview problem:** Find the second-largest **distinct** element. Example: `[10, 30, 30, 20] → 20`.
+6. **Recursion revision:** recursively calculate the sum of all array elements. No loop inside the recursive function.
+
+For Programs 4–6, submit **algorithm + one dry run + code**.
+
+### Debugging Challenge
+
+Find all problems:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int arr[5];
+
+    for(int i = 0; i <= 5; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    for(int i = 0; i <= 5; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
+```
+
+Explain why this is particularly dangerous in C even though `arr[5]` looks superficially reasonable.
+
+---
+
+# Aptitude — 30 Minutes
+
+Today: **Time, Speed & Distance + Ages + Work**
+
+1. A train 240 m long moving at **72 km/h** crosses a platform in 30 seconds. Find the platform's length.
+2. A man travels from A to B at **40 km/h** and returns over the same distance at **60 km/h**. Find his average speed for the complete journey.
+3. A and B can finish work in 12 and 18 days respectively. They work together for 4 days, after which B leaves. How many **additional days** does A need?
+4. Eight years ago, A was three times B's age. Four years from now, A will be twice B's age. Find their present ages.
+5. A train leaves Delhi at 8:00 AM at 60 km/h. Another train leaves the same point at 9:30 AM in the same direction at 90 km/h. At what time will the second train catch the first?
+
+Show equations/workings, not only final answers.
+
+---
+
+# Logical Reasoning — 20 Minutes
+
+1. `3, 7, 15, 31, 63, ?`
+2. `2, 6, 15, 31, 56, ?`
+3. If every letter is shifted two positions forward, encode `THOUGHT`.
+4. Pointing to a man, Riya says: **"His mother's only daughter is my mother."** How is the man related to Riya?
+5. Five people A, B, C, D and E sit in a row. C is immediately right of A. B is immediately left of E. D is left of A. E is right of C. Find the arrangement.
+
+---
+
+# Interview Round
+
+Answer without notes:
+
+1. Why does C not automatically detect array-out-of-bounds access?
+2. What is the difference between an **array index** and an **array element**?
+3. If `int` occupies 4 bytes and `arr[0]` starts at address `1000`, what addresses would you expect for `arr[1]`, `arr[2]`, and `arr[4]`?
+4. Can the size of a traditional fixed-size array be changed after its creation? Explain.
+
+### Stretch Problem
+
+Given:
+
+```text
+4 2 7 2 9 4 2
+```
+
+Find the **frequency of every distinct element**.
