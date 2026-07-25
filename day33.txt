@@ -1,0 +1,144 @@
+# STEP Readiness Update
+
+| Area                | Previous | Current |
+| ------------------- | -------: | ------: |
+| C Programming       |       96 |  **94** |
+| Coding Ability      |       98 |  **96** |
+| Aptitude            |       96 |  **97** |
+| Logical Reasoning   |       97 |  **98** |
+| Debugging           |       92 |  **90** |
+| Interview Readiness |       81 |  **82** |
+| Consistency         |       99 |  **99** |
+
+## 🎯 STEP Readiness: **94/100**
+
+A readiness score can decrease when a new topic exposes weaknesses. That's intentional—it should reflect current demonstrated ability rather than only move upward.
+
+---
+
+# Week 3 – Day 6
+
+## Arrays Part 2 — Problem Solving
+
+**Total: ~2 hours 50 minutes**
+
+### C Programming — 100 minutes
+
+Before new material, correct these three programs from today:
+
+1. Reverse an array **in-place** using swapping.
+2. Calculate an average using floating-point division.
+3. Rewrite second-largest-distinct so it also works for:
+
+   * `[30,30,20,10]`
+   * `[-5,-2,-8,-2]`
+   * `[7,7,7,7]` → report that no second distinct element exists.
+
+Then solve:
+
+4. **Linear Search:** Input `N` numbers and a target. Return its index or `-1`.
+
+5. **Count occurrences:** Given `[2,5,2,8,2,5]` and target `2`, output `3`.
+
+6. **Remove duplicates logically:** Given `[1,2,2,3,1,4]`, print each distinct value once. Don't worry about optimal complexity yet.
+
+7. ⭐ **Interview problem — Left Rotation**
+
+```text
+Input:
+[1,2,3,4,5]
+
+Rotate left by 2
+
+Output:
+[3,4,5,1,2]
+```
+
+Do not search for the algorithm.
+
+### Recursion Revision
+
+Write recursively:
+
+```text
+maxArray(arr,n)
+```
+
+which returns the maximum element.
+
+No loop inside the recursive function.
+
+---
+
+# Debugging Challenge
+
+Predict what is wrong:
+
+```c
+int arr[5] = {10,20,30,40,50};
+
+for(int i = 0; i < 5; i++)
+{
+    printf("%d ", arr[i+1]);
+}
+```
+
+Answer:
+
+1. Which iterations are valid?
+2. When does out-of-bounds access happen?
+3. Why might the program still appear to work?
+4. Correct it.
+
+---
+
+# Aptitude — 30 Minutes
+
+Show complete working.
+
+**Q1 — Ages:** A father is three times his son's age. Ten years ago, he was five times his son's age. Find their present ages.
+
+**Q2 — Time & Work:** A can complete work in 20 days and B in 30 days. They work together for 6 days. Then A leaves. How many more days does B require?
+
+**Q3 — Trains:** Two trains, 180 m and 220 m long, travel in opposite directions at 54 km/h and 90 km/h. Find their crossing time.
+
+**Q4 — Average Speed:** A car travels 120 km at 40 km/h, 180 km at 60 km/h, and 100 km at 50 km/h. Find its average speed for the complete journey.
+
+**Q5 — Catch-up:** A cyclist leaves at 7:00 AM at 15 km/h. Another cyclist starts from the same point at 8:30 AM at 24 km/h. At what time does the second cyclist catch the first?
+
+---
+
+# Logical Reasoning — 20 Minutes
+
+1. `4, 10, 22, 46, 94, ?`
+2. `2, 5, 11, 23, 47, ?`
+3. If `MACHINE → NBDIJOF`, encode `POINTER`.
+4. A says, **"The woman standing there is the daughter of the wife of my father's only son."** If A is male and his father has only one son, how is the woman related to A?
+5. Five people P, Q, R, S, T sit in a row. R is immediately right of P. T is immediately left of Q. S sits left of P. Q sits right of R. Determine the arrangement.
+
+---
+
+# Interview Round
+
+Answer without notes:
+
+1. Why is `arr[5]` invalid for `int arr[5]`?
+2. What does `sizeof(arr) / sizeof(arr[0])` calculate, and **when can this technique fail?**
+3. What is the time complexity of finding the maximum element in an unsorted array?
+4. Can an array contain values of different data types in C? Why?
+5. Why is an in-place algorithm sometimes preferable to creating another array?
+
+### Optional Stretch
+
+Find all pairs whose sum equals a target:
+
+```text
+Array: [2,7,11,15,3,6]
+Target: 9
+
+Pairs:
+2 + 7
+3 + 6
+```
+
+Start with your own brute-force solution. **Don't optimize it yet.**
