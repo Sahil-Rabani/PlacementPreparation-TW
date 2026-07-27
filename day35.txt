@@ -1,0 +1,100 @@
+# STEP Readiness Update
+
+| Area                | Previous |  Current |
+| ------------------- | -------: | -------: |
+| C Programming       |       94 | **95** ↑ |
+| Coding Ability      |       96 | **97** ↑ |
+| Aptitude            |       97 | **98** ↑ |
+| Logical Reasoning   |       98 |   **98** |
+| Debugging           |       90 | **92** ↑ |
+| Interview Readiness |       82 | **83** ↑ |
+| Consistency         |       99 |   **99** |
+
+# 🎯 STEP Readiness: **95/100** ↑
+
+Your strongest areas currently are **aptitude, reasoning and implementation**.
+
+Your largest gap is increasingly becoming **C conceptual/interview knowledge**—memory behavior, complexity, arrays vs pointers, undefined behavior, etc. We'll deliberately strengthen that.
+
+---
+
+# Week 3 – Day 7
+
+## Revision + Weekly Test Preparation
+
+No major new C topic today.
+
+**Total: 2 hours 45 minutes**
+
+### C Revision — 90 minutes
+
+Without looking at previous solutions, write these:
+
+1. Recursive GCD using Euclid's algorithm.
+2. Recursive decimal → binary.
+3. Reverse an array **in-place**.
+4. Find second-largest **distinct** element. Test:
+
+   * `[5,8,3,8,7] → 7`
+   * `[-5,-10,-2,-3] → -3`
+   * `[4,4,4] → No second largest`
+5. Left-rotate an array by `k`.
+6. Find maximum recursively.
+
+Then answer these conceptual questions:
+
+* Why is `arr[n]` invalid when an array contains `n` elements?
+* Why is array access normally O(1)?
+* Difference between `O(n)`, `O(log n)` and `O(n²)`.
+* Why does `sizeof(arr)/sizeof(arr[0])` work in `main()` but may fail after passing `arr` to a function?
+* Difference between stack memory and the call stack used during recursion.
+
+### Aptitude — 30 minutes
+
+1. A father is four times his son's age. Eight years later, he will be 2.5 times the son's age. Find present ages.
+2. A can complete work in 15 days and B in 10 days. They work together for 4 days. What fraction of the work remains?
+3. A 200 m train crosses a 300 m platform in 20 seconds. Find its speed in km/h.
+4. Two trains 180 m and 270 m long move in the same direction at 72 km/h and 54 km/h. Find the time for the faster train to completely overtake the slower one.
+5. A person travels equal distances at 30, 40 and 60 km/h. Find the average speed for the complete journey.
+
+### Reasoning — 20 minutes
+
+1. `2, 5, 12, 27, 58, ?`
+2. `3, 10, 29, 66, 127, ?`
+3. If `ARRAY → BSSBZ`, encode `STACK`.
+4. A woman says, **"The man's father's only daughter is my mother."** How is the man related to the woman?
+5. Six people A–F sit in a row. B is immediately right of A. D is immediately left of E. C sits somewhere between B and D. F is right of E. Give one valid arrangement.
+
+### Debugging Challenge
+
+Explain everything wrong with:
+
+```c
+int findMax(int arr[], int n)
+{
+    int max = arr[0];
+
+    for(int i = 0; i <= n; i++)
+    {
+        if(arr[i] > max)
+            max = arr[i];
+    }
+
+    return max;
+}
+```
+
+Then give:
+
+* corrected code,
+* time complexity,
+* space complexity,
+* what happens when `n == 0`.
+
+## After Day 7
+
+The next step is **Week 3 Weekly Assessment**, not Week 4.
+
+The assessment will cover:
+
+**functions + switch + recursion + 1D arrays + harder aptitude + reasoning + C interview concepts.**
