@@ -1,0 +1,469 @@
+Perfect. This is your **Week 3 Assessment**, designed like a **Thoughtworks STEP screening**—not a school exam. It focuses on problem-solving, debugging, reasoning, and explaining concepts.
+
+**Rules:**
+
+* ⏱ Time: **90 minutes**
+* 📚 No Google or AI.
+* 🧠 Solve on your own.
+* 📝 Show calculations for aptitude.
+* 💻 Write complete C programs where asked.
+* 🎯 Total: **100 Marks**
+
+---
+
+# Week 3 Assessment
+
+## Section A – C Theory (10 Marks)
+
+### Q1 (2 Marks)
+
+What is the difference between a **function declaration**, **function definition**, and **function call**? Give one example of each.
+
+---
+
+### Q2 (2 Marks)
+
+Explain the difference between:
+
+* Head Recursion
+* Tail Recursion
+
+Give one example of each.
+
+---
+
+### Q3 (2 Marks)
+
+Why does C use **zero-based indexing** for arrays?
+
+---
+
+### Q4 (2 Marks)
+
+Why is
+
+```c
+sizeof(arr)/sizeof(arr[0])
+```
+
+correct inside `main()`, but often incorrect inside a function?
+
+---
+
+### Q5 (2 Marks)
+
+Differentiate:
+
+* Stack Memory
+* Heap Memory
+
+Mention one use case for each.
+
+---
+
+# Section B – Dry Run & Output (15 Marks)
+
+### Q6 (5 Marks)
+
+Predict the output.
+
+```c
+#include <stdio.h>
+
+void fun(int n)
+{
+    if(n==0)
+        return;
+
+    printf("%d ", n);
+
+    fun(n-1);
+
+    printf("%d ", n);
+}
+
+int main()
+{
+    fun(3);
+}
+```
+
+Also write:
+
+* Function call sequence
+* Return sequence
+
+---
+
+### Q7 (5 Marks)
+
+Predict output.
+
+```c
+#include <stdio.h>
+
+int sum(int n)
+{
+    if(n==0)
+        return 0;
+
+    return n + sum(n-1);
+}
+
+int main()
+{
+    printf("%d", sum(4));
+}
+```
+
+---
+
+### Q8 (5 Marks)
+
+Dry run.
+
+```c
+int arr[]={5,2,8,1};
+
+for(int i=0;i<4;i++)
+{
+    printf("%d ",arr[3-i]);
+}
+```
+
+Output?
+
+---
+
+# Section C – Debugging (15 Marks)
+
+### Q9 (5 Marks)
+
+Find every mistake.
+
+```c
+#include <stdio.h>
+
+int fact(int n)
+{
+    if(n==0)
+        return;
+
+    return n*fact(n-1);
+}
+
+int main()
+{
+    printf("%d",fact(5));
+}
+```
+
+---
+
+### Q10 (5 Marks)
+
+```c
+int arr[5];
+
+for(int i=0;i<=5;i++)
+{
+    scanf("%d",&arr[i]);
+}
+```
+
+Explain:
+
+1. Bug
+2. Why dangerous?
+3. Correct loop
+
+---
+
+### Q11 (5 Marks)
+
+```c
+int max(int arr[],int n)
+{
+    int m=arr[0];
+
+    for(int i=1;i<=n;i++)
+    {
+        if(arr[i]>m)
+            m=arr[i];
+    }
+
+    return m;
+}
+```
+
+Find all mistakes.
+
+---
+
+# Section D – Coding (30 Marks)
+
+Write complete C programs.
+
+---
+
+### Q12 (6 Marks)
+
+Input **N** numbers.
+
+Print:
+
+* Largest
+* Smallest
+* Average (floating point)
+
+---
+
+### Q13 (6 Marks)
+
+Reverse an array **in-place**.
+
+---
+
+### Q14 (6 Marks)
+
+Using recursion:
+
+Find **sum of digits**.
+
+Example:
+
+```
+582
+
+Answer
+
+15
+```
+
+---
+
+### Q15 (6 Marks)
+
+Find the **second-largest distinct** element.
+
+If it doesn't exist, print:
+
+```
+No second largest
+```
+
+---
+
+### Q16 (6 Marks)
+
+Rotate an array **left by K positions**.
+
+Example
+
+```
+Input
+
+1 2 3 4 5
+
+K=3
+
+Output
+
+4 5 1 2 3
+```
+
+---
+
+# Section E – Aptitude (10 Marks)
+
+### Q17 (2 Marks)
+
+A father is **five times** his son's age.
+
+After **15 years**, he will be **twice** his son's age.
+
+Find present ages.
+
+---
+
+### Q18 (2 Marks)
+
+A can do work in **18 days**.
+
+B in **24 days**.
+
+They work together for **6 days**.
+
+How much work remains?
+
+---
+
+### Q19 (2 Marks)
+
+A train **180 m** long crosses a platform **420 m** long in **30 seconds**.
+
+Find speed in km/h.
+
+---
+
+### Q20 (2 Marks)
+
+A person travels equal distances at
+
+```
+30
+45
+90 km/h
+```
+
+Find average speed.
+
+---
+
+### Q21 (2 Marks)
+
+Two trains:
+
+```
+200 m
+300 m
+
+Same direction
+
+72 km/h
+54 km/h
+```
+
+Find overtaking time.
+
+---
+
+# Section F – Logical Reasoning (10 Marks)
+
+### Q22 (2 Marks)
+
+Find next.
+
+```
+5
+11
+23
+47
+95
+?
+```
+
+---
+
+### Q23 (2 Marks)
+
+Find next.
+
+```
+1
+2
+6
+24
+120
+?
+```
+
+---
+
+### Q24 (2 Marks)
+
+If
+
+```
+CODE
+
+↓
+
+DPEF
+```
+
+Encode
+
+```
+ARRAY
+```
+
+---
+
+### Q25 (2 Marks)
+
+A says,
+
+> "The man is the son of the only son of my grandfather."
+
+How is the man related to A?
+
+---
+
+### Q26 (2 Marks)
+
+Five people:
+
+A B C D E
+
+* B immediately right of A
+* D immediately left of E
+* C between B and D
+
+Give one valid arrangement.
+
+---
+
+# Section G – Interview Round (10 Marks)
+
+Answer in your own words.
+
+### Q27 (2 Marks)
+
+Why is recursion usually slower than iteration?
+
+---
+
+### Q28 (2 Marks)
+
+Why is array indexing **O(1)**?
+
+---
+
+### Q29 (2 Marks)
+
+Difference between
+
+* O(n)
+* O(log n)
+* O(n²)
+
+---
+
+### Q30 (2 Marks)
+
+Can an array store different data types?
+
+Explain.
+
+---
+
+### Q31 (2 Marks)
+
+When would you choose recursion instead of a loop?
+
+---
+
+# Total: **100 Marks**
+
+### Submission Instructions
+
+Submit your answers exactly as you have been doing:
+
+* Theory first
+* Then dry runs
+* Then debugging
+* Then coding
+* Then aptitude
+* Then reasoning
+* Finally interview answers
