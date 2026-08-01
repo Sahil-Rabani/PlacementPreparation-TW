@@ -1,0 +1,468 @@
+
+# 📈 STEP Progress
+
+| Area                   |    Current |
+| ---------------------- | ---------: |
+| C Programming          | **96/100** |
+| Aptitude               | **99/100** |
+| Logical Reasoning      | **99/100** |
+| Debugging              | **94/100** |
+| Interview Readiness    | **87/100** |
+| Overall STEP Readiness | **97/100** |
+# 🎯 Week 4 – Day 1
+
+## Topic: Strings & Character Arrays
+
+**Total Study Time:** **2 Hours 45 Minutes**
+
+---
+
+# Session 1 (45 Minutes)
+
+## Theory
+
+Study the following concepts.
+
+### 1. What is a String?
+
+Understand:
+
+* Difference between a character and a string.
+* Why strings end with the null character (`'\0'`).
+* Memory representation of strings.
+
+Example:
+
+```c
+char name[] = "Hello";
+```
+
+Memory layout:
+
+```text
++-----+-----+-----+-----+-----+------+
+| H   | e   | l   | l   | o   | '\0' |
++-----+-----+-----+-----+-----+------+
+```
+
+---
+
+### 2. Ways to Declare Strings
+
+Study all four:
+
+```c
+char name[] = "Hello";
+```
+
+```c
+char name[10] = "Hello";
+```
+
+```c
+char name[] = {'H','e','l','l','o','\0'};
+```
+
+```c
+char name[20];
+```
+
+Know the difference between them.
+
+---
+
+### 3. Input Methods
+
+Study:
+
+```c
+scanf("%s", str);
+```
+
+vs
+
+```c
+fgets(str, sizeof(str), stdin);
+```
+
+Questions to answer:
+
+* Which reads spaces?
+* Which is safer?
+* Why?
+
+---
+
+### 4. Character Arrays vs Integer Arrays
+
+Understand:
+
+* Storage
+* Traversal
+* Null terminator
+* Printing
+
+---
+
+# Session 2 (70 Minutes)
+
+## Coding
+
+### Program 1
+
+Input a string.
+
+Print it.
+
+---
+
+### Program 2
+
+Without using `strlen()`,
+
+find the length of a string.
+
+---
+
+### Program 3
+
+Count:
+
+* Vowels
+* Consonants
+* Digits
+* Spaces
+
+Example:
+
+```
+Hello 123
+
+Vowels: 2
+Consonants: 3
+Digits: 3
+Spaces: 1
+```
+
+---
+
+### Program 4
+
+Reverse a string manually.
+
+**Don't use `strrev()`** (it's non-standard).
+
+---
+
+### ⭐ Interview Problem
+
+### Program 5
+
+Check whether a string is a palindrome.
+
+Examples:
+
+```
+madam
+```
+
+↓
+
+```
+Palindrome
+```
+
+```
+hello
+```
+
+↓
+
+```
+Not Palindrome
+```
+
+---
+
+# Session 3 (25 Minutes)
+
+## String Dry Run
+
+Given:
+
+```c
+char str[] = "STEP";
+```
+
+Draw memory.
+
+Include:
+
+* Address (assume first element starts at 1000)
+* Index
+* Character
+
+---
+
+Also answer:
+
+What happens if:
+
+```c
+char str[4] = "STEP";
+```
+
+Explain carefully.
+
+---
+
+# Debugging Challenge
+
+Find every mistake.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char name[5];
+
+    scanf("%s", name);
+
+    printf("%s", name);
+
+    return 0;
+}
+```
+
+Questions:
+
+1. What happens if the user enters:
+
+```
+Thoughtworks
+```
+
+2. Why is it dangerous?
+
+3. Write a safer version.
+
+---
+
+# Aptitude (Company Level)
+
+## Topic: Time & Work + Ages
+
+### Q1
+
+A can finish a work in **16 days**.
+
+B can finish the same work in **24 days**.
+
+After working together for **4 days**, B leaves.
+
+How many more days will A take?
+
+---
+
+### Q2
+
+A father is **36 years older** than his son.
+
+After **12 years**, the father's age will be **twice** the son's age.
+
+Find present ages.
+
+---
+
+### Q3
+
+A train **240 m** long crosses a **360 m** platform in **24 seconds**.
+
+Find its speed in km/h.
+
+---
+
+### Q4
+
+A man covers **300 km**.
+
+First **100 km** at **40 km/h**.
+
+Next **100 km** at **50 km/h**.
+
+Last **100 km** at **60 km/h**.
+
+Find average speed.
+
+---
+
+### Q5
+
+Two trains:
+
+* 180 m
+* 220 m
+
+Moving in opposite directions at:
+
+* 54 km/h
+* 90 km/h
+
+Find crossing time.
+
+---
+
+# Logical Reasoning (Placement Level)
+
+### Q1
+
+Find next.
+
+```
+2
+6
+18
+54
+162
+?
+```
+
+---
+
+### Q2
+
+Find next.
+
+```
+1
+5
+13
+29
+61
+?
+```
+
+---
+
+### Q3
+
+If
+
+```
+STRING
+
+↓
+
+TUSJOH
+```
+
+Encode
+
+```
+MEMORY
+```
+
+---
+
+### Q4
+
+Pointing to a boy,
+
+Riya says:
+
+> "He is the son of the only son of my grandfather."
+
+How is the boy related to Riya?
+
+---
+
+### Q5
+
+Five friends:
+
+A B C D E
+
+* B sits immediately right of A.
+* D sits immediately left of E.
+* C sits between B and D.
+
+Arrange them.
+
+---
+
+# Interview Round
+
+Answer in your own words.
+
+### Q1
+
+Why is `'\0'` necessary in C strings?
+
+---
+
+### Q2
+
+Why is `scanf("%s")` considered unsafe?
+
+---
+
+### Q3
+
+Difference between:
+
+```c
+char name[] = "Hello";
+```
+
+and
+
+```c
+char *name = "Hello";
+```
+
+*(Don't worry if you don't know this yet. Try your best—we'll revisit it when we study pointers.)*
+
+---
+
+### Q4
+
+Can a string contain spaces? If yes, how should it be read?
+
+---
+
+### Q5
+
+Why doesn't C have a built-in `String` data type like Java?
+
+---
+
+# 📚 Homework
+
+Write short notes (5–6 lines each):
+
+1. Character Array
+2. String
+3. Null Character (`'\0'`)
+4. `scanf()` vs `fgets()`
+5. Advantages of Character Arrays
+
+---
+
+# 🎯 Stretch Challenge (Optional)
+
+Write a menu-driven program:
+
+```
+1. Find Length
+2. Reverse String
+3. Check Palindrome
+4. Count Vowels
+5. Exit
+```
+
+Use:
+
+* Functions
+* `switch`
+* Character arrays
