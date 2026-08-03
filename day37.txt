@@ -1,1 +1,552 @@
+# 📊 STEP Progress
 
+| Area                   |    Current |
+| ---------------------- | ---------: |
+| C Programming          | **97/100** |
+| Strings                | **84/100** |
+| Aptitude               | **99/100** |
+| Logical Reasoning      | **99/100** |
+| Debugging              | **95/100** |
+| Interview Readiness    | **89/100** |
+| Overall STEP Readiness | **98/100** |
+
+---
+
+Excellent. Since you performed well on **Week 4 – Day 1**, today we'll move to **String Library Functions + Manual Implementation**.
+
+> **Important Rule (from today onward):**
+>
+> Every time you learn a library function, you'll also learn **how to implement it manually**. This is exactly what companies like **Thoughtworks, TCS Digital, Infosys Specialist, Accenture ASE**, etc., often expect in interviews.
+
+---
+
+# 🚀 Week 4 – Day 2
+
+## Topic: String Functions + Manual Implementation
+
+**Study Time:** 2 Hours 45 Minutes
+
+---
+
+# 📚 Session 1 (45 Minutes)
+
+## Theory
+
+Study these functions:
+
+### 1. `strlen()`
+
+* Purpose
+* Return type
+* Time Complexity
+* How it works internally
+
+Example:
+
+```c
+char str[] = "Developer";
+
+printf("%lu", strlen(str));
+```
+
+---
+
+### 2. `strcpy()`
+
+Study:
+
+```c
+strcpy(destination, source);
+```
+
+Questions:
+
+* Does it copy `'\0'`?
+* What happens if destination is too small?
+
+---
+
+### 3. `strcat()`
+
+Example:
+
+```c
+char a[20] = "Hello";
+char b[] = " World";
+
+strcat(a,b);
+```
+
+Output:
+
+```
+Hello World
+```
+
+---
+
+### 4. `strcmp()`
+
+Understand:
+
+```text
+0
+
+Positive
+
+Negative
+```
+
+When does each occur?
+
+---
+
+### 5. `fgets()` vs `gets()` vs `scanf()`
+
+Why is
+
+```c
+gets()
+```
+
+removed from the C standard?
+
+---
+
+# 💻 Session 2 (75 Minutes)
+
+## Coding Practice
+
+---
+
+## Program 1
+
+Implement your own
+
+```c
+mystrlen()
+```
+
+Don't use
+
+```c
+strlen()
+```
+
+---
+
+## Program 2
+
+Implement your own
+
+```c
+mystrcpy()
+```
+
+---
+
+## Program 3
+
+Implement your own
+
+```c
+mystrcat()
+```
+
+---
+
+## Program 4
+
+Implement your own
+
+```c
+mystrcmp()
+```
+
+Return
+
+```
+0
+
+Positive
+
+Negative
+```
+
+like the standard function.
+
+---
+
+## ⭐ Interview Question
+
+### Program 5
+
+Remove **all spaces** from a string.
+
+Example
+
+```
+Input
+
+Hello World From C
+
+Output
+
+HelloWorldFromC
+```
+
+---
+
+## ⭐⭐ Interview Question
+
+### Program 6
+
+Count frequency of every character.
+
+Example
+
+```
+hello
+
+h → 1
+
+e → 1
+
+l → 2
+
+o → 1
+```
+
+*(Case-sensitive for now.)*
+
+---
+
+# 🧠 Session 3 (25 Minutes)
+
+## Memory Understanding
+
+Given
+
+```c
+char a[20]="Hello";
+char b[]="World";
+```
+
+Draw memory before
+
+```c
+strcat(a,b);
+```
+
+and after.
+
+Show:
+
+* Index
+* Character
+* `'\0'`
+
+---
+
+# 🐞 Debugging Challenge
+
+Find every mistake.
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char a[5]="Hello";
+    char b[]="World";
+
+    strcat(a,b);
+
+    printf("%s",a);
+}
+```
+
+Questions
+
+1. Why is this dangerous?
+2. Does it compile?
+3. What happens at runtime?
+4. Correct version.
+
+---
+
+# 📐 Aptitude (Placement Level)
+
+## Time & Work + Trains
+
+### Q1
+
+A can complete a work in **12 days**.
+
+B in **18 days**.
+
+C in **36 days**.
+
+How many days will all three take together?
+
+---
+
+### Q2
+
+A father is **42 years older** than his son.
+
+After **6 years**, the father will be **three times** the son's age.
+
+Find present ages.
+
+---
+
+### Q3
+
+A train **180 m** long crosses a **420 m** platform in **20 seconds**.
+
+Find speed in km/h.
+
+---
+
+### Q4
+
+Two trains:
+
+```
+240 m
+
+360 m
+```
+
+Moving opposite direction
+
+```
+72 km/h
+
+54 km/h
+```
+
+Find crossing time.
+
+---
+
+### Q5
+
+Equal distances covered at
+
+```
+40
+
+60
+
+80 km/h
+```
+
+Find average speed.
+
+---
+
+# 🧩 Logical Reasoning
+
+### Q1
+
+Find next.
+
+```
+3
+
+9
+
+27
+
+81
+
+243
+
+?
+```
+
+---
+
+### Q2
+
+Find next.
+
+```
+2
+
+7
+
+17
+
+37
+
+77
+
+?
+```
+
+---
+
+### Q3
+
+If
+
+```
+SYSTEM
+
+↓
+
+TZTUFN
+```
+
+Encode
+
+```
+STRING
+```
+
+---
+
+### Q4
+
+Pointing to a girl,
+
+Rahul says,
+
+> "She is the daughter of my father's only daughter."
+
+How is the girl related to Rahul?
+
+---
+
+### Q5
+
+Five people:
+
+A B C D E
+
+* C is immediately right of A.
+* D is left of E.
+* B sits between C and D.
+
+Arrange them.
+
+---
+
+# 🎤 Interview Round
+
+### Q1
+
+What is the difference between
+
+```c
+strcpy()
+```
+
+and
+
+```c
+memcpy()
+```
+
+*(Research is not required; answer based on what you understand after studying.)*
+
+---
+
+### Q2
+
+Why does
+
+```c
+strcat()
+```
+
+first search for
+
+```
+'\0'
+```
+
+before appending?
+
+---
+
+### Q3
+
+Can
+
+```c
+strlen()
+```
+
+work in
+
+```
+O(1)
+```
+
+time?
+
+Why or why not?
+
+---
+
+### Q4
+
+Why should we avoid
+
+```c
+gets()
+```
+
+in modern C?
+
+---
+
+### Q5
+
+Which is safer?
+
+```
+scanf()
+
+fgets()
+```
+
+Explain.
+
+---
+
+# 📖 Homework
+
+Write short notes (5–6 lines each):
+
+1. `strlen()`
+2. `strcpy()`
+3. `strcat()`
+4. `strcmp()`
+5. Why buffer overflow happens in C strings
+
+---
+
+# ⭐ Stretch Challenge (Optional)
+
+Build a **String Utility Program** using **functions + switch**:
+
+```
+1. Find Length
+2. Copy String
+3. Concatenate
+4. Compare
+5. Reverse
+6. Remove Spaces
+7. Count Vowels
+8. Exit
+```
+
+## 👨‍🏫 Coach's Note
+
+From this point onward, I want you to **think like an interviewer**, not just a student.
