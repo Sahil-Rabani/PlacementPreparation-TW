@@ -1,1 +1,459 @@
+# 📊 STEP Progress
+
+| Area                   |    Current |
+| ---------------------- | ---------: |
+| C Programming          | **98/100** |
+| Strings                | **90/100** |
+| Aptitude               | **99/100** |
+| Logical Reasoning      | **99/100** |
+| Debugging              | **96/100** |
+| Interview Readiness    | **91/100** |
+| Overall STEP Readiness | **99/100** |
+
+---
+
+# 🚀 Week 4 – Day 3
+
+## Topic: String Algorithms (Interview Focus)
+
+**Study Time:** **2 hours 45 minutes**
+
+---
+
+# 📚 Session 1 (40 Minutes)
+
+## Theory
+
+Study these concepts:
+
+### 1. What is an Anagram?
+
+Example:
+
+```text
+listen
+silent
+```
+
+Questions:
+
+* Why are they anagrams?
+* How many methods exist to check anagrams?
+
+---
+
+### 2. Palindrome vs Anagram
+
+Understand the difference.
+
+Examples:
+
+```text
+madam
+```
+
+Palindrome
+
+```text
+listen
+silent
+```
+
+Anagram
+
+---
+
+### 3. Duplicate Characters
+
+Study:
+
+* Consecutive duplicates
+* Duplicate occurrences
+* Unique characters
+
+---
+
+### 4. Character Frequency
+
+How is it different from:
+
+* Word frequency
+* String length
+
+---
+
+# 💻 Session 2 (80 Minutes)
+
+## Coding Practice
+
+---
+
+### Program 1
+
+Reverse the **words** of a sentence.
+
+Example:
+
+```text
+Input:
+I Love C Programming
+
+Output:
+Programming C Love I
+```
+
+*(Hint: Reverse the whole string, then reverse each word.)*
+
+---
+
+### Program 2
+
+Check whether two strings are **Anagrams**.
+
+Example:
+
+```text
+listen
+silent
+
+Output:
+Anagram
+```
+
+Do **not** use sorting.
+
+---
+
+### Program 3
+
+Find the **first non-repeating character**.
+
+Example:
+
+```text
+aabbcdde
+
+Output:
+c
+```
+
+---
+
+### Program 4
+
+Remove **duplicate characters**.
+
+Example:
+
+```text
+programming
+
+Output:
+progamin
+```
+
+Keep only the first occurrence.
+
+---
+
+### ⭐ Interview Question
+
+### Program 5
+
+Find the **most frequent character**.
+
+Example:
+
+```text
+Mississippi
+
+Output:
+i → 4
+```
+
+---
+
+### ⭐⭐ Challenge
+
+### Program 6
+
+Check whether one string is a **rotation** of another.
+
+Example:
+
+```text
+abcd
+cdab
+
+Output:
+Yes
+```
+
+Do **not** use `strstr()`.
+
+---
+
+# 🧠 Session 3 (20 Minutes)
+
+## Dry Run
+
+Given:
+
+```c
+char str[] = "HELLO";
+```
+
+Show every step while reversing the string **using swapping**.
+
+Draw:
+
+* Index
+* Characters
+* Every swap
+
+---
+
+# 🐞 Debugging Challenge
+
+Find all mistakes.
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char a[10] = "Hello";
+
+    strcat(a, "World!");
+
+    printf("%s", a);
+}
+```
+
+Questions:
+
+1. Will it compile?
+2. Will it always work?
+3. What is the danger?
+4. Correct solution.
+
+---
+
+# 📐 Aptitude (Placement Level)
+
+## Time & Work + Ages
+
+### Q1
+
+A can finish a work in **10 days**.
+
+B in **15 days**.
+
+After working together for **3 days**, A leaves.
+
+How many more days will B take?
+
+---
+
+### Q2
+
+A father is **30 years older** than his son.
+
+After **10 years**, the father will be **twice** the son's age.
+
+Find present ages.
+
+---
+
+### Q3
+
+A train **210 m** long crosses a **390 m** platform in **24 seconds**.
+
+Find speed in km/h.
+
+---
+
+### Q4
+
+Two trains:
+
+* 180 m
+* 240 m
+
+Moving in the **same direction** at:
+
+* 90 km/h
+* 54 km/h
+
+Find overtaking time.
+
+---
+
+### Q5
+
+Equal distances covered at:
+
+* 36 km/h
+* 54 km/h
+* 108 km/h
+
+Find average speed.
+
+---
+
+# 🧩 Logical Reasoning
+
+### Q1
+
+Find next:
+
+```text
+4
+12
+36
+108
+324
+?
+```
+
+---
+
+### Q2
+
+Find next:
+
+```text
+3
+8
+18
+38
+78
+?
+```
+
+---
+
+### Q3
+
+If:
+
+```text
+STRING
+↓
+
+TUSJOH
+```
+
+Encode:
+
+```text
+POINTER
+```
+
+---
+
+### Q4
+
+Pointing to a man, Neha says:
+
+> "He is the son of the only son of my grandfather."
+
+How is the man related to Neha?
+
+---
+
+### Q5
+
+Arrange:
+
+A B C D E
+
+* D is immediately left of B.
+* C is immediately right of A.
+* E sits between C and D.
+
+---
+
+# 🎤 Interview Round
+
+### Q1
+
+Why does `strcmp()` return an integer instead of `true` or `false`?
+
+---
+
+### Q2
+
+Why is `strlen()` generally **O(n)**?
+
+Can you imagine a language where it could be **O(1)**?
+
+---
+
+### Q3
+
+Why is manually implementing string functions useful when the C standard library already provides them?
+
+---
+
+### Q4
+
+How would you safely concatenate two strings if you don't know whether the destination buffer is large enough?
+
+*(Think conceptually; we haven't studied all safe alternatives yet.)*
+
+---
+
+### Q5
+
+Which is generally more efficient for checking an anagram?
+
+* Sorting both strings
+* Counting character frequencies
+
+Explain why.
+
+---
+
+# 📖 Homework
+
+Write short notes (5–6 lines each):
+
+1. Anagram
+2. First Non-Repeating Character
+3. Character Frequency
+4. Duplicate Characters in a String
+5. Why String Algorithms are Common in Interviews
+
+---
+
+# ⭐ Stretch Challenge (Optional)
+
+Build a **String Toolkit** using functions and `switch`:
+
+```text
+1. Length
+2. Reverse
+3. Palindrome
+4. Anagram
+5. Remove Duplicates
+6. Character Frequency
+7. First Non-Repeating Character
+8. Reverse Words
+9. Exit
+```
+
+---
+
+## 👨‍🏫 Coach's Note
+
+This week is laying the foundation for **Week 5: Pointers**, which is one of the most important topics in C.
+
+As you solve today's problems, don't just aim for correct output. For every solution, also think about:
+
+* What is the **time complexity**?
+* What is the **space complexity**?
+* What **edge cases** could break the solution?
+* Can the algorithm be made simpler or more efficient?
 
