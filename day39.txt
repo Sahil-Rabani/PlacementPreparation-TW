@@ -1,0 +1,193 @@
+# 🎯 STEP Readiness Update
+
+| Area               | Previous |  Current |
+| ------------------ | -------: | -------: |
+| C Programming      |       98 |   **98** |
+| Strings            |       90 | **94** ↑ |
+| Aptitude           |       99 |   **99** |
+| Logical Reasoning  |       99 |   **99** |
+| Debugging          |       96 |   **96** |
+| Interview Concepts |       91 |   **91** |
+| Coding Ability     |       99 |   **99** |
+| Consistency        |      100 |  **100** |
+
+# 🚀 Overall STEP Readiness: **99/100**
+
+I'm keeping the score at **99**, not artificially increasing it because you performed well. At this point, the remaining gap is mostly **interview depth, C memory/pointers, edge cases, and eventually Java/OOP/SQL**.
+
+---
+
+# ⚡ Week 4 – Day 4
+
+## Part A — Catch-up Interview Round
+
+**15–20 minutes**
+
+Answer these in your own words:
+
+### 1.
+
+Why does `strcmp()` return an integer instead of simply `true/false`?
+
+### 2.
+
+Why is `strlen()` generally `O(n)`?
+
+### 3.
+
+Why manually implement `strlen`, `strcpy`, etc. if the library already provides them?
+
+### 4.
+
+What can happen if you concatenate strings without checking destination capacity?
+
+### 5.
+
+Which is generally better for anagram checking:
+
+* Sorting
+* Frequency counting
+
+Why?
+
+---
+
+# Part B — Homework
+
+Write **5–6 lines each**:
+
+1. Anagram
+2. First non-repeating character
+3. Character frequency
+4. Duplicate characters
+5. Why string algorithms appear frequently in coding interviews
+
+---
+
+# Part C — New Topic: 2D Arrays
+
+After the catch-up:
+
+### Learn
+
+* What is a 2D array?
+* Declaration
+* Initialization
+* Row and column indexing
+* Nested loops
+* Memory representation
+* Matrix traversal
+
+Example:
+
+```c
+int matrix[3][3];
+```
+
+Understand:
+
+```text
+matrix[row][column]
+```
+
+---
+
+## Coding
+
+### Q1
+
+Input and print a `3 × 3` matrix.
+
+### Q2
+
+Find the sum of all matrix elements.
+
+### Q3
+
+Find the largest element in a matrix.
+
+### Q4
+
+Find the sum of each row.
+
+Example:
+
+```text
+1 2 3
+4 5 6
+7 8 9
+
+Row 1 = 6
+Row 2 = 15
+Row 3 = 24
+```
+
+### Q5
+
+Find the **main diagonal sum**.
+
+For:
+
+```text
+1 2 3
+4 5 6
+7 8 9
+```
+
+answer:
+
+```text
+1 + 5 + 9 = 15
+```
+
+### ⭐ Q6
+
+Find the **transpose** of a matrix.
+
+```text
+1 2 3
+4 5 6
+```
+
+↓
+
+```text
+1 4
+2 5
+3 6
+```
+
+---
+
+## Aptitude
+
+Keep the same difficulty.
+
+1. A can complete work in 12 days and B in 20 days. They work together for 5 days. What fraction remains?
+2. A father is 3 times his son's age. In 12 years, he will be twice his son's age. Find their current ages.
+3. A 250 m train crosses a 350 m platform in 30 seconds. Find speed.
+4. A vehicle travels equal distances at 30 and 60 km/h. Find average speed.
+5. Two trains of 150 m and 250 m move in opposite directions at 54 and 72 km/h. Find crossing time.
+
+## Reasoning
+
+1. `6, 13, 27, 55, 111, ?`
+2. `1, 4, 10, 22, 46, ?`
+3. If `POINTER → QPJOUFS`, encode `RECURSION`.
+4. A man says: "The only daughter of my father's only son is my daughter." Who is the girl to the man?
+5. Four people A, B, C, D sit in a row. A is left of B, C is right of B, and D is left of A. Arrange them.
+
+---
+
+### One important correction from today's work
+
+You're getting very good at writing algorithms, but I want you to stop saying **"compiler error"** whenever something is wrong.
+
+From now on, classify bugs as:
+
+* **Syntax/compile-time error**
+* **Runtime error**
+* **Undefined behavior**
+* **Logical error**
+
+That distinction is especially important for **C interviews**.
