@@ -1,0 +1,301 @@
+# 🎯 STEP Readiness Update
+
+| Area               | Previous |   Current |
+| ------------------ | -------: | --------: |
+| C Programming      |       98 |    **98** |
+| Strings            |       94 |    **94** |
+| 2D Arrays          |        — | **90** 🆕 |
+| Aptitude           |       99 |    **99** |
+| Logical Reasoning  |       99 |    **99** |
+| Debugging          |       96 |    **96** |
+| Interview Concepts |       91 |    **91** |
+| Coding Ability     |       99 |    **99** |
+| Consistency        |      100 |   **100** |
+
+# 🚀 Overall STEP Readiness: **99/100**
+
+I'm deliberately keeping the overall score at 99. Your actual preparation is strong, but **pointers, structures, dynamic memory, file handling, Java/OOP, SQL, and interviews haven't been covered yet**. The score should represent readiness, not reward consistency alone.
+
+---
+
+# 🚀 Week 4 – Day 5
+
+**Total: ~2 hours 50 minutes**
+
+Today we're going deeper into **matrix problem solving + 2D-array reasoning**.
+
+## Part 1 — 2D Array Concepts — 25 min
+
+Understand:
+
+* Row-major order
+* `arr[i][j]`
+* Number of elements in `R × C` matrix
+* Main diagonal
+* Secondary diagonal
+* Transpose
+* Why nested loops are required
+
+For:
+
+```text
+1 2 3
+4 5 6
+7 8 9
+```
+
+identify:
+
+**Main diagonal**
+
+```text
+1 5 9
+```
+
+**Secondary diagonal**
+
+```text
+3 5 7
+```
+
+---
+
+# Part 2 — Coding — 90 min
+
+### Q1 — Column Sum
+
+For:
+
+```text
+1 2 3
+4 5 6
+7 8 9
+```
+
+produce:
+
+```text
+Column 1 = 12
+Column 2 = 15
+Column 3 = 18
+```
+
+---
+
+### Q2 — Secondary Diagonal Sum
+
+For the same matrix:
+
+```text
+3 + 5 + 7 = 15
+```
+
+Don't hard-code the indexes.
+
+---
+
+### Q3 — Matrix Addition
+
+Input two `3 × 3` matrices and produce their sum.
+
+---
+
+### Q4 — Matrix Multiplication ⭐
+
+Multiply:
+
+```text
+A =
+
+1 2
+3 4
+```
+
+and
+
+```text
+B =
+
+5 6
+7 8
+```
+
+Expected:
+
+```text
+19 22
+43 50
+```
+
+Don't memorize it. Understand the three-loop structure.
+
+---
+
+### Q5 — Search in Matrix
+
+Input a matrix and a target.
+
+Print its:
+
+* row
+* column
+
+or:
+
+```text
+Not Found
+```
+
+---
+
+### Q6 — ⭐ Interview Problem
+
+Check whether a matrix is an **identity matrix**.
+
+Example:
+
+```text
+1 0 0
+0 1 0
+0 0 1
+```
+
+Output:
+
+```text
+Identity Matrix
+```
+
+Rules:
+
+```text
+Main diagonal = 1
+Everything else = 0
+```
+
+---
+
+# 🐞 Debugging
+
+Find every problem:
+
+```c
+int arr[3][3];
+
+for(int i = 0; i <= 3; i++)
+{
+    for(int j = 0; j <= 3; j++)
+    {
+        scanf("%d", &arr[i][j]);
+    }
+}
+```
+
+Explain:
+
+1. Which indexes are invalid?
+2. What is the correct condition?
+3. Why is this dangerous?
+4. What type of bug is this?
+
+---
+
+# 📐 Aptitude — Harder
+
+### Q1 — Work
+
+A completes a job in 15 days, B in 20 days and C in 30 days.
+
+A and B work together for 4 days. Then C joins them.
+
+How many **additional days** are required?
+
+### Q2 — Ages
+
+Five years ago, A was four times B's age. Five years from now, A will be twice B's age. Find their current ages.
+
+### Q3 — Train
+
+A 300 m train crosses a 500 m platform in 32 seconds.
+
+Find speed in:
+
+1. m/s
+2. km/h
+
+### Q4 — Average Speed
+
+A travels half the distance at 40 km/h and the other half at 80 km/h.
+
+Find average speed.
+
+### Q5 — Relative Speed
+
+Two trains of 250 m and 350 m travel in the same direction at 90 km/h and 54 km/h.
+
+Find the time required for the faster train to completely overtake the slower one.
+
+---
+
+# 🧩 Reasoning
+
+### Q1
+
+```text
+7, 15, 31, 63, 127, ?
+```
+
+### Q2
+
+```text
+2, 6, 12, 20, 30, ?
+```
+
+### Q3
+
+If:
+
+```text
+POINTER → QPJOUFS
+```
+
+encode:
+
+```text
+THOUGHT
+```
+
+### Q4
+
+A man says:
+
+> "The woman is the daughter of my mother's only daughter."
+
+How is the woman related to the man?
+
+### Q5
+
+Six people:
+
+A, B, C, D, E, F
+
+* B is immediately right of A.
+* C is immediately left of D.
+* E is immediately right of F.
+* A is left of F.
+
+Give one valid arrangement.
+
+---
+
+# 🎤 Interview — 15 min
+
+1. Why is a 2D array actually stored in **contiguous memory** in C?
+2. What is the difference between `arr[i][j]` and `arr[j][i]`?
+3. What is the time complexity of matrix addition for an `n × n` matrix?
+4. Why does matrix multiplication require **three loops**?
+5. What is row-major order?
+
+### Important
+
+**Day 5 is not a race.** Matrix multiplication is the first genuinely more algorithmic problem here. If you don't understand the three-loop structure, don't memorize it—work it out.
