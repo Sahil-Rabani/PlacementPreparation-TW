@@ -1,0 +1,195 @@
+# 🎯 STEP Readiness Update
+
+| Area               | Previous |  Current |
+| ------------------ | -------: | -------: |
+| C Programming      |       98 |   **98** |
+| Strings            |       94 |   **94** |
+| 2D Arrays          |       92 | **95** ↑ |
+| Matrix Algorithms  |       70 | **88** ↑ |
+| Aptitude           |       99 |   **98** |
+| Logical Reasoning  |       99 |   **97** |
+| Debugging          |       97 |   **97** |
+| Interview Concepts |       90 | **92** ↑ |
+| Coding Ability     |       99 |   **99** |
+| Consistency        |      100 |  **100** |
+
+# 🚀 Overall STEP Readiness: **99/100**
+
+Again, I'm not letting the overall score move above 99 simply because you've reached the current ceiling of this preliminary metric. Your actual STEP preparation still has major areas ahead: **pointers, structures, dynamic memory, file handling, Java/OOP, SQL, projects, and mock interviews.**
+
+---
+
+# 🚀 Week 4 – Day 7
+
+## Revision + Assessment Preparation
+
+**No new major topic today.**
+
+We're going to consolidate **Strings + 2D Arrays + Matrix Algorithms**, then your Week 4 Assessment will follow.
+
+### Part 1 — C Revision
+
+Without looking at previous solutions:
+
+#### Q1
+
+Write `mystrlen()`.
+
+#### Q2
+
+Write `mystrcmp()`.
+
+#### Q3
+
+Check whether two strings are anagrams using frequency counting.
+
+#### Q4
+
+Find the first non-repeating character.
+
+#### Q5
+
+Reverse a `3×3` matrix by **180 degrees**.
+
+#### Q6
+
+Check whether a matrix is symmetric.
+
+#### Q7
+
+Multiply:
+
+```text
+A = 1 2
+    3 4
+
+B = 5 6
+    7 8
+```
+
+Do the calculation **manually first**, then write C code.
+
+#### Q8
+
+Transpose a square matrix **in-place**.
+
+---
+
+# 🐞 Debugging Revision
+
+Explain every issue:
+
+```c
+char str[5] = "Hello";
+
+strcat(str, "C");
+
+for(int i = 0; i <= 3; i++)
+{
+    for(int j = 0; j <= 3; j++)
+    {
+        printf("%d ", matrix[i][j]);
+    }
+}
+```
+
+Classify each problem as:
+
+* Compile-time issue
+* Runtime issue
+* Undefined behavior
+* Logical error
+
+---
+
+# 📐 Aptitude
+
+Take your time today.
+
+### Q1
+
+A and B can finish a work in 12 and 18 days. They work together for 4 days. Then A leaves. How many more days will B need?
+
+### Q2
+
+A father is 30 years older than his son. After 10 years, the father will be twice the son's age. Find present ages.
+
+### Q3
+
+A 240 m train crosses a 360 m platform in 30 seconds. Find speed in **m/s and km/h**.
+
+### Q4
+
+A person travels equal distances at 30, 60 and 90 km/h. Find average speed.
+
+### Q5
+
+Two trains 200 m and 300 m long move in the same direction at 72 and 54 km/h. Find overtaking time.
+
+**Double-check every answer.**
+
+---
+
+# 🧩 Reasoning
+
+### Q1
+
+`3, 7, 15, 31, 63, ?`
+
+### Q2
+
+`4, 10, 22, 46, 94, ?`
+
+### Q3
+
+If:
+
+```text
+POINTER → QPJOUFS
+```
+
+encode:
+
+```text
+RECURSION
+```
+
+### Q4
+
+A woman says:
+
+> "The boy is the son of my mother's only son."
+
+Draw the relationship and give the **exact** relationship.
+
+### Q5
+
+Arrange:
+
+A, B, C, D, E
+
+* A immediately left of B
+* C immediately right of D
+* E immediately right of B
+* D is left of A
+
+---
+
+# 🎤 Interview Revision
+
+Answer these without notes:
+
+1. What is the difference between `arr[i][j]` and `arr[j][i]`?
+2. Why does matrix multiplication need `k`?
+3. Why is matrix multiplication O(n³)?
+4. Why is `strlen()` O(n)?
+5. Why can `strcat()` cause buffer overflow?
+6. What is the difference between an array and a string in C?
+7. What does `'\0'` mean?
+8. Why is `fgets()` safer than unrestricted `%s` input?
+
+---
+
+## Important
+
+**Day 7 is your final preparation day.**
