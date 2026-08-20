@@ -1,0 +1,628 @@
+# 📝 Week 4 Assessment — STEP Preparation
+
+You have completed Week 4, so this assessment covers **Strings + 2D Arrays + Matrix Algorithms + Debugging + Aptitude + Reasoning + C Interview Concepts**.
+
+This one is deliberately harder than the Week 3 assessment.
+
+**Time limit:** 100 minutes
+**Total:** 100 marks
+**Rule:** No AI, Google, old solutions, or compiler while attempting it.
+
+---
+
+# Section A — C & String Fundamentals
+
+## 10 Marks
+
+### Q1 — 2 marks
+
+Explain the difference between:
+
+```c
+char str[] = "Hello";
+```
+
+and
+
+```c
+char *str = "Hello";
+```
+
+Mention whether the contents can safely be modified.
+
+---
+
+### Q2 — 2 marks
+
+What exactly does `'\0'` represent?
+
+For:
+
+```c
+char str[] = "CODE";
+```
+
+give:
+
+* Number of visible characters
+* Array size
+* Index containing `'\0'`
+
+---
+
+### Q3 — 2 marks
+
+Why is:
+
+```c
+strlen(str)
+```
+
+generally **O(n)**?
+
+---
+
+### Q4 — 2 marks
+
+Explain why this can cause undefined behavior:
+
+```c
+char str[10] = "Hello";
+strcat(str, "Thoughtworks");
+```
+
+---
+
+### Q5 — 2 marks
+
+What is the difference between:
+
+```text
+Character array
+```
+
+and
+
+```text
+C string
+```
+
+---
+
+# Section B — Dry Run & Output
+
+## 10 Marks
+
+### Q6 — 5 marks
+
+Predict the exact output:
+
+```c
+#include <stdio.h>
+
+void fun(int n)
+{
+    if(n == 0)
+        return;
+
+    printf("%d ", n);
+
+    fun(n - 1);
+
+    printf("%d ", n);
+}
+
+int main()
+{
+    fun(4);
+    return 0;
+}
+```
+
+Also write:
+
+**Call sequence:**
+**Return sequence:**
+
+---
+
+### Q7 — 5 marks
+
+What is the output?
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char str[] = "PROGRAM";
+
+    for(int i = 0; str[i] != '\0'; i++)
+    {
+        if(i % 2 == 0)
+            printf("%c", str[i]);
+    }
+
+    return 0;
+}
+```
+
+---
+
+# Section C — String Coding
+
+## 20 Marks
+
+Write complete C programs.
+
+### Q8 — 5 marks
+
+Implement:
+
+```c
+mystrlen()
+```
+
+without using `strlen()`.
+
+Also state:
+
+* Time complexity
+* Space complexity
+
+---
+
+### Q9 — 5 marks
+
+Check whether two strings are anagrams using **frequency counting**.
+
+Requirements:
+
+* Case-sensitive
+* Don't sort
+* Don't use a nested-loop comparison
+
+Example:
+
+```text
+listen
+silent
+
+→ Anagram
+```
+
+---
+
+### Q10 — 5 marks
+
+Find the **first non-repeating character** in a string.
+
+Example:
+
+```text
+aabbcdde
+```
+
+Output:
+
+```text
+c
+```
+
+If none exists:
+
+```text
+No non-repeating character
+```
+
+---
+
+### Q11 — 5 marks
+
+Remove duplicate characters while preserving the **first occurrence**.
+
+Example:
+
+```text
+programming
+```
+
+Output:
+
+```text
+progamin
+```
+
+---
+
+# Section D — 2D Arrays & Matrices
+
+## 20 Marks
+
+### Q12 — 4 marks
+
+Input an `N × N` matrix and print:
+
+1. Main diagonal
+2. Secondary diagonal
+3. Main diagonal sum
+4. Secondary diagonal sum
+
+For:
+
+```text
+1 2 3
+4 5 6
+7 8 9
+```
+
+expected sums:
+
+```text
+Main = 15
+Secondary = 15
+```
+
+---
+
+### Q13 — 4 marks
+
+Write a program to calculate the **transpose of a square matrix in-place**.
+
+Do not create a second matrix.
+
+---
+
+### Q14 — 4 marks
+
+Check whether a square matrix is **symmetric**.
+
+A matrix is symmetric if:
+
+```c
+arr[i][j] == arr[j][i]
+```
+
+Example:
+
+```text
+1 2 3
+2 4 5
+3 5 6
+```
+
+Output:
+
+```text
+Symmetric
+```
+
+---
+
+### Q15 — 4 marks
+
+Multiply two matrices.
+
+For:
+
+```text
+A =       B =
+
+1 2       5 6
+3 4       7 8
+```
+
+Output:
+
+```text
+19 22
+43 50
+```
+
+**Important:** Write the general `i-j-k` algorithm, not hard-coded calculations.
+
+---
+
+### Q16 — 4 marks
+
+Find the largest element in an `N × M` matrix.
+
+Your program must correctly handle a matrix containing **only negative numbers**.
+
+---
+
+# Section E — Debugging
+
+## 10 Marks
+
+### Q17 — 5 marks
+
+Find **every problem**:
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str[5] = "Hello";
+
+    strcat(str, "C");
+
+    printf("%s", str);
+
+    return 0;
+}
+```
+
+Explain:
+
+1. Is there a compile-time problem?
+2. What happens when `strcat()` executes?
+3. Why?
+4. What type of bug is involved?
+5. Give a corrected version.
+
+---
+
+### Q18 — 5 marks
+
+Find the problems:
+
+```c
+int matrix[3][3];
+
+for(int i = 0; i <= 3; i++)
+{
+    for(int j = 0; j <= 3; j++)
+    {
+        scanf("%d", &matrix[i][j]);
+    }
+}
+```
+
+Explain:
+
+* Valid index range
+* Exact problem with `<=`
+* Correct loops
+* Why the original code is dangerous
+
+---
+
+# Section F — Aptitude
+
+## 15 Marks
+
+These are intentionally closer to the **CBSE Class 10 / placement aptitude level** we agreed to use.
+
+### Q19 — 3 marks — Ages
+
+Five years ago, a father was **four times** as old as his son.
+
+Five years from now, the father will be **twice** as old as his son.
+
+Find their present ages.
+
+---
+
+### Q20 — 3 marks — Time & Work
+
+A can complete a job in **12 days**.
+
+B can complete it in **18 days**.
+
+They work together for **4 days**, after which A leaves.
+
+How many additional days does B require?
+
+---
+
+### Q21 — 3 marks — Train
+
+A train **240 m** long crosses a **360 m** platform in **30 seconds**.
+
+Find its speed in:
+
+1. m/s
+2. km/h
+
+---
+
+### Q22 — 3 marks — Average Speed
+
+A person travels **equal distances** at:
+
+```text
+30 km/h
+60 km/h
+90 km/h
+```
+
+Find the average speed.
+
+**Do not simply take the arithmetic average.**
+
+---
+
+### Q23 — 3 marks — Relative Speed
+
+Two trains of lengths:
+
+```text
+200 m
+300 m
+```
+
+move in the **same direction** at:
+
+```text
+72 km/h
+54 km/h
+```
+
+How long will the faster train take to completely overtake the slower train?
+
+---
+
+# Section G — Logical Reasoning
+
+## 10 Marks
+
+### Q24 — 2 marks
+
+Find the next number:
+
+```text
+5, 11, 23, 47, 95, ?
+```
+
+---
+
+### Q25 — 2 marks
+
+Find the next number:
+
+```text
+4, 10, 22, 46, 94, ?
+```
+
+---
+
+### Q26 — 2 marks
+
+If:
+
+```text
+POINTER → QPJOUFS
+```
+
+then encode:
+
+```text
+RECURSION
+```
+
+---
+
+### Q27 — 2 marks
+
+A woman says:
+
+> "The boy is the son of my mother's only son."
+
+How is the boy related to the woman?
+
+Give the **exact relationship**.
+
+---
+
+### Q28 — 2 marks
+
+Five people A, B, C, D and E are arranged in a row.
+
+* A is immediately left of B.
+* C is immediately right of D.
+* E is immediately right of B.
+* D is left of A.
+
+Give **one valid arrangement**.
+
+---
+
+# Section H — C Interview
+
+## 5 Marks
+
+Answer in your own words.
+
+### Q29 — 1 mark
+
+Why does matrix multiplication require a third variable/index `k`?
+
+---
+
+### Q30 — 1 mark
+
+Why is multiplication of two `N × N` matrices generally:
+
+```text
+O(N³)
+```
+
+?
+
+---
+
+### Q31 — 1 mark
+
+Why is array access:
+
+```c
+arr[i]
+```
+
+generally **O(1)**?
+
+---
+
+### Q32 — 1 mark
+
+Why is `fgets()` safer than unrestricted:
+
+```c
+scanf("%s", str);
+```
+
+?
+
+---
+
+### Q33 — 1 mark
+
+What is the difference between:
+
+```text
+Undefined behavior
+```
+
+and
+
+```text
+Logical error
+```
+
+?
+
+---
+
+# 🎯 Total: 100 Marks
+
+## Recommended Time Allocation
+
+| Section          |        Time |
+| ---------------- | ----------: |
+| A — Fundamentals |       8 min |
+| B — Dry Run      |      10 min |
+| C — Strings      |      22 min |
+| D — Matrices     |      25 min |
+| E — Debugging    |      10 min |
+| F — Aptitude     |      12 min |
+| G — Reasoning    |       7 min |
+| H — Interview    |       6 min |
+| **Total**        | **100 min** |
+
+### Important instructions
+
+For coding questions, don't just submit code. After each substantial program, write:
+
+```text
+Time Complexity:
+Space Complexity:
+```
+
+For aptitude, show your calculation.
+
+For reasoning, show the pattern/logic when appropriate.
+
+**Most importantly:** don't look at your previous solutions. I want this assessment to measure what you can independently recall and reason through after Week 4.
