@@ -95,6 +95,8 @@ Day41       |     17/08/26         |  Completing week 4 sixth task given by AI.
 
 Day42       |     19/08/26         |  Completing week 4 seventh task given by AI.
 
+Day43       |     20/08/26         |  Completing weekly assignment 4 given by AI.
+
 Everything mention above is uploaded by day name in my repository.
 
 If there is date missing between file upload, Which means I am working on previous file on upload missing date.
