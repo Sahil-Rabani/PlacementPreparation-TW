@@ -1,0 +1,604 @@
+# 🚀 Week 5 — Day 1
+
+## C Pointers: Absolute Fundamentals
+
+**Today's objective:** Understand what a pointer actually is before using pointers with arrays, strings, or functions.
+
+**Total time: ~2 hours 45 minutes**
+
+Because your STEP Round 1 may be only a few weeks away, we're going to make pointers **interview-relevant**, but we will not rush the fundamentals.
+
+---
+
+# 🧠 Part 1 — Memory & Addresses
+
+### 30 minutes
+
+Before writing pointer code, understand this model.
+
+Suppose:
+
+```c
+int x = 10;
+```
+
+Imagine:
+
+```text
+Memory Address       Value
+---------------------------
+1000                 10
+```
+
+The variable `x` has:
+
+* a **value** → `10`
+* an **address** → `1000`
+
+Now:
+
+```c
+printf("%d", x);
+```
+
+prints the **value**.
+
+While:
+
+```c
+printf("%p", (void*)&x);
+```
+
+prints the **address**.
+
+---
+
+## Learn these two operators
+
+### `&` — Address-of operator
+
+```c
+&x
+```
+
+means:
+
+> "Give me the memory address of x."
+
+### `*` — Dereference operator
+
+If:
+
+```c
+int *p = &x;
+```
+
+then:
+
+```c
+*p
+```
+
+means:
+
+> "Give me the value stored at the address contained in p."
+
+Think:
+
+```text
+        x
+        │
+        │ value = 10
+        ↓
+Address 1000
+
+p = 1000
+│
+└──────→ x
+
+*p = 10
+```
+
+This relationship is the **most important thing today**.
+
+---
+
+# 💻 Part 2 — First Pointer Programs
+
+### 35 minutes
+
+Write these yourself.
+
+## Q1 — Address and Value
+
+Create:
+
+```c
+int x = 25;
+```
+
+Print:
+
+1. Value of `x`
+2. Address of `x`
+3. Value of `x` using a pointer
+
+Expected concept:
+
+```text
+x       → 25
+&x      → address
+*p      → 25
+```
+
+---
+
+## Q2 — Modify Through Pointer
+
+Create:
+
+```c
+int x = 10;
+int *p = &x;
+```
+
+Then change `x` to `50` **using only `p`**.
+
+Expected:
+
+```text
+Before: 10
+After:  50
+```
+
+You should understand why changing:
+
+```c
+*p = 50;
+```
+
+changes `x`.
+
+---
+
+## Q3 — Two Variables
+
+Create:
+
+```c
+int a = 10;
+int b = 20;
+```
+
+Create pointers to both.
+
+Print:
+
+```text
+a value
+a address
+b value
+b address
+```
+
+Then modify both values through their pointers.
+
+---
+
+# 🔍 Part 3 — Pointer Dry Runs
+
+### 25 minutes
+
+Don't run these immediately.
+
+Predict the output first.
+
+## Q4
+
+```c
+int x = 10;
+int *p = &x;
+
+printf("%d\n", x);
+
+*p = 20;
+
+printf("%d\n", x);
+```
+
+What is the output?
+
+Explain **why**.
+
+---
+
+## Q5
+
+```c
+int x = 10;
+int *p = &x;
+
+printf("%d\n", *p);
+
+x = 50;
+
+printf("%d\n", *p);
+```
+
+What is the output?
+
+This tests whether you understand that `p` stores the **address**, not a copy of `x`.
+
+---
+
+## Q6 ⭐
+
+```c
+int x = 10;
+int y = 20;
+
+int *p = &x;
+int *q = &y;
+
+*p = *q;
+
+printf("%d %d", x, y);
+```
+
+Predict the output.
+
+Then explain exactly what happens.
+
+---
+
+# 🧠 Part 4 — Pointer Concepts
+
+### 20 minutes
+
+Answer these in your own words.
+
+### Q7
+
+What is a pointer?
+
+Don't say only:
+
+> "A pointer stores an address."
+
+Explain what that actually means.
+
+---
+
+### Q8
+
+What's the difference between:
+
+```c
+int *p;
+```
+
+and:
+
+```c
+*p
+```
+
+This distinction is extremely important.
+
+---
+
+### Q9
+
+What's the difference between:
+
+```c
+&p
+```
+
+and:
+
+```c
+*p
+```
+
+---
+
+### Q10
+
+What happens here?
+
+```c
+int x = 10;
+int *p = &x;
+
+printf("%p\n", (void*)p);
+printf("%d\n", *p);
+```
+
+What does each `printf` represent?
+
+---
+
+# 🐞 Part 5 — Debugging
+
+### 15 minutes
+
+Find every problem:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int x = 10;
+    int *p;
+
+    *p = 20;
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+Answer:
+
+1. Does it compile?
+2. Is `p` initialized?
+3. What does `*p = 20` attempt to do?
+4. What kind of problem is this?
+5. Correct the program.
+
+**Don't just write the corrected code. Explain the bug.**
+
+---
+
+# ⭐ Part 6 — Interview Challenge
+
+### 15 minutes
+
+Answer these without looking at notes.
+
+### Q11
+
+Why do we write:
+
+```c
+int *p = &x;
+```
+
+instead of:
+
+```c
+int p = &x;
+```
+
+---
+
+### Q12
+
+What is the difference between:
+
+```c
+p
+```
+
+and:
+
+```c
+*p
+```
+
+---
+
+### Q13
+
+If:
+
+```c
+int x = 100;
+int *p = &x;
+```
+
+and we execute:
+
+```c
+*p = 200;
+```
+
+what happens to `x`?
+
+Why?
+
+---
+
+### Q14 ⭐
+
+Can two different pointers point to the same variable?
+
+Demonstrate conceptually.
+
+---
+
+# 📐 Part 7 — Aptitude
+
+### 15 minutes
+
+We're keeping your agreed **CBSE Class 10 + placement-oriented difficulty**.
+
+### Q15 — Ages
+
+A father is **3 times** as old as his son.
+
+After 12 years, the father will be **twice** as old as his son.
+
+Find their present ages.
+
+---
+
+### Q16 — Time & Work
+
+A can complete a job in **15 days** and B in **20 days**.
+
+They work together for **5 days**.
+
+What fraction of the work remains?
+
+---
+
+### Q17 — Speed
+
+A car travels:
+
+* 120 km at 40 km/h
+* 180 km at 60 km/h
+
+Find its **average speed for the entire journey**.
+
+Be careful: the distances are **not equal**.
+
+---
+
+### Q18 — Train
+
+A 180 m train travels at 54 km/h.
+
+How many seconds will it take to cross a stationary person?
+
+---
+
+# 🧩 Part 8 — Logical Reasoning
+
+### 10 minutes
+
+### Q19
+
+Find the next number:
+
+```text
+3, 7, 15, 31, 63, ?
+```
+
+---
+
+### Q20
+
+Find the next number:
+
+```text
+2, 6, 12, 20, 30, ?
+```
+
+---
+
+### Q21
+
+If:
+
+```text
+POINTER → QPJOUFS
+```
+
+then:
+
+```text
+POINTER
+```
+
+is transformed by what rule?
+
+Explain the rule rather than simply giving an answer.
+
+---
+
+### Q22 — Blood Relation
+
+A man says:
+
+> "The woman is the daughter of my mother's only son."
+
+How is the woman related to the man?
+
+Draw the relationship before answering.
+
+---
+
+# 📝 Homework
+
+Write short answers for:
+
+1. What is a pointer?
+2. What does `&` do?
+3. What does `*` do?
+4. Why is `int *p = &x` valid?
+5. Why can an uninitialized pointer be dangerous?
+
+---
+
+# ⭐ Optional Challenge
+
+If your laptop has enough charge:
+
+Write a program that swaps two integers using pointers.
+
+For:
+
+```text
+a = 10
+b = 20
+```
+
+produce:
+
+```text
+a = 20
+b = 10
+```
+
+**Do not use a global variable.**
+
+Also write:
+
+```text
+Time Complexity:
+Space Complexity:
+```
+
+---
+
+# 🎯 Today's Success Criteria
+
+Don't worry about completing the optional challenge.
+
+By the end of Day 1, I want you to be able to explain this without hesitation:
+
+```c
+int x = 10;
+int *p = &x;
+```
+
+as:
+
+```text
+x
+│
+│ contains 10
+│
+└── has an address
+
+p
+│
+└── contains the address of x
+
+*p
+│
+└── accesses the value at that address → 10
+```
+
+If that mental model becomes clear today, **Day 2 will be much easier**, because we'll build directly on it with **pointer arithmetic and pointers with arrays**.
+
+And one strict rule for this week:
+
+> **Do not memorize pointer syntax. Draw the memory relationship first, then write the code.**
+
+When you submit **Task Complete**, I'll evaluate it and automatically give you **Week 5 Day 2**.
