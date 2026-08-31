@@ -2,7 +2,7 @@
 Hii! Here I am gonna show, How I was preparing for the placement in ThoughtWorks STEP Program.
 
 For taking placement in ThoughtWorks STEP Program, I am going to study step-by-step:-
-1. Basic programing language like:- Java, C, Pyhon.
+1. Basic programing language like:- Java, C, Python.
 2. Database like:- MySql, Sqlite3.
 3. Basic Cloud & AI practice.
 
