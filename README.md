@@ -6,7 +6,7 @@ For taking placement in ThoughtWorks STEP Program, I am going to study step-by-s
 2. Database like:- MySql, Sqlite3.
 3. Basic Cloud & AI practice.
 
-I am going to upload everything, I praticed daily.
+I am going to upload everything, I practiced daily.
 
 Day by Day routine:-
 
