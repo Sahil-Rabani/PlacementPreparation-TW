@@ -1,0 +1,174 @@
+# 🚀 Week 5 — Day 2
+
+## Pointers + Arrays + Pointer Arithmetic
+
+**Total: ~2 hours 45 minutes**
+
+Today you'll learn the relationship that makes pointers much more powerful:
+
+```text
+Array ↔ Pointer
+```
+
+### Part 1 — Theory — 30 min
+
+Understand:
+
+```c
+int arr[5] = {10,20,30,40,50};
+```
+
+and:
+
+```c
+int *p = arr;
+```
+
+Why does:
+
+```c
+*p
+```
+
+give `10`?
+
+Why does:
+
+```c
+*(p + 1)
+```
+
+give `20`?
+
+Why does:
+
+```c
+*(p + 4)
+```
+
+give `50`?
+
+Understand:
+
+```text
+arr[i] == *(arr + i)
+```
+
+This is **extremely important for STEP/C interviews.**
+
+---
+
+### Part 2 — Coding — 60 min
+
+#### Q1
+
+Print all array elements using only a pointer.
+
+#### Q2
+
+Find the sum of an array using pointer arithmetic.
+
+#### Q3
+
+Find the largest element using a pointer.
+
+#### Q4
+
+Reverse an array using two pointers.
+
+Example:
+
+```text
+1 2 3 4 5
+```
+
+↓
+
+```text
+5 4 3 2 1
+```
+
+#### Q5 ⭐
+
+Count even and odd numbers using pointers.
+
+#### Q6 ⭐⭐
+
+Find the second-largest element using pointer traversal.
+
+---
+
+### Part 3 — Dry Run
+
+Given:
+
+```c
+int arr[] = {10,20,30,40};
+int *p = arr;
+```
+
+Predict:
+
+```c
+printf("%d\n", *p);
+printf("%d\n", *(p+1));
+printf("%d\n", *(p+2));
+printf("%d\n", *(p+3));
+```
+
+Then explain why `p + 1` does **not necessarily mean one byte forward**.
+
+---
+
+### 🐞 Debugging
+
+Find the problem:
+
+```c
+int arr[3] = {10,20,30};
+int *p = arr;
+
+printf("%d", *(p + 3));
+```
+
+Explain:
+
+* What address is being accessed?
+* Is it valid?
+* Why?
+* What type of bug is it?
+
+---
+
+### 📐 Aptitude
+
+1. A and B complete a job in 10 and 15 days. They work together for 3 days. What fraction remains?
+2. A father is 4 times his son's age. After 12 years, he will be twice his son's age. Find present ages.
+3. A 300 m train travels at 72 km/h. How long to cross a person?
+4. A travels 150 km at 50 km/h and 100 km at 40 km/h. Find average speed.
+5. Two trains of 200 m and 300 m move opposite directions at 54 and 72 km/h. Find crossing time.
+
+### 🧩 Reasoning
+
+1. `6, 13, 27, 55, 111, ?`
+2. `4, 9, 19, 39, 79, ?`
+3. If `POINTER → QPJOUFS`, encode `ARRAY`.
+4. A man says: "The girl is the daughter of my mother's only daughter." What is the girl's relation to the man?
+5. Arrange A, B, C, D, E:
+
+   * B immediately right of A
+   * D immediately left of C
+   * E immediately right of B
+   * D left of A
+
+### 🎤 Interview
+
+Answer in your own words:
+
+1. Why can an array name often be used where a pointer is expected?
+2. Explain `arr[i] == *(arr + i)`.
+3. What happens to a pointer when you do `p + 1`?
+4. Why does pointer arithmetic depend on the pointer's data type?
+5. Is `arr` itself a pointer variable? Explain carefully.
+
+**Do not rush the last question.** It is one of the classic C interview traps.
