@@ -1,0 +1,381 @@
+# 🚀 Week 5 — Day 3
+
+## Pointers + Functions
+
+This is where pointers become genuinely useful.
+
+**Time: ~2 hours 45 minutes**
+
+### Part 1 — Theory
+
+Understand:
+
+### Pass by Value
+
+```c
+void change(int x)
+{
+    x = 50;
+}
+```
+
+Calling:
+
+```c
+int a = 10;
+change(a);
+```
+
+does **not** change `a`.
+
+---
+
+### Using a Pointer
+
+```c
+void change(int *x)
+{
+    *x = 50;
+}
+```
+
+Calling:
+
+```c
+change(&a);
+```
+
+changes the original variable.
+
+Think:
+
+```text
+a
+│
+└── address ──→ pointer parameter
+                    │
+                    ↓
+                   *x
+                    │
+                    ↓
+                  a's value
+```
+
+---
+
+# 💻 Coding
+
+### Q1
+
+Write a function that changes an integer using a pointer.
+
+---
+
+### Q2
+
+Write a function that swaps two integers using pointers.
+
+Use a temporary variable this time.
+
+---
+
+### Q3
+
+Write a function that returns both:
+
+* Sum
+* Difference
+
+of two numbers using pointer output parameters.
+
+---
+
+### Q4
+
+Write a function that finds:
+
+* Maximum
+* Minimum
+
+of an integer array using pointers.
+
+---
+
+### Q5 ⭐
+
+Write a function that reverses an array using two pointers.
+
+---
+
+### Q6 ⭐⭐
+
+Write:
+
+```c
+void sort(int *arr, int n)
+```
+
+to sort an array using pointers.
+
+You may use selection sort or bubble sort.
+
+---
+
+# 🧠 Dry Run
+
+Predict:
+
+```c
+void change(int *p)
+{
+    *p = *p + 10;
+}
+
+int main()
+{
+    int x = 20;
+
+    change(&x);
+
+    printf("%d", x);
+}
+```
+
+Then explain the exact sequence:
+
+```text
+&x
+ ↓
+p
+ ↓
+*p
+ ↓
+x
+```
+
+---
+
+# 🐞 Debugging
+
+Find the problem:
+
+```c
+void swap(int *a, int *b)
+{
+    int *temp = a;
+    a = b;
+    b = temp;
+}
+```
+
+Does this actually swap the **values**?
+
+If not, explain what it swaps.
+
+Then correct it.
+
+---
+
+# 📐 Aptitude — NEW FORMAT STARTING NOW
+
+As requested, **5 CBSE Class 10 Maths questions will be included alongside the existing placement-style questions.**
+
+### Placement Q1 — Work
+
+A can complete a job in 12 days and B in 18 days. They work together for 6 days. What fraction remains?
+
+### Placement Q2 — Train
+
+A 240 m train travels at 72 km/h. How long does it take to cross a person?
+
+### Class 10 Q3 — Quadratic Equation
+
+Solve:
+
+```text
+x² - 7x + 12 = 0
+```
+
+### Class 10 Q4 — Arithmetic Progression
+
+Find the 20th term of:
+
+```text
+3, 7, 11, 15, ...
+```
+
+### Class 10 Q5 — Pair of Linear Equations
+
+Solve:
+
+```text
+2x + 3y = 13
+3x - 2y = 4
+```
+
+### Class 10 Q6 — Probability
+
+A bag contains:
+
+* 5 red balls
+* 3 blue balls
+* 2 green balls
+
+One ball is selected randomly.
+
+Find the probability that it is:
+
+1. Red
+2. Not blue
+
+### Class 10 Q7 — Trigonometry
+
+If:
+
+```text
+sin θ = 3/5
+```
+
+and θ is acute, find:
+
+```text
+cos θ
+```
+
+---
+
+# 🧩 Reasoning — HARD MODE
+
+I'm deliberately moving away from repetitive basic series/blood relations.
+
+### Q8 — Syllogism
+
+Statements:
+
+* All programmers are logical.
+* Some logical people are gamers.
+* No gamer is careless.
+
+Conclusions:
+
+1. Some programmers are gamers.
+2. Some logical people are not careless.
+3. No programmer is careless.
+
+Determine which conclusions necessarily follow.
+
+---
+
+### Q9 — Data Sufficiency
+
+Is `x > y`?
+
+**Statement I:** `x² > y²`
+
+**Statement II:** `x + y > 0`
+
+Determine whether:
+
+* I alone is sufficient
+* II alone is sufficient
+* Both together are sufficient
+* Neither is sufficient
+
+---
+
+### Q10 — Arrangement
+
+Six people:
+
+```text
+A B C D E F
+```
+
+sit around a circular table facing the center.
+
+* B sits second clockwise from A.
+* C sits immediately clockwise from B.
+* D sits opposite A.
+* E is not adjacent to D.
+* F sits between E and A.
+
+Determine the arrangement.
+
+---
+
+### Q11 — Coding Logic
+
+If:
+
+```text
+MANGO → 13-1-14-7-15
+```
+
+and:
+
+```text
+APPLE → 1-16-16-12-5
+```
+
+what is the code for:
+
+```text
+ORANGE
+```
+
+Then identify the underlying rule.
+
+---
+
+### Q12 — Truth/Lie Puzzle ⭐
+
+A, B and C make these statements:
+
+**A:** "B is lying."
+
+**B:** "C is lying."
+
+**C:** "A and B are both lying."
+
+Exactly **one person is telling the truth**.
+
+Who is telling the truth?
+
+---
+
+### Q13 — Number Logic ⭐⭐
+
+Find the missing number:
+
+```text
+2   3   13
+4   5   41
+6   7   ?
+```
+
+Find the rule.
+
+---
+
+# 🎤 Interview
+
+1. What is the difference between passing an integer normally and passing its address to a function?
+2. Why doesn't C have true pass-by-reference?
+3. What is an output parameter?
+4. Why does `swap(int a, int b)` fail to swap the caller's variables?
+5. What does `swap(int *a, int *b)` change?
+
+---
+
+## 🔴 One thing I specifically want tomorrow
+
+Don't just solve the pointer problems.
+
+For each function, tell me:
+
+```text
+What is passed?
+What does the pointer contain?
+What does *pointer access?
+What changes in the caller?
+```
