@@ -1,0 +1,662 @@
+# 🚀 Week 5 — Day 4
+
+## **Pointers + Strings + Pointer-to-Pointer**
+
+Today is about moving from integer arrays to **character arrays/strings using pointers**, then introducing `int **`.
+
+**Target time: 2–3 hours.**
+Difficulty: **Medium → Hard**
+Focus: **understanding, not memorizing code.**
+
+---
+
+# Part 1 — Theory & Concepts
+
+Before coding, understand these:
+
+### 1. String pointer traversal
+
+Given:
+
+```c
+char str[] = "Thoughtworks";
+char *p = str;
+```
+
+Understand:
+
+```c
+*p
+*(p+1)
+*(p+2)
+```
+
+and why:
+
+```c
+while(*p != '\0')
+```
+
+can traverse a string.
+
+---
+
+### 2. Two pointers on a string
+
+Understand how:
+
+```c
+char *left = str;
+char *right = str + strlen(str) - 1;
+```
+
+can be used to reverse a string.
+
+---
+
+### 3. Pointer-to-pointer
+
+Understand:
+
+```c
+int x = 10;
+int *p = &x;
+int **q = &p;
+```
+
+Draw this mentally:
+
+```text
+q
+↓
+p
+↓
+x
+10
+```
+
+Be able to explain:
+
+```c
+q
+*q
+**q
+```
+
+---
+
+# Part 2 — Coding
+
+## Q1. Print a string using a pointer
+
+Write:
+
+```c
+void printString(char *str)
+```
+
+that prints every character using pointer traversal.
+
+**Do not use `str[i]`.**
+
+Example:
+
+```text
+Input:  Thoughtworks
+Output: Thoughtworks
+```
+
+---
+
+## Q2. Reverse a string using two pointers
+
+Write:
+
+```c
+void reverse(char *str)
+```
+
+Requirements:
+
+* Use `left` and `right` pointers.
+* Reverse the string **in-place**.
+* Don't create another character array.
+
+Example:
+
+```text
+Input:  HELLO
+Output: OLLEH
+```
+
+---
+
+## Q3. Count vowels and consonants
+
+Write:
+
+```c
+void countVC(char *str, int *vowels, int *consonants)
+```
+
+Count vowels and consonants using pointer traversal.
+
+For:
+
+```text
+"Hello World"
+```
+
+ignore the space.
+
+Expected:
+
+```text
+Vowels: 3
+Consonants: 7
+```
+
+---
+
+## Q4. Implement `strlen()` yourself
+
+Write:
+
+```c
+int mystrlen(char *str)
+```
+
+Rules:
+
+* Don't use `strlen()`.
+* Don't use `str[i]`.
+* Use only pointer traversal.
+
+Example:
+
+```text
+Input:  Thought
+Output: 7
+```
+
+---
+
+## Q5. Implement `strcmp()` properly
+
+Write:
+
+```c
+int mystrcmp(char *s1, char *s2)
+```
+
+It should behave like normal `strcmp()`:
+
+* Return `0` if strings are equal.
+* Return a negative value if `s1 < s2`.
+* Return a positive value if `s1 > s2`.
+
+Test:
+
+```text
+"apple", "apple"
+"apple", "banana"
+"cat", "car"
+```
+
+**Important:** Don't simply return `1` or `0`. I want the actual lexicographical comparison logic.
+
+---
+
+## Q6. Remove duplicate characters
+
+Write:
+
+```c
+void removeDuplicates(char *str)
+```
+
+Remove repeated characters **in-place**.
+
+Example:
+
+```text
+Input:  programming
+Output: progamin
+```
+
+You may use an auxiliary frequency array if needed, but the original string should be modified rather than creating a second result string.
+
+---
+
+# Part 3 — Pointer-to-Pointer
+
+## Q7. Predict the output
+
+Don't run it first. Dry-run it.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int x = 10;
+
+    int *p = &x;
+    int **q = &p;
+
+    **q = 50;
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+Answer:
+
+1. What does `p` contain?
+2. What does `q` contain?
+3. What does `*p` give?
+4. What does `*q` give?
+5. What does `**q` give?
+6. Final output?
+
+---
+
+## Q8. Modify a pointer using `int **`
+
+Write:
+
+```c
+void changePointer(int **p, int *newAddress)
+```
+
+The function should make the pointer supplied by the caller point to `newAddress`.
+
+Test with:
+
+```c
+int a = 10;
+int b = 20;
+
+int *p = &a;
+
+changePointer(&p, &b);
+
+printf("%d", *p);
+```
+
+Expected output:
+
+```text
+20
+```
+
+### You must understand why this requires `int **` rather than `int *`.
+
+---
+
+# Part 4 — Debugging
+
+## Q9. Find and fix the bug
+
+```c
+#include <stdio.h>
+
+void change(int *p)
+{
+    p = NULL;
+}
+
+int main()
+{
+    int x = 10;
+    int *ptr = &x;
+
+    change(ptr);
+
+    if(ptr == NULL)
+        printf("NULL");
+    else
+        printf("%d", *ptr);
+
+    return 0;
+}
+```
+
+Answer:
+
+1. What is the output?
+2. Why doesn't `ptr` become `NULL`?
+3. Correct the program so that `change()` can actually make `ptr` become `NULL`.
+4. Why does the corrected version require `int **`?
+
+---
+
+# Part 5 — Pointer Dry Run 🔍
+
+## Q10
+
+Trace this carefully:
+
+```c
+int x = 5;
+int *p = &x;
+int **q = &p;
+
+*p = *p + 10;
+**q = **q * 2;
+```
+
+Create a table:
+
+| Step |  x | p points to | q points to | `*p` | `*q` | `**q` |
+| ---- | -: | ----------- | ----------- | ---: | ---: | ----: |
+
+Then give the final value of `x`.
+
+---
+
+# 📐 Part 6 — Aptitude
+
+As requested, **5 Class 10 Maths questions + placement aptitude**.
+
+### Q11 — Time & Work
+
+A can complete a job in 15 days and B in 20 days.
+
+They work together for 4 days.
+
+**What fraction of the work remains?**
+
+---
+
+### Q12 — Percentage
+
+A student's marks increase from 480 to 600.
+
+Find the percentage increase.
+
+---
+
+### Q13 — Class 10 Quadratic Equations
+
+Solve:
+
+$$
+2x^2-7x+3=0
+$$
+
+---
+
+### Q14 — Class 10 Arithmetic Progression
+
+Find the 25th term of:
+
+$$
+7,11,15,19,\ldots
+$$
+
+---
+
+### Q15 — Class 10 Pair of Linear Equations
+
+Solve:
+
+$$
+2x+y=7
+$$
+
+$$
+x-y=2
+$$
+
+---
+
+### Q16 — Class 10 Probability
+
+A box contains:
+
+* 4 red balls
+* 5 blue balls
+* 3 green balls
+
+One ball is selected randomly.
+
+Find the probability that it is **neither red nor green**.
+
+---
+
+### Q17 — Class 10 Trigonometry
+
+If:
+
+$$
+\tan\theta=\frac{5}{12}
+$$
+
+and θ is acute, find:
+
+$$
+\sin\theta
+$$
+
+---
+
+# 🧩 Part 7 — Hard-Mode Reasoning
+
+No easy number-series questions today.
+
+## Q18 — Syllogism
+
+Statements:
+
+* All engineers are problem-solvers.
+* Some problem-solvers are musicians.
+* No musician is careless.
+* Some engineers are musicians.
+
+Conclusions:
+
+1. Some engineers are not careless.
+2. Some problem-solvers are not careless.
+3. All engineers are musicians.
+4. No engineer is careless.
+
+Determine **which conclusions necessarily follow**.
+
+---
+
+## Q19 — Data Sufficiency
+
+Question:
+
+**Is `x` divisible by 6?**
+
+Statement I:
+
+> x is divisible by 2.
+
+Statement II:
+
+> x is divisible by 3.
+
+Determine whether:
+
+* I alone is sufficient
+* II alone is sufficient
+* Both together are sufficient
+* Either alone is sufficient
+
+Give a reason.
+
+---
+
+## Q20 — Circular Arrangement
+
+Six people **A, B, C, D, E and F** sit around a circular table facing the center.
+
+* B sits immediately clockwise of A.
+* C sits second clockwise from A.
+* D sits opposite C.
+* E sits immediately counter-clockwise of F.
+* F is not adjacent to A.
+
+**Determine the complete arrangement.**
+
+Show your reasoning rather than guessing.
+
+---
+
+## Q21 — Truth/Lie Logic
+
+Three people A, B and C make statements:
+
+**A:** "B and C are both lying."
+
+**B:** "A is telling the truth."
+
+**C:** "B is lying."
+
+Assume each person is either always truthful or always lying.
+
+Determine all possible truth/lie combinations.
+
+---
+
+## Q22 — Ranking Logic
+
+Five students — **P, Q, R, S and T** — have different ranks.
+
+* P ranks higher than Q.
+* R ranks lower than S but higher than P.
+* T ranks higher than S.
+
+Who is ranked **third**?
+
+Give the complete ranking from highest to lowest.
+
+---
+
+# 🎤 Part 8 — STEP Interview
+
+Answer these **in your own words**, as if you're sitting in front of the interviewer.
+
+### Q23.
+
+**Why is `char *p` useful when working with strings in C?**
+
+### Q24.
+
+Explain:
+
+```c
+str[i]
+```
+
+versus:
+
+```c
+*(str + i)
+```
+
+Are they accessing the same thing?
+
+### Q25.
+
+What is the difference between:
+
+```c
+int *p;
+```
+
+and:
+
+```c
+int **p;
+```
+
+### Q26.
+
+Why does `sizeof(arr)` work for determining an array's size in `main()`, but generally not when an array is passed to a function?
+
+This is particularly important because of the mistake you made in yesterday's max/min problem.
+
+### Q27.
+
+Explain **`p`, `*p`, `q`, `*q`, and `**q`** using this example:
+
+```c
+int x = 10;
+int *p = &x;
+int **q = &p;
+```
+
+---
+
+# 🏠 Homework — Important
+
+Without looking at today's solutions, write these from scratch:
+
+### H1.
+
+Implement:
+
+```c
+int mystrlen(char *str)
+```
+
+### H2.
+
+Implement:
+
+```c
+void reverse(char *str)
+```
+
+using two pointers.
+
+### H3.
+
+Implement:
+
+```c
+void swap(int **p, int **q)
+```
+
+that swaps **two pointer variables themselves**, not the values they point to.
+
+Example:
+
+```text
+p → a
+q → b
+
+after swap:
+
+p → b
+q → a
+```
+
+This will test whether you've actually understood **pointer-to-pointer**.
+
+---
+
+## 🎯 Day 4 Success Criteria
+
+Don't aim merely to finish all questions.
+
+By the end of today, you should be able to explain these without hesitation:
+
+```text
+array → pointer decay
+string → char array
+char * → string traversal
+*p → value
+p → address
+int ** → address of a pointer
+*q → pointer
+**q → actual value
+```
+
+**Most important:** Q4, Q5, Q7–Q10 and H3. These are the questions that will push your pointer understanding from *"I can use pointers"* to *"I understand pointers."*
