@@ -701,5 +701,3 @@ and:
 ```c
 int *p = malloc(n * sizeof(int));
 ```
-
-**Your biggest priority today is not memorizing `malloc()` syntax. It's understanding what the pointer represents and who owns the allocated memory.**
