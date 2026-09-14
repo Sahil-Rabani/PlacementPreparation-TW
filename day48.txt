@@ -1,0 +1,705 @@
+# 🚀 Week 5 — Day 5
+
+## **Structures + Pointers + Dynamic Memory Introduction**
+
+Today we move from **pointers to user-defined data structures**, then make your first serious step toward **dynamic memory allocation**.
+
+**Target:** 2–3 hours
+**Difficulty:** Medium → Hard
+**Priority:** C fundamentals + STEP interview readiness
+
+---
+
+# Part 1 — Structures: Core Concepts
+
+Study these concepts first.
+
+### 1. Basic structure
+
+```c
+struct Student {
+    char name[30];
+    int age;
+    float marks;
+};
+```
+
+Creating a variable:
+
+```c
+struct Student s1;
+```
+
+Accessing members:
+
+```c
+s1.age
+s1.marks
+```
+
+---
+
+### 2. Pointer to structure
+
+```c
+struct Student *p = &s1;
+```
+
+You can access members using:
+
+```c
+(*p).age
+```
+
+or, more conveniently:
+
+```c
+p->age
+```
+
+Understand why:
+
+```c
+p->age
+```
+
+is equivalent to:
+
+```c
+(*p).age
+```
+
+---
+
+### 3. Structure vs pointer to structure
+
+Be able to explain the difference between:
+
+```c
+s1.age
+```
+
+and:
+
+```c
+p->age
+```
+
+---
+
+# Part 2 — Structure Coding
+
+## Q1. Student structure
+
+Create:
+
+```c
+struct Student {
+    char name[30];
+    int age;
+    float marks;
+};
+```
+
+Create one student, assign values, and print all three fields.
+
+---
+
+## Q2. Modify structure using a pointer
+
+Write:
+
+```c
+void updateMarks(struct Student *s, float newMarks)
+```
+
+The function should modify the student's marks.
+
+Test:
+
+```text
+Before: 75
+After:  91
+```
+
+You **must use `->` inside the function**.
+
+---
+
+## Q3. Find the student with highest marks
+
+Create an array of 5 students:
+
+```c
+struct Student students[5];
+```
+
+Write a function:
+
+```c
+struct Student *highestMarks(struct Student *students, int n)
+```
+
+Return a pointer to the student having the highest marks.
+
+Print that student's name and marks.
+
+### Important
+
+Don't return the entire structure.
+
+Return a **pointer to the structure**.
+
+---
+
+## Q4. Search a student
+
+Write:
+
+```c
+struct Student *findStudent(struct Student *students, int n, char *name)
+```
+
+Search by name.
+
+If found, return a pointer to that student.
+
+If not found:
+
+```c
+return NULL;
+```
+
+Then handle the result safely in `main()`.
+
+---
+
+# Part 3 — Structure + Pointer Dry Run
+
+## Q5.
+
+Trace:
+
+```c
+struct Student {
+    int age;
+    int marks;
+};
+
+int main()
+{
+    struct Student s = {20, 80};
+
+    struct Student *p = &s;
+
+    p->marks = p->marks + 10;
+
+    printf("%d", s.marks);
+}
+```
+
+Answer:
+
+1. What does `p` contain?
+2. What does `p->age` represent?
+3. What does `p->marks` initially contain?
+4. What happens after `p->marks = p->marks + 10`?
+5. Final output?
+
+---
+
+# Part 4 — Debugging
+
+## Q6. Find the bug
+
+```c
+struct Student {
+    int marks;
+};
+
+void update(struct Student *s)
+{
+    s.marks = 100;
+}
+```
+
+### Questions:
+
+1. What is wrong?
+2. Correct it.
+3. Explain why `->` is required here.
+
+---
+
+# Part 5 — Dynamic Memory Allocation
+
+Now begin `malloc()`.
+
+Understand:
+
+```c
+int *p = malloc(5 * sizeof(int));
+```
+
+This requests enough memory for **5 integers**.
+
+You should know:
+
+```c
+malloc()
+free()
+NULL
+sizeof()
+```
+
+### Critical rule
+
+Memory obtained through `malloc()` should eventually be released with:
+
+```c
+free(p);
+```
+
+Also understand why we check:
+
+```c
+if(p == NULL)
+```
+
+before using allocated memory.
+
+---
+
+# Part 6 — Dynamic Memory Coding
+
+## Q7. Allocate an integer array
+
+Write a program that:
+
+1. Reads `n`.
+2. Dynamically allocates an array of `n` integers.
+3. Takes input.
+4. Prints the array using pointer notation.
+5. Finds the sum.
+6. Frees the memory.
+
+Use:
+
+```c
+int *arr = malloc(n * sizeof(int));
+```
+
+---
+
+## Q8. Dynamic array — maximum
+
+Write:
+
+```c
+int findMax(int *arr, int n)
+```
+
+The array must be dynamically allocated.
+
+Do **not** use a fixed-size array such as:
+
+```c
+int arr[100];
+```
+
+---
+
+## Q9. Dynamic memory debugging
+
+What's wrong with this?
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+if(p == NULL)
+    printf("Allocation failed");
+
+for(int i = 0; i < 5; i++)
+    p[i] = i * 10;
+
+free(p);
+```
+
+Consider what happens if allocation fails.
+
+Correct the program.
+
+---
+
+# Part 7 — `malloc()` Dry Run
+
+## Q10.
+
+Explain this:
+
+```c
+int *p = malloc(3 * sizeof(int));
+
+p[0] = 10;
+p[1] = 20;
+p[2] = 30;
+```
+
+Answer:
+
+1. What does `p` contain?
+2. Where are `10`, `20`, and `30` stored?
+3. What does `p[1]` mean in pointer terms?
+4. What does `*(p + 2)` give?
+5. Why do we call `free(p)`?
+
+---
+
+# 📐 Part 8 — Aptitude
+
+As requested: **5 CBSE Class 10 Maths questions + placement questions**, and **no trigonometry**.
+
+## Q11 — Time & Work
+
+A can complete a job in 10 days and B in 15 days.
+
+They work together for 3 days.
+
+What fraction of the work remains?
+
+---
+
+## Q12 — Profit & Loss
+
+An article is purchased for ₹800 and sold for ₹920.
+
+Find the percentage profit.
+
+---
+
+## Q13 — Class 10 Quadratic
+
+Solve:
+
+$$
+x^2-9x+20=0
+$$
+
+---
+
+## Q14 — Class 10 AP
+
+Find the 30th term of:
+
+$$
+5, 9, 13, 17,\ldots
+$$
+
+---
+
+## Q15 — Class 10 Pair of Linear Equations
+
+Solve:
+
+$$
+x+y=9
+$$
+
+$$
+2x-y=6
+$$
+
+---
+
+## Q16 — Class 10 Probability
+
+A box contains:
+
+* 6 red balls
+* 4 blue balls
+* 5 green balls
+
+One ball is selected randomly.
+
+Find the probability that it is **blue or green**.
+
+---
+
+## Q17 — Class 10 Coordinate Geometry
+
+Find the distance between:
+
+$$
+A(2,3)
+$$
+
+and
+
+$$
+B(8,11)
+$$
+
+---
+
+# 🧩 Part 9 — Hard-Mode Reasoning
+
+## Q18 — Syllogism
+
+Statements:
+
+* All developers are programmers.
+* Some programmers are designers.
+* No designer is careless.
+* Some developers are designers.
+
+Conclusions:
+
+1. Some developers are not careless.
+2. Some programmers are not careless.
+3. All programmers are developers.
+4. No developer is careless.
+
+Which conclusions necessarily follow?
+
+---
+
+## Q19 — Data Sufficiency
+
+Question:
+
+**Is `n` an even number?**
+
+Statement I:
+
+> `n` is divisible by 4.
+
+Statement II:
+
+> `n` is divisible by 6.
+
+Determine which statement(s) are sufficient.
+
+---
+
+## Q20 — Ordering Puzzle
+
+Five people **A, B, C, D and E** have different heights.
+
+* A is taller than B.
+* C is shorter than D.
+* E is taller than A.
+* D is shorter than B.
+
+Determine the complete order from **tallest to shortest**.
+
+---
+
+## Q21 — Truth/Lie Puzzle
+
+A, B and C are either truthful or liars.
+
+**A:** "B is truthful."
+
+**B:** "C is truthful."
+
+**C:** "A and B are of different types."
+
+Determine all possible combinations.
+
+---
+
+## Q22 — Number Logic
+
+Find the missing number:
+
+```text
+3   4   25
+5   2   29
+7   3   ?
+```
+
+Identify the rule.
+
+---
+
+# 🎤 Part 10 — STEP Interview
+
+Answer these **as if the interviewer is sitting in front of you**.
+
+### Q23.
+
+What is a structure in C, and why would you use one?
+
+### Q24.
+
+What is the difference between:
+
+```c
+s.age
+```
+
+and:
+
+```c
+p->age
+```
+
+### Q25.
+
+Why is:
+
+```c
+p->age
+```
+
+equivalent to:
+
+```c
+(*p).age
+```
+
+### Q26.
+
+What is `malloc()`?
+
+Explain what this statement does:
+
+```c
+int *p = malloc(10 * sizeof(int));
+```
+
+### Q27.
+
+What is the difference between **stack memory and dynamically allocated memory**?
+
+Keep your answer practical rather than giving a textbook definition.
+
+### Q28.
+
+Why should we check:
+
+```c
+if(p == NULL)
+```
+
+after `malloc()`?
+
+### Q29.
+
+Why do we call:
+
+```c
+free(p);
+```
+
+after using dynamically allocated memory?
+
+### Q30. ⭐ Important
+
+Suppose an interviewer asks:
+
+> **"Why can't you use `sizeof(arr)` inside a function to determine the number of elements when an array is passed as a parameter?"**
+
+Give a precise 2–4 sentence answer.
+
+This directly revisits the mistake from Day 3.
+
+---
+
+# 🏠 Homework — Don't Skip
+
+## H1 — Structure + pointer
+
+Create:
+
+```c
+struct Employee {
+    char name[30];
+    int age;
+    float salary;
+};
+```
+
+Write:
+
+```c
+void increaseSalary(struct Employee *e, float percentage)
+```
+
+Increase the employee's salary by the given percentage using `->`.
+
+---
+
+## H2 — Dynamic array
+
+Write a program that dynamically allocates `n` integers and finds:
+
+* maximum
+* minimum
+* average
+
+Then:
+
+```c
+free(arr);
+```
+
+---
+
+## H3 — ⭐ Challenge
+
+Write:
+
+```c
+int *createArray(int n)
+```
+
+The function should:
+
+1. Dynamically allocate an integer array.
+2. Take `n` as input.
+3. Return the allocated pointer.
+
+Then use it in `main()`.
+
+Be careful about **who owns the allocated memory and who must call `free()`**.
+
+---
+
+# 🎯 Day 5 Success Criteria
+
+By the end of today, you should be able to explain this chain:
+
+```text
+structure
+   ↓
+structure variable
+   ↓
+pointer to structure
+   ↓
+->
+   ↓
+dynamic allocation
+   ↓
+malloc()
+   ↓
+pointer to allocated memory
+   ↓
+free()
+```
+
+And these should be automatic:
+
+```c
+s.age
+p->age
+(*p).age
+```
+
+and:
+
+```c
+int *p = malloc(n * sizeof(int));
+```
+
+**Your biggest priority today is not memorizing `malloc()` syntax. It's understanding what the pointer represents and who owns the allocated memory.**
