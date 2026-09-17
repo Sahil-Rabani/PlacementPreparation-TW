@@ -1,0 +1,570 @@
+Round 1, we're switching from broad C learning to **STEP Round-1 targeted preparation**.
+
+# 🎯 STEP Round 1 — Day 1
+
+## C Basics + Output Prediction
+
+**Target time: ~2.5 hours**
+
+Today's goal is simple:
+
+> **Look at C code → understand exactly what happens → get the output without guessing.**
+
+---
+
+# Part A — C Output Questions
+
+### Q1
+
+Predict the output:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a = 10;
+    int b = 20;
+
+    printf("%d", a + b);
+
+    return 0;
+}
+```
+
+---
+
+### Q2
+
+```c
+int a = 10;
+
+printf("%d ", a++);
+printf("%d", a);
+```
+
+What is the output?
+
+---
+
+### Q3
+
+```c
+int a = 10;
+
+printf("%d ", ++a);
+printf("%d", a++);
+printf("%d", a);
+```
+
+---
+
+### Q4
+
+```c
+int a = 5;
+int b = 2;
+
+printf("%d", a / b);
+```
+
+Why is the answer what it is?
+
+---
+
+### Q5
+
+```c
+int a = 5;
+float b = 2;
+
+printf("%.2f", a / b);
+```
+
+---
+
+### Q6
+
+```c
+int a = 10;
+
+if(a > 5)
+    printf("A");
+else
+    printf("B");
+
+printf("C");
+```
+
+---
+
+### Q7
+
+```c
+int x = 10;
+
+if(x > 5)
+{
+    if(x < 15)
+        printf("A");
+    else
+        printf("B");
+}
+else
+{
+    printf("C");
+}
+```
+
+---
+
+### Q8
+
+```c
+int i;
+
+for(i = 1; i <= 5; i++)
+{
+    printf("%d ", i);
+}
+```
+
+---
+
+### Q9
+
+```c
+int i;
+
+for(i = 5; i >= 1; i--)
+{
+    printf("%d ", i);
+}
+```
+
+---
+
+### Q10 ⭐
+
+Predict carefully:
+
+```c
+int i = 1;
+int sum = 0;
+
+while(i <= 5)
+{
+    sum = sum + i;
+    i++;
+}
+
+printf("%d", sum);
+```
+
+---
+
+# Part B — Slightly Harder Output
+
+### Q11
+
+```c
+int a = 5;
+
+if(a % 2 == 0)
+    printf("Even");
+else
+    printf("Odd");
+```
+
+---
+
+### Q12
+
+```c
+int x = 10;
+
+switch(x)
+{
+    case 5:
+        printf("Five");
+        break;
+
+    case 10:
+        printf("Ten");
+        break;
+
+    default:
+        printf("Other");
+}
+```
+
+---
+
+### Q13 ⭐
+
+```c
+int x = 2;
+
+switch(x)
+{
+    case 1:
+        printf("A");
+
+    case 2:
+        printf("B");
+
+    case 3:
+        printf("C");
+
+    default:
+        printf("D");
+}
+```
+
+**Pay attention to `break`.**
+
+---
+
+### Q14
+
+```c
+int i;
+
+for(i = 1; i <= 5; i++)
+{
+    if(i == 3)
+        continue;
+
+    printf("%d ", i);
+}
+```
+
+---
+
+### Q15 ⭐
+
+```c
+int i;
+
+for(i = 1; i <= 5; i++)
+{
+    if(i == 3)
+        break;
+
+    printf("%d ", i);
+}
+```
+
+---
+
+# Part C — Arrays
+
+### Q16
+
+```c
+int arr[] = {10, 20, 30, 40, 50};
+
+printf("%d", arr[2]);
+```
+
+---
+
+### Q17
+
+```c
+int arr[] = {2, 4, 6, 8, 10};
+
+int sum = 0;
+
+for(int i = 0; i < 5; i++)
+{
+    sum += arr[i];
+}
+
+printf("%d", sum);
+```
+
+---
+
+### Q18 ⭐
+
+```c
+int arr[] = {5, 10, 15, 20};
+
+for(int i = 3; i >= 0; i--)
+{
+    printf("%d ", arr[i]);
+}
+```
+
+---
+
+# Part D — Strings
+
+### Q19
+
+```c
+char str[] = "C";
+
+printf("%d", sizeof(str));
+```
+
+---
+
+### Q20 ⭐
+
+```c
+char str[] = "Hello";
+
+printf("%c", str[1]);
+printf("%c", *(str + 3));
+```
+
+What is the output?
+
+Explain why.
+
+---
+
+# Part E — Write C Programs
+
+Don't just memorize these. Write them **from scratch**.
+
+### Q21
+
+Write a C program to determine whether a number is:
+
+```text
+Even or Odd
+```
+
+---
+
+### Q22
+
+Write a C program to find the **largest of three numbers**.
+
+---
+
+### Q23
+
+Write a C program to calculate the **sum of digits** of a number.
+
+Example:
+
+```text
+Input: 12345
+Output: 15
+```
+
+---
+
+### Q24 ⭐
+
+Write a C program to reverse an integer.
+
+Example:
+
+```text
+Input: 12345
+Output: 54321
+```
+
+---
+
+### Q25 ⭐
+
+Write a C program to check whether a number is a **palindrome**.
+
+Example:
+
+```text
+Input: 121
+Output: Palindrome
+```
+
+```text
+Input: 123
+Output: Not Palindrome
+```
+
+---
+
+# ⭐ Part F — Pattern Programming
+
+This is particularly important because the webinar explicitly mentioned patterns.
+
+Don't use nested loops blindly. First understand:
+
+```text
+rows
+columns
+spaces
+characters/numbers
+```
+
+## Q26
+
+Print:
+
+```text
+*
+**
+***
+****
+*****
+```
+
+---
+
+## Q27
+
+Print:
+
+```text
+*****
+****
+***
+**
+*
+```
+
+---
+
+## Q28
+
+Print:
+
+```text
+1
+12
+123
+1234
+12345
+```
+
+---
+
+## Q29 ⭐
+
+Print:
+
+```text
+    *
+   **
+  ***
+ ****
+*****
+```
+
+---
+
+## Q30 ⭐
+
+Print:
+
+```text
+*****
+ ****
+  ***
+   **
+    *
+```
+
+---
+
+# 📐 Part G — STEP Maths
+
+Only the topics they mentioned.
+
+### Q31 — Percentage
+
+A student's marks increase from **400 to 460**.
+
+Find the percentage increase.
+
+---
+
+### Q32 — Number System
+
+Find the **HCF and LCM** of:
+
+```text
+24 and 36
+```
+
+---
+
+### Q33 — Time & Work
+
+A can complete a job in **12 days** and B can complete it in **18 days**.
+
+How many days will they take if they work together?
+
+---
+
+### Q34 — Profit & Loss
+
+An article is bought for ₹800 and sold for ₹920.
+
+Find the **profit percentage**.
+
+---
+
+# 🧠 How I want you to attempt this
+
+Don't immediately ask me for the answers.
+
+Treat this as your **first mini STEP test**.
+
+### Round 1 — 25 C questions
+
+Spend approximately:
+
+**35–40 minutes**
+
+Try to solve Q1–Q25 without looking anything up.
+
+### Round 2 — Patterns
+
+Spend:
+
+**25–30 minutes**
+
+Write Q26–Q30 yourself.
+
+### Round 3 — Maths
+
+Spend:
+
+**15 minutes**
+
+Do Q31–Q34.
+
+---
+
+## 🚨 One important rule
+
+For **Q1–Q20**, write the **exact output**, not just the concept.
+
+For example:
+
+❌ `It increments a`
+
+✅ `10 11`
+
+For **Q21–Q30**, write actual C code.
+
+For maths, show your calculation.
+
+---
+
+### 🎯 Today's target
+
+I want you to reach:
+
+**22+/25 C questions correct**
+
+and be able to write at least:
+
+**4/5 patterns without help.**
