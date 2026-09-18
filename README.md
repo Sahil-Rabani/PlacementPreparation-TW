@@ -109,6 +109,8 @@ Day48       |     14/09/26         |  Completing week 5 fifth task given by AI.
 
 Day49       |     17/09/26         |  Completing day 1 of Round 1 STEP Preparation.
 
+Day50       |     18/09/26         |  Completing day 2 of Round 1 STEP Preparation.
+
 Everything mention above is uploaded by day name in my repository.
 
 If there is date missing between file upload, Which means I am working on previous file on upload missing date.
