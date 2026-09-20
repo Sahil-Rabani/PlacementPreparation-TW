@@ -1,0 +1,808 @@
+# 🔥 STEP Selection Test — Day 3
+
+## Memory Allocation + Basic Programs + Arrays + Hard Patterns
+
+Today we repair the two areas that cost you marks yesterday:
+
+1. **Memory allocation** — from absolute basics.
+2. **Second-largest / program precision**.
+
+Then we'll do a short mixed STEP-style section.
+
+**Target: 2.5–3 hours**
+
+---
+
+# Part 1 — 🧠 Memory Allocation From Zero
+
+Don't memorize yet. Understand the model.
+
+## Q1 — Concept
+
+Explain in your own words:
+
+### A.
+
+What is the difference between:
+
+```c
+int x = 10;
+```
+
+and:
+
+```c
+int *p = malloc(sizeof(int));
+```
+
+### B.
+
+What does `p` contain after successful allocation?
+
+### C.
+
+Where is the actual integer stored?
+
+### D.
+
+Why do we use:
+
+```c
+free(p);
+```
+
+---
+
+# Q2 — `malloc()`
+
+Complete this program:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int *p;
+
+    // Allocate memory for one integer
+
+    // Check whether allocation succeeded
+
+    // Store 50 in the allocated memory
+
+    // Print the value
+
+    // Free the memory
+
+    return 0;
+}
+```
+
+Use `malloc()` correctly.
+
+---
+
+# Q3 — Dynamic Array
+
+Write a complete program that:
+
+1. Takes `n` from the user.
+2. Allocates space for `n` integers using `malloc()`.
+3. Takes `n` integers as input.
+4. Prints them.
+5. Frees the allocated memory.
+
+You **must not** use:
+
+```c
+int arr[100];
+```
+
+---
+
+# Q4 — `NULL`
+
+Consider:
+
+```c
+int *p = malloc(10 * sizeof(int));
+
+if(p == NULL)
+{
+    printf("Allocation failed");
+}
+```
+
+Answer:
+
+1. What does `NULL` mean here?
+2. Why should we check it?
+3. Should we access `p[0]` if `p == NULL`?
+
+---
+
+# Q5 — `calloc()`
+
+Explain the difference between:
+
+```c
+int *p = malloc(5 * sizeof(int));
+```
+
+and:
+
+```c
+int *p = calloc(5, sizeof(int));
+```
+
+Then answer:
+
+> What initial value do the allocated bytes have when `calloc()` succeeds?
+
+---
+
+# Q6 — `realloc()`
+
+Suppose:
+
+```c
+int *arr = malloc(3 * sizeof(int));
+```
+
+Later you need space for 6 integers.
+
+Write the correct `realloc()` statement.
+
+Then explain:
+
+> Why might we need to store the result of `realloc()` carefully instead of immediately overwriting the original pointer?
+
+---
+
+# Q7 — Memory Bug
+
+Find the problem:
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+for(int i = 0; i <= 5; i++)
+{
+    p[i] = i * 10;
+}
+
+free(p);
+```
+
+Answer:
+
+1. How many integers were allocated?
+2. What are the valid indexes?
+3. Which iteration is invalid?
+4. Correct the loop.
+
+---
+
+# Q8 — Use After Free ⭐
+
+What is wrong here?
+
+```c
+int *p = malloc(3 * sizeof(int));
+
+p[0] = 10;
+p[1] = 20;
+p[2] = 30;
+
+free(p);
+
+printf("%d", p[1]);
+```
+
+Explain the problem in your own words.
+
+---
+
+# Q9 — Memory Leak ⭐
+
+What's wrong with:
+
+```c
+void test()
+{
+    int *p = malloc(100 * sizeof(int));
+
+    p[0] = 50;
+}
+```
+
+What happens to the allocated memory when the function finishes?
+
+How should it be fixed?
+
+---
+
+# Part 2 — 💻 Repair Yesterday's Programming Weaknesses
+
+## Q10 — Second Largest ⭐⭐⭐
+
+Write a program to find the **second-largest distinct element** without sorting.
+
+For:
+
+```c
+int arr[] = {10, 5, 20, 8, 15};
+```
+
+Expected:
+
+```text
+15
+```
+
+Also test:
+
+```text
+10 20 20 8 15
+```
+
+Your program should still return:
+
+```text
+15
+```
+
+because we're asking for the **second-largest distinct value**.
+
+---
+
+# Q11 — Prime Number
+
+Rewrite your prime-number program so it correctly handles:
+
+```text
+-5
+0
+1
+2
+3
+4
+17
+```
+
+Only numbers greater than 1 can be prime.
+
+Try to reduce unnecessary iterations by checking divisors only up to:
+
+$$
+\sqrt n
+$$
+
+You don't need to implement an advanced prime algorithm.
+
+---
+
+# Q12 — Fibonacci
+
+Fix yesterday's off-by-one mistake.
+
+Write:
+
+```text
+n = 7
+```
+
+and produce exactly:
+
+```text
+0 1 1 2 3 5 8
+```
+
+Be careful with:
+
+```c
+i < n
+```
+
+versus:
+
+```c
+i <= n
+```
+
+---
+
+# Q13 — Armstrong
+
+Write a program to check whether a **3-digit number** is Armstrong.
+
+Test:
+
+```text
+153 → Armstrong
+370 → Armstrong
+371 → Armstrong
+407 → Armstrong
+123 → Not Armstrong
+```
+
+---
+
+# Q14 — GCD + LCM
+
+Write a program that accepts two numbers and prints both:
+
+```text
+GCD
+LCM
+```
+
+For:
+
+```text
+12 18
+```
+
+Expected:
+
+```text
+GCD = 6
+LCM = 36
+```
+
+Try to calculate LCM using:
+
+$$
+LCM = \frac{|a\times b|}{GCD}
+$$
+
+---
+
+# Part 3 — 🔢 Arrays
+
+## Q15 — Frequency
+
+Given:
+
+```c
+int arr[] = {2, 3, 2, 5, 3, 2, 7};
+```
+
+Find how many times a given number occurs.
+
+For:
+
+```text
+number = 2
+```
+
+Expected:
+
+```text
+3
+```
+
+---
+
+# Q16 — Maximum and Minimum
+
+Write a program to find both maximum and minimum in an array.
+
+Don't sort the array.
+
+---
+
+# Q17 — Reverse an Array
+
+Given:
+
+```text
+1 2 3 4 5 6
+```
+
+produce:
+
+```text
+6 5 4 3 2 1
+```
+
+Use the **two-pointer technique**:
+
+```text
+left → beginning
+right → end
+```
+
+---
+
+# Q18 — Remove Duplicates ⭐
+
+Given:
+
+```text
+1 2 2 3 4 4 5
+```
+
+produce:
+
+```text
+1 2 3 4 5
+```
+
+Try to modify the same array rather than creating another large array.
+
+---
+
+# Part 4 — ⭐ Harder Patterns
+
+## Q19
+
+Print:
+
+```text
+1
+23
+456
+78910
+```
+
+Notice that the numbers **continue**, rather than restarting at 1 on every row.
+
+---
+
+## Q20
+
+Print:
+
+```text
+1
+121
+12321
+1234321
+123454321
+```
+
+---
+
+## Q21 ⭐
+
+Print:
+
+```text
+    1
+   121
+  12321
+ 1234321
+123454321
+```
+
+You need to handle **spaces + increasing numbers + decreasing numbers**.
+
+---
+
+## Q22 ⭐⭐
+
+Print:
+
+```text
+*****
+*   *
+*   *
+*   *
+*****
+```
+
+Think about the condition for printing:
+
+```text
+*
+```
+
+versus:
+
+```text
+space
+```
+
+---
+
+# Part 5 — 🧠 C Output — STEP Difficulty
+
+Don't execute these.
+
+## Q23
+
+```c
+int x = 1;
+
+for(int i = 1; i <= 4; i++)
+{
+    x = x * i;
+    printf("%d ", x);
+}
+```
+
+---
+
+## Q24
+
+```c
+int x = 10;
+
+for(int i = 1; i <= 3; i++)
+{
+    if(x % 2 == 0)
+        x = x / 2;
+    else
+        x = x + 3;
+
+    printf("%d ", x);
+}
+```
+
+---
+
+## Q25 ⭐
+
+```c
+int a = 5;
+int b = 10;
+
+if(a < b)
+{
+    a = a + b;
+    b = a - b;
+    a = a - b;
+}
+
+printf("%d %d", a, b);
+```
+
+What is the output?
+
+Explain the three statements.
+
+---
+
+## Q26 ⭐
+
+```c
+int arr[] = {3, 1, 4, 1, 5};
+int x = 0;
+
+for(int i = 0; i < 5; i++)
+{
+    if(arr[i] > 2)
+        x += arr[i];
+}
+
+printf("%d", x);
+```
+
+---
+
+## Q27 ⭐⭐
+
+Predict the output:
+
+```c
+int x = 1;
+
+for(int i = 1; i <= 3; i++)
+{
+    for(int j = 1; j <= i; j++)
+    {
+        x++;
+    }
+}
+
+printf("%d", x);
+```
+
+---
+
+# Part 6 — 📐 Maths
+
+Only the areas indicated by the webinar/company material.
+
+## Q28 — Percentage
+
+A price of ₹800 is increased by 15%.
+
+What is the new price?
+
+---
+
+## Q29 — Number System
+
+Find the **HCF and LCM** of:
+
+```text
+18 and 24
+```
+
+---
+
+## Q30 — Time & Work
+
+A can complete a job in 10 days.
+
+B can complete it in 15 days.
+
+How long do they take together?
+
+---
+
+## Q31 — Profit & Loss
+
+An article costs ₹1,500.
+
+It is sold at a profit of 12%.
+
+Find the selling price.
+
+---
+
+# Part 7 — 🎤 Interview Concepts
+
+Answer in **2–4 sentences**.
+
+## Q32
+
+What is dynamic memory allocation?
+
+---
+
+## Q33
+
+Difference between `malloc()` and `calloc()`?
+
+---
+
+## Q34
+
+What is a memory leak?
+
+---
+
+## Q35
+
+What is a dangling pointer?
+
+---
+
+## Q36 ⭐
+
+Explain the difference between:
+
+```c
+arr[i]
+```
+
+```c
+*(arr + i)
+```
+
+```c
+arr + i
+```
+
+This time be **very precise**.
+
+---
+
+## Q37 ⭐
+
+Why does this work?
+
+```c
+int *p = malloc(5 * sizeof(int));
+```
+
+but this does not necessarily give the number of elements inside a function?
+
+```c
+sizeof(p)
+```
+
+---
+
+# 🧪 Part 8 — Mini STEP Challenge
+
+## Q38 — Write From Scratch
+
+Write a program to determine whether a number is a **perfect number**.
+
+Example:
+
+```text
+6 → Perfect
+```
+
+because:
+
+```text
+1 + 2 + 3 = 6
+```
+
+And:
+
+```text
+8 → Not Perfect
+```
+
+---
+
+## Q39 — Pattern Challenge
+
+Without copying Q19–Q22, write a program to produce:
+
+```text
+1
+22
+333
+4444
+55555
+4444
+333
+22
+1
+```
+
+---
+
+## Q40 — Final Output Challenge 🔥
+
+Predict exactly:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int arr[] = {2, 4, 6, 8};
+    int sum = 0;
+
+    for(int i = 0; i < 4; i++)
+    {
+        if(arr[i] % 4 == 0)
+            sum += arr[i];
+        else
+            sum -= arr[i];
+    }
+
+    printf("%d", sum);
+
+    return 0;
+}
+```
+
+Show the value of `sum` after each iteration.
+
+---
+
+# ⏱️ Suggested timing
+
+| Section                 |         Time |
+| ----------------------- | -----------: |
+| Memory allocation Q1–Q9 |       35 min |
+| Programs Q10–Q14        |       35 min |
+| Arrays Q15–Q18          |       25 min |
+| Patterns Q19–Q22        |       30 min |
+| Output Q23–Q27          |       20 min |
+| Maths Q28–Q31           |       10 min |
+| Interview Q32–Q37       |       15 min |
+| Challenge Q38–Q40       |       20 min |
+| **Total**               | **~3 hours** |
+
+### 🎯 Today's priorities
+
+If time becomes limited, **do not skip these**:
+
+**Q1–Q9 → Memory allocation**
+**Q10 → Second largest**
+**Q15–Q18 → Arrays**
+**Q21–Q22 → Hard patterns**
+**Q23–Q27 → Output**
+**Q36–Q37 → C precision**
