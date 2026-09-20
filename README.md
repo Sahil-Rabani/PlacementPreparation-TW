@@ -1,5 +1,8 @@
 # PlacementPreparation-TW
-Hii! Here I am gonna show, How I was preparing for the placement in ThoughtWorks STEP Program.
+
+Hi, I'm Sahil Rabani. I'm preparing for the ThoughtWorks STEP Program and
+using this repository to document my learning journey, daily practice,
+assignments, and progress.
 
 For taking placement in ThoughtWorks STEP Program, I am going to study step-by-step:-
 1. Basic programing language like:- Java, C, Python.
@@ -37,7 +40,7 @@ Day12       |     25/06/26         |  Completing second task given by AI.
 
 Day13       |     27/06/26         |  Completing third task given by AI.
 
-Day14       |     28/06/26         |  Completing forth task given by AI.
+Day14       |     28/06/26         |  Completing fourth task given by AI.
 
 Day15       |     30/06/26         |  Completing fifth task given by AI.
 
@@ -55,7 +58,7 @@ Day21       |     06/07/26         |  Completing week 2 second task given by AI.
 
 Day22       |     07/07/26         |  Completing week 2 third task given by AI.
 
-Day23       |     08/07/26         |  Completing week 2 forth task given by AI.
+Day23       |     08/07/26         |  Completing week 2 fourth task given by AI.
 
 Day24       |     09/07/26         |  Completing week 2 fifth task given by AI.
 
@@ -71,7 +74,7 @@ Day29       |     15/07/26         |  Completing week 3 second task given by AI.
 
 Day30       |     17/07/26         |  Completing week 3 third task given by AI.
 
-Day31       |     22/07/26         |  Completing week 3 forth task given by AI.
+Day31       |     22/07/26         |  Completing week 3 fourth task given by AI.
 
 Day32       |     24/07/26         |  Completing week 3 fifth task given by AI.
 
@@ -87,7 +90,7 @@ Day37       |     02/08/26         |  Completing week 4 second task given by AI.
 
 Day38       |     03/08/26         |  Completing week 4 third task given by AI.
 
-Day39       |     07/08/26         |  Completing week 4 forth task given by AI.
+Day39       |     07/08/26         |  Completing week 4 fourth task given by AI.
 
 Day40       |     12/08/26         |  Completing week 4 fifth task given by AI.
 
@@ -103,7 +106,7 @@ Day45       |     01/09/26         |  Completing week 5 second task given by AI.
 
 Day46       |     02/09/26         |  Completing week 5 third task given by AI.
 
-Day47       |     03/09/26         |  Completing week 5 forth task given by AI.
+Day47       |     03/09/26         |  Completing week 5 fourth task given by AI.
 
 Day48       |     14/09/26         |  Completing week 5 fifth task given by AI.
 
