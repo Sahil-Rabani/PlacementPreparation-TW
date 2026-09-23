@@ -1,0 +1,660 @@
+# 🔥 STEP Selection Test — Day 4
+
+## **Memory Allocation Mastery + First 25-Question STEP Mock**
+
+Today is an important checkpoint.
+
+You've already become strong in **conditions, loops, output prediction, basic programs, arrays, strings, patterns, and basic maths**. The remaining explicit syllabus gap is **memory allocation**, so we will close that first. The updated selection-test material you shared lists **C Programming, Conditions, Loops, Strings, Arrays, Memory allocation, basic C programs, and 10th-standard Mathematics**. 
+
+Today has **two parts**:
+
+* **Part A:** Learn + practice memory allocation.
+* **Part B:** **25-question timed mock** based on the Round-1 format you've been told about.
+
+---
+
+# PART A — 🧠 MEMORY ALLOCATION
+
+## Q1 — The basic model
+
+Explain in your own words:
+
+```c
+int x = 10;
+```
+
+versus:
+
+```c
+int *p = malloc(sizeof(int));
+```
+
+Answer:
+
+1. What does `x` represent?
+2. What does `p` represent?
+3. Where is the actual integer stored in the second example?
+4. What does `*p` mean?
+5. What should eventually happen to the allocated memory?
+
+---
+
+# Q2 — First `malloc()` program
+
+Complete this program:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int *p;
+
+    // Allocate memory for one integer
+
+
+    // Check allocation
+
+
+    // Store 50
+
+
+    // Print the value
+
+
+    // Release memory
+
+
+    return 0;
+}
+```
+
+Expected output:
+
+```text
+50
+```
+
+---
+
+# Q3 — Dynamic array
+
+Write a complete program that:
+
+1. Reads `n`.
+2. Dynamically allocates `n` integers.
+3. Takes input.
+4. Prints the array.
+5. Calculates its sum.
+6. Calls `free()`.
+
+Example:
+
+```text
+Input:
+5
+10 20 30 40 50
+
+Output:
+10 20 30 40 50
+Sum = 150
+```
+
+---
+
+# Q4 — `NULL`
+
+Consider:
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+if(p == NULL)
+{
+    printf("Allocation failed");
+}
+```
+
+Answer:
+
+* What is `NULL`?
+* Why check for it?
+* What would happen if you tried `p[0]` while `p == NULL`?
+
+---
+
+# Q5 — `malloc()` vs `calloc()`
+
+Explain the difference:
+
+```c
+int *p = malloc(5 * sizeof(int));
+```
+
+and:
+
+```c
+int *p = calloc(5, sizeof(int));
+```
+
+Then answer:
+
+> What are the initial values of the allocated integer elements when `calloc()` succeeds?
+
+---
+
+# Q6 — `realloc()`
+
+Start with:
+
+```c
+int *p = malloc(3 * sizeof(int));
+```
+
+Now you need space for **6 integers**.
+
+Write the `realloc()` statement.
+
+Then explain:
+
+> Why is using a temporary pointer often safer when calling `realloc()`?
+
+---
+
+# Q7 — Out-of-bounds memory
+
+Find the error:
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+for(int i = 0; i <= 5; i++)
+{
+    p[i] = i * 10;
+}
+
+free(p);
+```
+
+Answer:
+
+1. How many integers were allocated?
+2. Valid indexes?
+3. Which iteration is invalid?
+4. Correct the loop.
+
+---
+
+# Q8 — Use-after-free
+
+```c
+int *p = malloc(3 * sizeof(int));
+
+p[0] = 10;
+p[1] = 20;
+p[2] = 30;
+
+free(p);
+
+printf("%d", p[1]);
+```
+
+Answer:
+
+* Is this valid?
+* What type of problem is this?
+* How should the program be corrected?
+
+---
+
+# Q9 — Memory leak
+
+What's wrong with:
+
+```c
+void test()
+{
+    int *p = malloc(100 * sizeof(int));
+
+    p[0] = 50;
+}
+```
+
+What happens when `test()` finishes?
+
+How would you fix it?
+
+---
+
+# Q10 — Pointer after `free()`
+
+Consider:
+
+```c
+int *p = malloc(sizeof(int));
+
+*p = 100;
+
+free(p);
+
+p = NULL;
+```
+
+Why is setting:
+
+```c
+p = NULL;
+```
+
+after `free(p)` a useful practice?
+
+---
+
+# PART B — 🔥 25-QUESTION STEP MOCK
+
+## Rules
+
+**This is a timed mock.**
+
+⏱️ **Target: 45 minutes**
+
+Do not search or run code.
+
+### Distribution
+
+* **15 C output/concept questions**
+* **5 coding/pattern questions**
+* **3 maths**
+* **2 memory allocation**
+
+Write exact outputs where requested.
+
+---
+
+# Section 1 — C Output
+
+## Q11
+
+```c
+int x = 5;
+
+printf("%d ", x++);
+printf("%d ", ++x);
+printf("%d", x);
+```
+
+---
+
+## Q12
+
+```c
+int sum = 0;
+
+for(int i = 1; i <= 5; i++)
+{
+    if(i % 2 != 0)
+        sum += i;
+}
+
+printf("%d", sum);
+```
+
+---
+
+## Q13
+
+```c
+for(int i = 1; i <= 3; i++)
+{
+    for(int j = 1; j <= i; j++)
+    {
+        printf("*");
+    }
+
+    printf("\n");
+}
+```
+
+Write the exact output.
+
+---
+
+## Q14
+
+```c
+int x = 3;
+
+switch(x)
+{
+    case 1:
+        printf("A");
+        break;
+
+    case 2:
+        printf("B");
+        break;
+
+    case 3:
+        printf("C");
+
+    case 4:
+        printf("D");
+        break;
+
+    default:
+        printf("E");
+}
+```
+
+---
+
+## Q15
+
+```c
+int arr[] = {10, 20, 30, 40, 50};
+
+int sum = 0;
+
+for(int i = 1; i < 4; i++)
+{
+    sum += arr[i];
+}
+
+printf("%d", sum);
+```
+
+---
+
+## Q16
+
+```c
+char str[] = "HELLO";
+
+printf("%c", *(str + 1));
+printf("%c", str[4]);
+```
+
+---
+
+## Q17
+
+```c
+int x = 10;
+
+while(x > 0)
+{
+    printf("%d ", x);
+    x -= 3;
+}
+```
+
+---
+
+## Q18 ⭐
+
+```c
+int x = 1;
+
+for(int i = 1; i <= 4; i++)
+{
+    x += i;
+}
+
+printf("%d", x);
+```
+
+---
+
+## Q19 ⭐
+
+```c
+int x = 5;
+
+for(int i = 1; i <= 3; i++)
+{
+    if(x % 2 == 0)
+        x /= 2;
+    else
+        x += 2;
+}
+
+printf("%d", x);
+```
+
+---
+
+## Q20
+
+```c
+int arr[] = {2, 4, 6, 8};
+
+printf("%d", *(arr + 2));
+```
+
+---
+
+## Q21 ⭐
+
+```c
+int a = 10;
+int b = 20;
+
+if(a < b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+printf("%d %d", a, b);
+```
+
+---
+
+## Q22
+
+```c
+int count = 0;
+
+for(int i = 1; i <= 10; i++)
+{
+    if(i % 3 == 0)
+        count++;
+}
+
+printf("%d", count);
+```
+
+---
+
+## Q23 ⭐
+
+```c
+char str[] = "CODE";
+
+for(int i = 0; str[i] != '\0'; i++)
+{
+    if(i == 1)
+        continue;
+
+    printf("%c", str[i]);
+}
+```
+
+---
+
+## Q24 ⭐
+
+```c
+int x = 0;
+
+for(int i = 1; i <= 3; i++)
+{
+    for(int j = 1; j <= 2; j++)
+    {
+        x++;
+    }
+}
+
+printf("%d", x);
+```
+
+---
+
+## Q25 🔥
+
+```c
+int x = 2;
+
+for(int i = 1; i <= 3; i++)
+{
+    x *= i;
+
+    if(x > 5)
+        x -= 2;
+}
+
+printf("%d", x);
+```
+
+---
+
+# Section 2 — Basic C Programming
+
+## Q26 — Prime
+
+Write a C program to determine whether a number is prime.
+
+Requirements:
+
+* `1` must not be considered prime.
+* Don't check divisors beyond `sqrt(n)` unnecessarily.
+
+---
+
+## Q27 — Second Largest ⭐
+
+Write a program to find the **second-largest distinct** element without sorting.
+
+```text
+10 20 20 8 15
+```
+
+Expected:
+
+```text
+15
+```
+
+---
+
+## Q28 — Pattern
+
+Print:
+
+```text
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+```
+
+---
+
+## Q29 — Pattern ⭐
+
+Print:
+
+```text
+    1
+   121
+  12321
+ 1234321
+123454321
+```
+
+---
+
+## Q30 — Array
+
+Write a C program to count the frequency of a given number.
+
+Example:
+
+```text
+Array:  2 5 2 7 2 8
+Target: 2
+
+Output: 3
+```
+
+---
+
+# Section 3 — Maths
+
+## Q31 — Percentage
+
+A number increases from 500 to 575.
+
+Find the percentage increase.
+
+---
+
+## Q32 — Time & Work
+
+A can complete a job in 12 days.
+
+B can complete it in 24 days.
+
+How many days will they take together?
+
+---
+
+## Q33 — Profit & Loss
+
+An article is bought for ₹1,000 and sold for ₹1,150.
+
+Find the profit percentage.
+
+---
+
+# Section 4 — Memory Allocation
+
+## Q34
+
+What does this allocate?
+
+```c
+int *p = malloc(10 * sizeof(int));
+```
+
+How many integers can safely be stored in the allocated block?
+
+---
+
+## Q35 ⭐
+
+What's wrong with this?
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+if(p != NULL)
+{
+    p[0] = 10;
+}
+
+free(p);
+
+printf("%d", p[0]);
+```
+
+Identify the problem precisely.
+
+---
