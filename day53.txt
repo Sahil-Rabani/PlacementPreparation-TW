@@ -1,0 +1,564 @@
+# 🔥 STEP Day 5 — Final Mock Test
+
+Today is **exam simulation day**. Your goal is not to learn new topics; it is to prove that you can solve mixed C questions accurately under time pressure.
+
+## ⏱️ Rules
+
+* **Time limit: 40 minutes**
+* No Google
+* No ChatGPT
+* No compiler
+* No notes
+* Write answers exactly as you would in the actual test.
+* For output questions, give **only the final output** plus a short explanation if requested.
+* For coding questions, write complete C programs.
+
+### Target
+
+**90+/100**
+
+---
+
+# PART A — C Output & Concepts
+
+### 15 questions
+
+### Q1
+
+What is the output?
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+
+    printf("%d ", x++);
+    printf("%d ", x++);
+    printf("%d ", ++x);
+
+    return 0;
+}
+```
+
+---
+
+### Q2
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 10;
+
+    for(int i = 1; i <= 3; i++) {
+        x -= i;
+        printf("%d ", x);
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Q3
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 2;
+
+    switch(x) {
+        case 1:
+            printf("A");
+        case 2:
+            printf("B");
+        case 3:
+            printf("C");
+            break;
+        default:
+            printf("D");
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Q4
+
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[] = {3, 6, 9, 12, 15};
+
+    printf("%d ", arr[2]);
+    printf("%d ", *(arr + 4));
+    printf("%d", *(arr + 1) + arr[3]);
+
+    return 0;
+}
+```
+
+---
+
+### Q5
+
+```c
+#include <stdio.h>
+
+int main() {
+    char str[] = "WORLD";
+
+    printf("%c ", str[0]);
+    printf("%c ", *(str + 2));
+    printf("%c", str[4]);
+
+    return 0;
+}
+```
+
+---
+
+### Q6
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 1;
+
+    for(int i = 1; i <= 4; i++) {
+        if(i == 3)
+            continue;
+
+        x *= i;
+    }
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+---
+
+### Q7
+
+What is printed?
+
+```c
+printf("%d", 7 / 2);
+```
+
+Explain **why**.
+
+---
+
+### Q8
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 3;
+
+    for(int i = 0; i < 3; i++) {
+        if(x % 2 == 0)
+            x /= 2;
+        else
+            x += 3;
+    }
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+---
+
+### Q9
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 0;
+
+    for(int i = 1; i <= 3; i++) {
+        for(int j = 1; j <= i; j++) {
+            x++;
+        }
+    }
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+---
+
+### Q10
+
+What is the output?
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 10, b = 20;
+
+    if(a > b)
+        printf("A");
+    else if(a == b)
+        printf("B");
+    else
+        printf("C");
+
+    return 0;
+}
+```
+
+---
+
+### Q11
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 4;
+
+    while(x >= 1) {
+        printf("%d ", x);
+        x -= 2;
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Q12
+
+What is the output?
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+
+    if(x > 2 && x < 10)
+        printf("YES");
+    else
+        printf("NO");
+
+    return 0;
+}
+```
+
+---
+
+### Q13
+
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[] = {5, 10, 15, 20};
+    int sum = 0;
+
+    for(int i = 0; i < 4; i += 2)
+        sum += arr[i];
+
+    printf("%d", sum);
+
+    return 0;
+}
+```
+
+---
+
+### Q14
+
+What does this print?
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 10;
+
+    printf("%d", x > 5);
+
+    return 0;
+}
+```
+
+---
+
+### Q15
+
+Identify the problem:
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+for(int i = 0; i <= 5; i++)
+    p[i] = i;
+
+free(p);
+```
+
+Give:
+
+1. Number of allocated integers
+2. Valid indexes
+3. Problem with the loop
+4. Correct loop condition
+
+---
+
+# PART B — C Programming
+
+### 5 questions
+
+## Q16 — Prime
+
+Write a complete C program to determine whether an input number is prime.
+
+Your program **must correctly handle**:
+
+```text
+0
+1
+negative numbers
+2
+3
+composite numbers
+```
+
+You may use the `i * i <= n` optimization.
+
+---
+
+## Q17 — Armstrong Number
+
+Write a C program to check whether a **3-digit number** is an Armstrong number.
+
+Example:
+
+```text
+153 → Armstrong
+123 → Not Armstrong
+```
+
+---
+
+## Q18 — Second Largest Distinct
+
+Write a C program to find the **second-largest distinct element without sorting**.
+
+Input:
+
+```text
+10 20 20 8 15
+```
+
+Expected:
+
+```text
+15
+```
+
+---
+
+## Q19 — String
+
+Write a C program that takes a string and counts:
+
+* vowels
+* consonants
+
+Ignore spaces and other non-alphabetic characters.
+
+Example:
+
+```text
+Input: Hello World
+```
+
+Expected:
+
+```text
+Vowels: 3
+Consonants: 7
+```
+
+---
+
+## Q20 — Pattern
+
+Print:
+
+```text
+1
+12
+123
+1234
+12345
+```
+
+Use nested loops.
+
+---
+
+# PART C — Memory Allocation
+
+### 3 questions
+
+## Q21 — `realloc()`
+
+Complete the code correctly:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+    int *p = malloc(3 * sizeof(int));
+
+    if(p == NULL)
+        return 1;
+
+    p[0] = 10;
+    p[1] = 20;
+    p[2] = 30;
+
+    // Resize memory for 6 integers
+
+    // Check whether realloc succeeded
+
+    // Print the first three values
+
+    free(p);
+
+    return 0;
+}
+```
+
+Use a **temporary pointer**.
+
+---
+
+## Q22 — Concept
+
+Explain the difference between:
+
+```c
+free(p);
+```
+
+and
+
+```c
+p = NULL;
+```
+
+Why is this commonly written?
+
+```c
+free(p);
+p = NULL;
+```
+
+---
+
+## Q23 — Debugging
+
+What's wrong here?
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+if(p == NULL)
+    return 1;
+
+*p = 100;
+
+free(p);
+
+printf("%d", *p);
+```
+
+Identify the exact problem and show the corrected version.
+
+---
+
+# PART D — Mathematics
+
+### 2 questions
+
+## Q24 — Percentage
+
+A number increases from **800 to 920**.
+
+Find the percentage increase.
+
+---
+
+## Q25 — Time & Work
+
+A can complete a job in **10 days**.
+
+B can complete the same job in **15 days**.
+
+How many days will they take **together**?
+
+---
+
+# 🎯 Submission Format
+
+Send your answers in this exact structure:
+
+```text
+Q1. ...
+Q2. ...
+...
+Q15. ...
+
+Q16.
+[code]
+
+Q17.
+[code]
+
+...
+
+Q20.
+[code]
+
+Q21.
+[code]
+
+Q22. ...
+
+Q23.
+[code]
+
+Q24. ...
+Q25. ...
+```
+
+**Start the 40-minute timer when you begin Q1.**
+
+This is your first serious **full STEP-style accuracy test**. Don't rush just to finish early—the target is **accuracy + speed**.
