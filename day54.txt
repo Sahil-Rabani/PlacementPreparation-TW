@@ -1,0 +1,281 @@
+# 🎯 Updated STEP Readiness
+
+## **94 / 100**
+
+Despite the lower mock score, I am **not reducing your readiness significantly**, because your mistakes are concentrated and identifiable.
+
+### Current status
+
+| Topic            | Status                 |
+| ---------------- | ---------------------- |
+| C output tracing | 🟢 Excellent           |
+| Conditions       | 🟢 Excellent           |
+| Loops            | 🟢 Excellent           |
+| Arrays           | 🟢 Excellent           |
+| Patterns         | 🟢 Excellent           |
+| Prime            | 🟢 Fixed               |
+| Armstrong        | 🟢 Strong              |
+| Strings          | 🟡 **Needs repair**    |
+| Dynamic memory   | 🟡 **Needs precision** |
+| Basic maths      | 🟡 **Needs accuracy**  |
+
+Your biggest remaining issue is **not knowledge volume**.
+
+It's **precision**.
+
+---
+
+# 🚨 STEP Day 6 — Targeted Weakness Repair
+
+Before another full mock, we're going to attack today's mistakes.
+
+## Part A — Strings
+
+### Q1
+
+Explain the difference:
+
+```c
+char str[20];
+```
+
+```c
+sizeof(str)
+```
+
+```c
+strlen(str)
+```
+
+---
+
+### Q2
+
+Why is this incorrect for reading a string?
+
+```c
+scanf("%s", &str);
+```
+
+What should it be?
+
+---
+
+### Q3
+
+Write a C program to count vowels and consonants in:
+
+```text
+Hello World
+```
+
+Requirements:
+
+* spaces ignored
+* uppercase/lowercase both accepted
+* only alphabetic characters counted
+* use a loop terminating at `'\0'`
+
+---
+
+### Q4
+
+What does this mean?
+
+```c
+while(str[i] != '\0')
+```
+
+Explain the role of `'\0'`.
+
+---
+
+## Part B — Dynamic Memory
+
+### Q5
+
+Correct this:
+
+```c
+int *p = malloc(3 * sizeof(int));
+
+int *temp = realloc(p, 6 * sizeof(int));
+
+if(temp == NULL)
+    printf("Failed");
+
+printf("%d", p[0]);
+
+free(p);
+```
+
+Give the corrected complete section.
+
+---
+
+### Q6
+
+Explain these three states:
+
+```c
+int *p = malloc(sizeof(int));
+```
+
+```c
+free(p);
+```
+
+```c
+p = NULL;
+```
+
+---
+
+### Q7
+
+Is this valid?
+
+```c
+int *p = malloc(sizeof(int));
+*p = 50;
+
+free(p);
+
+p = NULL;
+
+printf("%d", *p);
+```
+
+Explain exactly what happens.
+
+---
+
+## Part C — Maths Accuracy
+
+### Q8
+
+A price increases from ₹800 to ₹920.
+
+Find the percentage increase.
+
+### Q9
+
+A number decreases from 500 to 425.
+
+Find the percentage decrease.
+
+### Q10
+
+An article costs ₹1,200 and is sold for ₹1,380.
+
+Find the profit percentage.
+
+### Q11
+
+A can complete work in 12 days and B in 18 days.
+
+How many days together?
+
+---
+
+## Part D — STEP Traps
+
+### Q12
+
+What is the output?
+
+```c
+int x = 7;
+
+printf("%d ", x / 2);
+printf("%d", x % 2);
+```
+
+Explain both results.
+
+---
+
+### Q13
+
+What is wrong?
+
+```c
+char str[] = "HELLO";
+
+for(int i = 0; i < sizeof(str); i++)
+    printf("%c", str[i]);
+```
+
+Is it actually unsafe here, or does it happen to work? Explain precisely.
+
+---
+
+### Q14
+
+What is the output?
+
+```c
+int x = 5;
+
+if(x = 0)
+    printf("YES");
+else
+    printf("NO");
+```
+
+Explain the difference between:
+
+```c
+=
+```
+
+and
+
+```c
+==
+```
+
+---
+
+### Q15
+
+What happens here?
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+if(p == NULL)
+    return 1;
+
+for(int i = 0; i < 5; i++)
+    p[i] = i * 10;
+
+printf("%d", *(p + 3));
+
+free(p);
+```
+
+Give the output and explain why `*(p + 3)` works.
+
+---
+
+## 🎯 Day 6 Target
+
+**15/15 conceptual accuracy.**
+
+Pay particular attention to these four rules:
+
+```text
+sizeof(array) ≠ string length
+strlen(string) = number of characters before '\0'
+
+malloc() → allocated memory is uninitialized
+calloc() → allocated memory is initialized to zero
+
+free(p) → releases memory
+p = NULL → changes pointer value
+
+percentage increase = increase/original × 100
+```
+
+Once you finish these, we'll move directly into the **final STEP mock cycle**, with increasingly exam-like mixed questions and no unnecessary OOP/trigonometry.
