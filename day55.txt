@@ -1,0 +1,602 @@
+# 🔥 STEP Day 7 — Final High-Pressure Mock
+
+Today is the **final major mock before targeted revision**. Treat this exactly like the STEP selection test.
+
+## ⏱️ Rules
+
+* **45 minutes**
+* No Google
+* No ChatGPT
+* No compiler
+* No notes
+* Attempt every question.
+* For output questions, give the exact output.
+* For programming questions, write complete C programs.
+
+### Target: **90+/100**
+
+---
+
+# PART A — C Output & Concepts
+
+## Q1–Q15
+
+### Q1 — Assignment trap
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+
+    if(x = 0)
+        printf("YES");
+    else
+        printf("NO");
+
+    printf(" %d", x);
+
+    return 0;
+}
+```
+
+Give the output and explain.
+
+---
+
+### Q2 — Pre/Post Increment
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 4;
+
+    printf("%d ", ++x);
+    printf("%d ", x++);
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+---
+
+### Q3 — Integer Division
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 9;
+    int b = 4;
+
+    printf("%d ", a / b);
+    printf("%d", a % b);
+
+    return 0;
+}
+```
+
+---
+
+### Q4 — `sizeof` vs `'\0'`
+
+```c
+#include <stdio.h>
+
+int main() {
+    char str[] = "CAT";
+
+    printf("%d ", (int)sizeof(str));
+    printf("%d", (int)strlen(str));
+
+    return 0;
+}
+```
+
+**Question:** What is the output?
+
+Also state what header is missing from the code.
+
+---
+
+### Q5 — Array + pointer
+
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[] = {5, 10, 15, 20, 25};
+
+    printf("%d ", arr[1]);
+    printf("%d ", *(arr + 3));
+    printf("%d", *(arr + 1) + *(arr + 4));
+
+    return 0;
+}
+```
+
+---
+
+### Q6 — `continue`
+
+```c
+#include <stdio.h>
+
+int main() {
+    int sum = 0;
+
+    for(int i = 1; i <= 6; i++) {
+        if(i % 2 == 0)
+            continue;
+
+        sum += i;
+    }
+
+    printf("%d", sum);
+
+    return 0;
+}
+```
+
+---
+
+### Q7 — Nested loops
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 0;
+
+    for(int i = 1; i <= 4; i++) {
+        for(int j = 1; j <= i; j++) {
+            x++;
+        }
+    }
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+---
+
+### Q8 — `switch` fall-through
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 2;
+
+    switch(x) {
+        case 1:
+            printf("A");
+            break;
+
+        case 2:
+            printf("B");
+
+        case 3:
+            printf("C");
+
+        case 4:
+            printf("D");
+            break;
+
+        default:
+            printf("E");
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Q9 — While loop
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 15;
+
+    while(x > 4) {
+        printf("%d ", x);
+        x -= 4;
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Q10 — String pointer
+
+```c
+#include <stdio.h>
+
+int main() {
+    char str[] = "HELLO";
+
+    printf("%c ", str[1]);
+    printf("%c ", *(str + 3));
+    printf("%c", *(str + 4));
+
+    return 0;
+}
+```
+
+---
+
+### Q11 — `break`
+
+```c
+#include <stdio.h>
+
+int main() {
+    int sum = 0;
+
+    for(int i = 1; i <= 10; i++) {
+        if(i == 6)
+            break;
+
+        sum += i;
+    }
+
+    printf("%d", sum);
+
+    return 0;
+}
+```
+
+---
+
+### Q12 — Condition + assignment
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 10;
+
+    if(x = 5)
+        printf("A");
+    else
+        printf("B");
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+---
+
+### Q13 — Pointer arithmetic
+
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[] = {10, 20, 30, 40};
+
+    int *p = arr;
+
+    printf("%d ", *p);
+    printf("%d ", *(p + 2));
+
+    p++;
+
+    printf("%d", *p);
+
+    return 0;
+}
+```
+
+---
+
+### Q14 — Loop state
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 2;
+
+    for(int i = 1; i <= 4; i++) {
+        x += i;
+
+        if(x % 2 == 0)
+            x /= 2;
+    }
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+---
+
+### Q15 — Dynamic memory
+
+Consider:
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+if(p == NULL)
+    return 1;
+
+for(int i = 0; i < 5; i++)
+    p[i] = i * 2;
+
+printf("%d", *(p + 4));
+
+free(p);
+p = NULL;
+```
+
+Answer:
+
+1. How many integers are allocated?
+2. What is the output?
+3. What does `free(p)` do?
+4. Why is `p = NULL` useful afterward?
+
+---
+
+# PART B — C Programming
+
+## Q16–Q20
+
+### Q16 — Prime
+
+Write a complete C program that:
+
+* reads an integer
+* handles `num <= 1`
+* determines whether it is prime
+* uses `i * i <= num`
+
+---
+
+### Q17 — Reverse an Array
+
+Write a C program that:
+
+* reads `n`
+* reads `n` integers
+* prints the array in reverse order
+
+Example:
+
+```text
+Input:
+5
+10 20 30 40 50
+
+Output:
+50 40 30 20 10
+```
+
+---
+
+### Q18 — Frequency
+
+Write a C program to count the frequency of a given number.
+
+For:
+
+```text
+Array: 2 5 2 7 2 8
+Target: 2
+```
+
+Output:
+
+```text
+3
+```
+
+---
+
+### Q19 — String
+
+Write a C program to count **vowels and consonants** in a complete line of text.
+
+Example:
+
+```text
+Input:
+Hello World
+
+Output:
+Vowels: 3
+Consonants: 7
+```
+
+Requirements:
+
+* spaces ignored
+* uppercase/lowercase accepted
+* only alphabetic characters counted
+* use `'\0'` to terminate traversal
+* use `fgets()` so spaces are accepted
+
+---
+
+### Q20 — Pattern
+
+Print:
+
+```text
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+```
+
+Use nested loops.
+
+---
+
+# PART C — Memory Allocation
+
+## Q21–Q23
+
+### Q21 — `realloc()`
+
+Complete this correctly:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+    int *p = malloc(3 * sizeof(int));
+
+    if(p == NULL)
+        return 1;
+
+    p[0] = 10;
+    p[1] = 20;
+    p[2] = 30;
+
+    // Resize to 6 integers
+
+    // Check realloc()
+
+    // Store:
+    // p[3] = 40
+    // p[4] = 50
+    // p[5] = 60
+
+    // Print all six values
+
+    // Free memory
+
+    return 0;
+}
+```
+
+**Use a temporary pointer.**
+
+---
+
+### Q22 — Identify the problem
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+if(p == NULL)
+    return 1;
+
+*p = 50;
+
+free(p);
+
+p = NULL;
+
+printf("%d", *p);
+```
+
+Is this valid?
+
+Explain precisely what happens.
+
+---
+
+### Q23 — Memory Leak
+
+What's wrong with this function?
+
+```c
+void test() {
+
+    int *p = malloc(100 * sizeof(int));
+
+    if(p == NULL)
+        return;
+
+    p[0] = 50;
+}
+```
+
+Explain what happens when `test()` finishes and show the corrected version.
+
+---
+
+# PART D — Mathematics
+
+## Q24–Q25
+
+### Q24 — Percentage
+
+A student's marks increase from **480 to 552**.
+
+Find the percentage increase.
+
+---
+
+### Q25 — Time & Work
+
+A can complete a job in **8 days**.
+
+B can complete the same job in **12 days**.
+
+How many days will they take together?
+
+---
+
+# 🎯 Submission Format
+
+Use:
+
+```text
+Q1. ...
+Q2. ...
+Q3. ...
+...
+Q15. ...
+
+Q16.
+[code]
+
+Q17.
+[code]
+
+Q18.
+[code]
+
+Q19.
+[code]
+
+Q20.
+[code]
+
+Q21.
+[code]
+
+Q22. ...
+
+Q23.
+[code]
+
+Q24. ...
+Q25. ...
+```
+
+**Start your 45-minute timer at Q1.**
