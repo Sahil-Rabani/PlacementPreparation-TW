@@ -120,7 +120,7 @@ Day52       |     23/09/26         |  Completing day 4 of Round 1 STEP Preparati
 
 Day53       |     25/09/26         |  Completing day 5 of Round 1 STEP Preparation.
 
-Day54       |     26/09/26         |  Completing day 6 of Round 1 STEP preparation.
+Day54       |     26/09/26         |  Completing day 6 of Round 1 STEP Preparation.
 
 Day55       |     27/09/26         |  Completing day 7 of Round 1 STEP Preparation.
 
