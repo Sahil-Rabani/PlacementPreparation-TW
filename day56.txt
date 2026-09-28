@@ -1,0 +1,411 @@
+# ⚡ STEP Day 8 — Exam-Maintenance Mode
+
+No new theory today. This is **accuracy + speed + retention**.
+
+### ⏱️ Time limit: 25 minutes
+
+### 🎯 Target: **18/20 equivalent**
+
+### Rules
+
+* No Google
+* No ChatGPT
+* No compiler
+* No notes
+* Don't overthink straightforward questions.
+
+---
+
+# Part A — Rapid C Output
+
+## Q1–Q10
+
+### Q1
+
+```c
+int x = 5;
+
+printf("%d ", x++);
+printf("%d ", ++x);
+printf("%d", x);
+```
+
+---
+
+### Q2
+
+```c
+int sum = 0;
+
+for(int i = 1; i <= 6; i++) {
+    if(i % 2 == 0)
+        continue;
+
+    sum += i;
+}
+
+printf("%d", sum);
+```
+
+---
+
+### Q3
+
+```c
+int arr[] = {10, 20, 30, 40};
+
+printf("%d ", arr[2]);
+printf("%d ", *(arr + 1));
+printf("%d", *(arr + 3));
+```
+
+---
+
+### Q4
+
+```c
+int x = 10;
+
+if(x = 0)
+    printf("YES");
+else
+    printf("NO");
+
+printf("%d", x);
+```
+
+---
+
+### Q5
+
+```c
+char str[] = "HELLO";
+
+printf("%c ", str[1]);
+printf("%c ", *(str + 3));
+printf("%d", (int)sizeof(str));
+```
+
+---
+
+### Q6
+
+```c
+int x = 2;
+
+for(int i = 1; i <= 3; i++) {
+    x *= i;
+
+    if(x > 4)
+        x -= 1;
+}
+
+printf("%d", x);
+```
+
+---
+
+### Q7
+
+```c
+int x = 0;
+
+for(int i = 1; i <= 3; i++) {
+    for(int j = 1; j <= 2; j++) {
+        x++;
+    }
+}
+
+printf("%d", x);
+```
+
+---
+
+### Q8
+
+```c
+int x = 3;
+
+switch(x) {
+    case 1:
+        printf("A");
+        break;
+    case 2:
+        printf("B");
+        break;
+    case 3:
+        printf("C");
+    case 4:
+        printf("D");
+        break;
+    default:
+        printf("E");
+}
+```
+
+---
+
+### Q9
+
+```c
+int x = 14;
+
+while(x > 5) {
+    printf("%d ", x);
+    x -= 3;
+}
+```
+
+---
+
+### Q10
+
+What is printed?
+
+```c
+printf("%d %d", 17 / 5, 17 % 5);
+```
+
+---
+
+# Part B — Rapid Coding
+
+## Q11–Q15
+
+### Q11 — Prime
+
+Write a complete C program to check whether an input number is prime.
+
+Must correctly handle:
+
+```text
+-5
+0
+1
+2
+3
+4
+```
+
+---
+
+### Q12 — Armstrong
+
+Write a C program to check whether a **3-digit number** is an Armstrong number.
+
+Example:
+
+```text
+153 → Armstrong
+123 → Not Armstrong
+```
+
+---
+
+### Q13 — Second Largest Distinct
+
+Write a program to find the second-largest distinct element without sorting.
+
+```text
+10 20 20 8 15
+```
+
+Expected:
+
+```text
+15
+```
+
+---
+
+### Q14 — String
+
+Write a C program using `fgets()` to count vowels and consonants in:
+
+```text
+Hello World
+```
+
+Requirements:
+
+* spaces ignored
+* uppercase/lowercase accepted
+* only alphabetic characters counted
+* traverse until `'\0'`
+
+---
+
+### Q15 — Pattern
+
+Print:
+
+```text
+*
+**
+***
+****
+*****
+```
+
+Use nested loops.
+
+---
+
+# Part C — Memory Trap Round
+
+## Q16–Q20
+
+### Q16
+
+What does this allocate?
+
+```c
+int *p = malloc(10 * sizeof(int));
+```
+
+How many integers can safely be stored?
+
+---
+
+### Q17
+
+What is the difference between:
+
+```c
+malloc(5 * sizeof(int))
+```
+
+and:
+
+```c
+calloc(5, sizeof(int))
+```
+
+What are the initial values after successful `calloc()`?
+
+---
+
+### Q18
+
+What's wrong?
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+p[0] = 10;
+
+free(p);
+
+printf("%d", p[0]);
+```
+
+Name the problem precisely.
+
+---
+
+### Q19
+
+What's the safest pattern?
+
+```c
+int *p = malloc(3 * sizeof(int));
+
+int *temp = realloc(p, 6 * sizeof(int));
+```
+
+What should happen after `temp` is checked successfully?
+
+---
+
+### Q20
+
+Explain precisely:
+
+```c
+free(p);
+p = NULL;
+```
+
+Does `p = NULL` free the memory?
+
+---
+
+# Part D — Maths Maintenance
+
+## Q21–Q25
+
+### Q21
+
+A number increases from **400 to 460**.
+
+Find the percentage increase.
+
+---
+
+### Q22
+
+An article costs ₹800 and is sold for ₹920.
+
+Find the profit percentage.
+
+---
+
+### Q23
+
+A can complete a job in 10 days and B in 20 days.
+
+How many days together?
+
+---
+
+### Q24
+
+Find the HCF of:
+
+```text
+84 and 126
+```
+
+---
+
+### Q25
+
+A number is divisible by both **6 and 8**.
+
+What is the smallest positive number satisfying this?
+
+---
+
+# 🏁 Submission
+
+Send:
+
+```text
+Q1. ...
+Q2. ...
+...
+Q10. ...
+
+Q11.
+[code]
+
+Q12.
+[code]
+
+Q13.
+[code]
+
+Q14.
+[code]
+
+Q15.
+[code]
+
+Q16. ...
+...
+Q25. ...
+```
+
+**Start the 25-minute timer now.**
+
+Today's objective is simple: **don't learn—perform.**
