@@ -126,6 +126,8 @@ Day55       |     27/09/26         |  Completing day 7 of Round 1 STEP Preparati
 
 Day56       |     28/09/26         |  Completing day 1 of Final Preparation.
 
+Day57       |     29/09/26         |  Completing day 2 of Final Preparation.
+
 Everything mention above is uploaded by day name in my repository.
 
 If there is date missing between file upload, Which means I am working on previous file on upload missing date.
