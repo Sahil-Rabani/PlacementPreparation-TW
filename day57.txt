@@ -1,4 +1,4 @@
-# 🔥 STEP Day 10 — Final Precision + Speed Test
+# 🔥 STEP Day 2 — Final Precision + Speed Test
 
 **Mode:** Exam Maintenance
 **Time limit:** **20 minutes**
