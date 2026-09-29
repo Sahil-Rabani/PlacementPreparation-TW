@@ -1,0 +1,446 @@
+# 🔥 STEP Day 10 — Final Precision + Speed Test
+
+**Mode:** Exam Maintenance
+**Time limit:** **20 minutes**
+**Target:** **18/20+**
+**Rule:** No notes, no searching. Write answers exactly as you would in the exam.
+
+---
+
+## Section A — C Output Prediction
+
+### Q1
+
+What is the output?
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 17, b = 5;
+    printf("%d %d", a / b, a % b);
+    return 0;
+}
+```
+
+---
+
+### Q2
+
+What is the output?
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 10;
+
+    if (x = 0)
+        printf("YES");
+    else
+        printf("NO");
+
+    printf(" %d", x);
+    return 0;
+}
+```
+
+---
+
+### Q3
+
+Trace carefully:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 1;
+
+    for(int i = 1; i <= 4; i++) {
+        x += i;
+        if(x % 2 == 0)
+            x++;
+    }
+
+    printf("%d", x);
+    return 0;
+}
+```
+
+Give the value of `x` **after every iteration** and the final output.
+
+---
+
+### Q4
+
+```c
+#include <stdio.h>
+
+int main() {
+    for(int i = 1; i <= 5; i++) {
+        if(i == 3)
+            continue;
+        printf("%d ", i);
+    }
+    return 0;
+}
+```
+
+Output?
+
+---
+
+### Q5
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 2;
+
+    switch(x) {
+        case 1:
+            printf("A");
+        case 2:
+            printf("B");
+        case 3:
+            printf("C");
+        default:
+            printf("D");
+    }
+
+    return 0;
+}
+```
+
+Output?
+
+---
+
+# Section B — Strings & Character Handling
+
+### Q6
+
+For:
+
+```c
+char str[] = "HELLO";
+```
+
+What are:
+
+```text
+sizeof(str) = ?
+strlen(str) = ?
+```
+
+Explain the difference in one sentence.
+
+---
+
+### Q7
+
+Which is correct for reading a normal word?
+
+```c
+char str[50];
+
+A) scanf("%s", &str);
+B) scanf("%s", str);
+```
+
+Also: what should you generally use if the input is:
+
+```text
+Hello World
+```
+
+---
+
+### Q8
+
+What does this represent?
+
+```c
+'\0'
+```
+
+And where does it normally appear in a C string?
+
+---
+
+### Q9
+
+Write a C program that counts **only vowels** in:
+
+```text
+Hello World
+```
+
+Requirements:
+
+* Use `fgets()`
+* Ignore spaces
+* Ignore consonants
+* Handle uppercase and lowercase vowels
+* Traverse until `'\0'`
+
+---
+
+### Q10
+
+What is the output?
+
+```c
+#include <stdio.h>
+
+int main() {
+    char str[] = "CODE";
+    char *p = str;
+
+    printf("%c %c %c", *p, *(p + 1), *(p + 3));
+
+    return 0;
+}
+```
+
+---
+
+# Section C — Dynamic Memory
+
+### Q11
+
+Explain the difference:
+
+```c
+malloc()
+calloc()
+```
+
+Give **one important difference**.
+
+---
+
+### Q12
+
+What is wrong here?
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+free(p);
+
+*p = 20;
+```
+
+Name the problem and explain why it is invalid.
+
+---
+
+### Q13
+
+What happens here?
+
+```c
+int *p = malloc(sizeof(int));
+
+*p = 50;
+
+free(p);
+p = NULL;
+```
+
+Answer separately:
+
+1. What happens to the allocated memory?
+2. What does `p = NULL` do?
+3. Can `*p` be safely accessed afterward?
+
+---
+
+### Q14
+
+Complete this safely:
+
+```c
+int *p = malloc(3 * sizeof(int));
+
+if(p == NULL)
+    return 1;
+
+int *temp = realloc(p, 6 * sizeof(int));
+
+if(________________) {
+    __________________;
+    return 1;
+}
+
+p = __________;
+```
+
+---
+
+### Q15
+
+Define in one line each:
+
+```text
+a) Memory leak
+b) Dangling pointer
+```
+
+---
+
+# Section D — Coding
+
+### Q16 — Prime Number
+
+Write a C program to determine whether an integer is prime.
+
+**Important:** correctly handle:
+
+```text
+0
+1
+negative numbers
+```
+
+---
+
+### Q17 — Armstrong Number
+
+Write a C program to check whether:
+
+```text
+153
+```
+
+is an Armstrong number.
+
+**Important:** preserve the original number before modifying the temporary variable.
+
+---
+
+### Q18 — Second Largest
+
+Write a C program to find the **second-largest distinct element** in:
+
+```text
+{10, 5, 8, 20, 15}
+```
+
+Expected answer:
+
+```text
+15
+```
+
+---
+
+### Q19 — Vowels & Consonants
+
+Write a complete program using:
+
+```c
+fgets()
+```
+
+to count vowels and consonants in:
+
+```text
+Hello World
+```
+
+Rules:
+
+* Ignore spaces
+* Ignore non-alphabetic characters
+* Case-insensitive
+
+---
+
+### Q20 — Pattern
+
+Print:
+
+```text
+1
+12
+123
+1234
+12345
+```
+
+Use **nested loops**.
+
+---
+
+# 🧮 Section E — Maths Sprint
+
+Do these without a calculator.
+
+### Q21 — Percentage
+
+A price increases from **₹800 to ₹920**.
+
+Find the percentage increase.
+
+---
+
+### Q22 — Percentage
+
+A product priced at **₹1,200** is sold for **₹1,020**.
+
+Find the percentage decrease.
+
+---
+
+### Q23 — Number System
+
+Find the **HCF** of:
+
+```text
+84 and 126
+```
+
+---
+
+### Q24 — Time & Work
+
+A can complete a job in **12 days**.
+
+B can complete it in **18 days**.
+
+How many days will they take together?
+
+---
+
+### Q25 — Profit & Loss
+
+A person buys an item for **₹800** and sells it for **₹920**.
+
+Find the:
+
+1. Profit
+2. Profit percentage
+
+---
+
+## ⏱️ Submission Format
+
+Try to finish within **20 minutes**.
+
+Send your answers as:
+
+```text
+Q1.
+Q2.
+Q3.
+...
+Q25.
+```
+
+For coding questions, paste the complete C code.
+
+**Target:** ≥90%.
