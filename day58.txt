@@ -1,0 +1,429 @@
+# 🔥 STEP Day 11 — Mini Mock #1
+
+We are moving out of the repetitive 20-minute drills now.
+
+**Goal:** simulate a compact STEP-style selection test rather than just testing isolated concepts.
+
+### Rules
+
+* **25 questions**
+* **30 minutes**
+* No notes/search
+* Coding questions: write complete C code
+* For output questions: give only the output + brief reasoning if needed
+* Maths: show the calculation
+* **Target: 22+/25**
+
+---
+
+## Section A — C Output & Logic
+
+### Q1
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 5, b = 2;
+    printf("%d %d %d", a+b, a/b, a%b);
+    return 0;
+}
+```
+
+---
+
+### Q2
+
+```c
+int x = 5;
+
+if(x = 10)
+    printf("A");
+else
+    printf("B");
+
+printf(" %d", x);
+```
+
+Output?
+
+---
+
+### Q3
+
+```c
+int x = 2;
+
+for(int i = 1; i <= 3; i++) {
+    x *= i;
+    printf("%d ", x);
+}
+```
+
+Output?
+
+---
+
+### Q4
+
+```c
+int x = 10;
+
+while(x > 3) {
+    x -= 2;
+}
+
+printf("%d", x);
+```
+
+Output?
+
+---
+
+### Q5
+
+```c
+int x = 3;
+
+switch(x) {
+    case 1:
+        printf("A");
+        break;
+
+    case 2:
+        printf("B");
+
+    case 3:
+        printf("C");
+
+    default:
+        printf("D");
+}
+```
+
+Output?
+
+---
+
+## Section B — Arrays & Strings
+
+### Q6
+
+What is the output?
+
+```c
+int arr[] = {10, 20, 30, 40};
+
+printf("%d %d", arr[1], *(arr + 3));
+```
+
+---
+
+### Q7
+
+For:
+
+```c
+char str[] = "HELLO";
+```
+
+What are:
+
+```text
+sizeof(str)
+strlen(str)
+```
+
+Why are they different?
+
+---
+
+### Q8
+
+What is the output?
+
+```c
+char str[] = "PROGRAM";
+char *p = str;
+
+printf("%c %c %c", *p, *(p+2), *(p+6));
+```
+
+---
+
+### Q9
+
+Write a C program to **reverse an integer array in-place**.
+
+Example:
+
+```text
+Input:  1 2 3 4 5
+Output: 5 4 3 2 1
+```
+
+Do not use a second array.
+
+---
+
+### Q10
+
+Write a C program to find the **maximum element** in:
+
+```text
+{12, 5, 28, 7, 19}
+```
+
+---
+
+## Section C — Basic C Programming
+
+### Q11 — Prime
+
+Write a program to check whether a number is prime.
+
+Your program must correctly handle:
+
+```text
+0
+1
+2
+negative numbers
+```
+
+---
+
+### Q12 — Armstrong
+
+Write a program to check whether:
+
+```text
+153
+```
+
+is an Armstrong number.
+
+**Important:** don't destroy the original value needed for the final comparison.
+
+---
+
+### Q13 — Pattern
+
+Print:
+
+```text
+*
+**
+***
+****
+*****
+```
+
+Use nested loops.
+
+---
+
+### Q14 — Pattern
+
+Print:
+
+```text
+1
+22
+333
+4444
+55555
+```
+
+Use nested loops.
+
+---
+
+## Section D — Dynamic Memory
+
+### Q15
+
+What is wrong with this?
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+if(p == NULL)
+    return 1;
+
+free(p);
+
+printf("%d", *p);
+```
+
+Name the problem and explain it.
+
+---
+
+### Q16
+
+Complete safely:
+
+```c
+int *p = malloc(3 * sizeof(int));
+
+if(p == NULL)
+    return 1;
+
+int *temp = realloc(p, 6 * sizeof(int));
+
+if(__________________) {
+    __________________;
+    return 1;
+}
+
+p = __________;
+```
+
+---
+
+### Q17
+
+Explain the difference between:
+
+```c
+free(p);
+p = NULL;
+```
+
+Specifically answer:
+
+1. Which one releases heap memory?
+2. Which one changes the pointer?
+3. Does `p = NULL` release memory?
+
+---
+
+## Section E — Strings
+
+### Q18
+
+Write a program using `fgets()` to count **vowels and consonants** in:
+
+```text
+Hello World
+```
+
+Rules:
+
+* Ignore spaces.
+* Ignore non-alphabetic characters.
+* Handle uppercase and lowercase.
+* Traverse until `'\0'`.
+
+---
+
+### Q19
+
+What is wrong with this?
+
+```c
+char str[] = "";
+
+fgets(str, sizeof(str), stdin);
+```
+
+Why is this unsafe?
+
+---
+
+## Section F — Maths
+
+### Q20 — Percentage
+
+A price increases from **₹600 to ₹690**.
+
+Find the percentage increase.
+
+---
+
+### Q21 — Profit & Loss
+
+CP = ₹800
+SP = ₹920
+
+Find:
+
+1. Profit
+2. Profit percentage
+
+---
+
+### Q22 — Number System
+
+Find the **HCF** of:
+
+```text
+96 and 144
+```
+
+---
+
+### Q23 — Time & Work
+
+A can complete a job in **15 days**.
+
+B can complete the same job in **10 days**.
+
+How many days will they take together?
+
+---
+
+### Q24 — Percentage
+
+A product's price decreases from **₹1,000 to ₹850**.
+
+Find the percentage decrease.
+
+---
+
+## 🔴 Q25 — Final Mixed Challenge
+
+Predict the output **without running it**:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+
+    for(int i = 1; i <= 3; i++) {
+        x += i;
+
+        if(x % 2 == 0)
+            x /= 2;
+        else
+            x += 2;
+    }
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+Give the value of `x` after **each iteration** and the final output.
+
+---
+
+### ⏱️ Time target
+
+**30 minutes maximum.**
+
+This time, don't rush just to beat the clock. Your previous 20-minute test showed that you can work quickly; now I want to measure whether you can maintain **accuracy while solving a broader set of problems**.
+
+Send:
+
+```text
+Q1.
+Q2.
+...
+Q25.
+```
+
+For Q9, Q10, Q11, Q12, Q13, Q14, Q18, and Q19, include your code/explanation.
