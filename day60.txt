@@ -1,0 +1,504 @@
+# 🔥 STEP — Demo-Style Mock #1
+
+This is the **actual first Demo-Style Mock**, based on the structure of the question paper you created.
+
+**Total Questions:** 25
+**Time Target:** **35 minutes**
+**Mode:** Full written-test simulation
+**Target:** **22+/25**
+**No notes, calculator, phone, or code execution.**
+
+I've kept the overall level close to your demo paper while adding the C topics we've been preparing: **strings, arrays, pointers, memory allocation, and tracing**.
+
+---
+
+# Section A — Predict the Output
+
+### Q1. Strings
+
+What is the exact output?
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str[] = "COMPUTER";
+
+    printf("%c %c %d", str[1], str[5], strlen(str));
+
+    return 0;
+}
+```
+
+---
+
+### Q2. Arrays
+
+What is the exact output?
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a[] = {12, 24, 36, 48, 60};
+
+    printf("%d %d %d", a[1], a[3], a[4]);
+
+    return 0;
+}
+```
+
+---
+
+### Q3. Loop
+
+What is the exact output?
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int sum = 0;
+
+    for(int i = 1; i <= 5; i++)
+    {
+        sum += i;
+        printf("%d ", sum);
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Q4. Nested If-Else
+
+What is the exact output?
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a = 12;
+
+    if(a > 10)
+    {
+        if(a % 2 == 0)
+            printf("A");
+        else
+            printf("B");
+    }
+    else
+    {
+        printf("C");
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Q5. Integer Division
+
+What is the exact output?
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a = 9, b = 4;
+    float x;
+
+    x = a / b;
+
+    printf("%d %.1f", a % b, x);
+
+    return 0;
+}
+```
+
+---
+
+# Section B — Basic Mathematics & Aptitude
+
+### Q6. Percentage
+
+A student's marks increase from **400 to 460**.
+
+Find the percentage increase.
+
+---
+
+### Q7. Time & Work
+
+A can complete a job in **12 days**, while B can complete it in **18 days**.
+
+How many days will they take if they work together?
+
+---
+
+### Q8. Number System
+
+Find the missing number:
+
+```text
+3, 8, 15, 24, 35, ?, 63
+```
+
+Also explain the pattern.
+
+---
+
+### Q9. Profit & Loss
+
+An article is bought for **₹800** and sold for **₹920**.
+
+Find:
+
+1. Profit
+2. Profit percentage
+
+---
+
+### Q10. Age
+
+The present age of a father is **4 times** the age of his son.
+
+After 10 years, the father's age will be **twice** the son's age.
+
+Find their present ages.
+
+---
+
+# Section C — Write C Programs
+
+### Q11. Sum of Natural Numbers
+
+Write a C program to input `N` and calculate:
+
+```text
+1 + 2 + 3 + ... + N
+```
+
+using a `for` loop.
+
+---
+
+### Q12. Even Numbers
+
+Write a C program to print all even numbers between **1 and 50**.
+
+Expected format:
+
+```text
+2 4 6 8 ... 50
+```
+
+---
+
+### Q13. Prime Number
+
+Write a complete C program to check whether an input number is prime.
+
+Your program must correctly handle:
+
+```text
+0
+1
+2
+negative numbers
+```
+
+You may use:
+
+```c
+i * i <= num
+```
+
+as the loop condition.
+
+---
+
+### Q14. Armstrong Number
+
+Write a C program to check whether an input number is an Armstrong number.
+
+For example:
+
+```text
+153 → Armstrong
+```
+
+**Important:** preserve the original number for the final comparison.
+
+---
+
+### Q15. Factorial
+
+Write a C program to input an integer and calculate its factorial using a loop.
+
+Example:
+
+```text
+Input: 5
+Output: 120
+```
+
+---
+
+# Section D — Patterns
+
+### Q16. Star Pattern
+
+Write a C program to print:
+
+```text
+*
+**
+***
+****
+*****
+```
+
+Use nested loops.
+
+---
+
+### Q17. Number Pattern
+
+Write a C program to print:
+
+```text
+1
+12
+123
+1234
+12345
+```
+
+Use nested loops.
+
+---
+
+### Q18. Reverse Pattern
+
+Write a C program to print:
+
+```text
+*****
+****
+***
+**
+*
+```
+
+---
+
+# Section E — Arrays & Strings
+
+### Q19. Array Maximum
+
+Write a C program to find the **largest element** in:
+
+```c
+int arr[] = {15, 8, 27, 12, 19};
+```
+
+Expected output:
+
+```text
+27
+```
+
+---
+
+### Q20. Reverse Array
+
+Write a C program to reverse this array **in-place**:
+
+```text
+1 2 3 4 5
+```
+
+Expected output:
+
+```text
+5 4 3 2 1
+```
+
+**Do not use a second array.**
+
+---
+
+### Q21. String Length
+
+Write a C program to input a string using `fgets()` and find its length **without using `strlen()`**.
+
+Remember to traverse until:
+
+```c
+'\0'
+```
+
+---
+
+### Q22. Vowels & Consonants
+
+Write a C program using `fgets()` to count vowels and consonants in:
+
+```text
+Hello World
+```
+
+Requirements:
+
+* Ignore spaces.
+* Ignore non-alphabetic characters.
+* Handle uppercase and lowercase.
+* Traverse until `'\0'`.
+
+---
+
+# Section F — Memory Allocation
+
+### Q23. Dynamic Memory
+
+Answer the following:
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+if(p == NULL)
+    return 1;
+
+p[0] = 10;
+p[1] = 20;
+
+free(p);
+p = NULL;
+```
+
+Explain:
+
+1. What does `malloc()` do?
+2. What does `free(p)` do?
+3. What does `p = NULL` do?
+4. Why is setting `p = NULL` after `free(p)` useful?
+
+---
+
+### Q24. `realloc()`
+
+Complete this program safely:
+
+```c
+int *p = malloc(3 * sizeof(int));
+
+if(p == NULL)
+    return 1;
+
+int *temp = realloc(p, 6 * sizeof(int));
+
+if(________________________)
+{
+    ________________________;
+    return 1;
+}
+
+________________________;
+```
+
+Use the safe `temp`-pointer approach.
+
+---
+
+# Section G — Final Code Tracing
+
+### Q25. Trace Carefully
+
+Study the following program.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int x = 3;
+
+    for(int i = 1; i <= 4; i++)
+    {
+        x += i;
+
+        if(x % 2 == 0)
+            x /= 2;
+        else
+            x += 3;
+    }
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+Give:
+
+```text
+After iteration 1: ?
+After iteration 2: ?
+After iteration 3: ?
+After iteration 4: ?
+
+Final output: ?
+```
+
+---
+
+# ⏱️ Test Rules
+
+**Start your timer when you begin Q1.**
+
+### Target: 35 minutes
+
+Don't deliberately try to finish in 15–20 minutes. This is our first **full demo-style simulation**, so I want to measure both:
+
+* **accuracy**
+* **natural solving speed**
+
+For programming questions, write the **complete C program**, just as you would on the written test.
+
+### Scoring emphasis
+
+I'll evaluate:
+
+```text
+Output accuracy
+Program logic
+C syntax
+Edge-case handling
+Pattern logic
+Memory terminology
+Math calculation
+Tracing accuracy
+```
+
+**No hints during the mock.**
+
+When finished, send your complete answers as:
+
+```text
+Q1.
+Q2.
+...
+Q25.
+```
+
+For Q11–Q24, include your code where requested.
