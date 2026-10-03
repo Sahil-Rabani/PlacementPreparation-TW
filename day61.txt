@@ -1,0 +1,523 @@
+# 🔥 STEP — Demo-Style Mock #2
+
+You're right about the format, so this version is designed to resemble a **written exam with limited answer space**.
+
+### Rules
+
+* **25 questions**
+* **35 minutes**
+* Practice on **one A4 sheet**
+* Only **3 complete programming questions**
+* For output questions, write only the exact output.
+* For concept questions, keep answers to 1–2 lines.
+* No compiler, calculator, phone, or notes.
+* **Target: 22+/25**
+
+Your handwritten mock showed that full programs consume most of the available space, so we're deliberately shifting the paper toward output prediction, tracing, aptitude, and short C concepts. 
+
+---
+
+# SECTION A — Predict the Output
+
+### Q1–Q8
+
+### Q1
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a = 15, b = 4;
+    printf("%d %d %d", a / b, a % b, a + b);
+    return 0;
+}
+```
+
+---
+
+### Q2
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int x = 7;
+
+    if(x > 5)
+        printf("A");
+    else
+        printf("B");
+
+    printf(" %d", x);
+    return 0;
+}
+```
+
+---
+
+### Q3
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int sum = 0;
+
+    for(int i = 1; i <= 4; i++)
+    {
+        sum += i * 2;
+        printf("%d ", sum);
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Q4
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    for(int i = 1; i <= 5; i++)
+    {
+        if(i == 2)
+            continue;
+
+        if(i == 5)
+            break;
+
+        printf("%d ", i);
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Q5
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a[] = {10, 20, 30, 40};
+
+    printf("%d %d", a[2], *(a + 1));
+
+    return 0;
+}
+```
+
+---
+
+### Q6
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char str[] = "HELLO";
+
+    printf("%c %c %d", str[0], str[4], sizeof(str));
+
+    return 0;
+}
+```
+
+---
+
+### Q7
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int x = 3;
+
+    switch(x)
+    {
+        case 1:
+            printf("A");
+            break;
+
+        case 2:
+            printf("B");
+
+        case 3:
+            printf("C");
+
+        default:
+            printf("D");
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Q8
+
+Trace and give the final output:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int x = 2;
+
+    for(int i = 1; i <= 3; i++)
+    {
+        x += i;
+
+        if(x % 2 == 0)
+            x /= 2;
+    }
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+---
+
+# SECTION B — Basic Mathematics & Aptitude
+
+### Q9–Q13
+
+### Q9 — Percentage
+
+A price increases from **₹500 to ₹575**.
+
+Find the percentage increase.
+
+---
+
+### Q10 — Profit & Loss
+
+An article is bought for **₹600** and sold for **₹690**.
+
+Find:
+
+1. Profit
+2. Profit percentage
+
+---
+
+### Q11 — Time & Work
+
+A can complete a job in **12 days** and B can complete it in **18 days**.
+
+How many days will they take together?
+
+---
+
+### Q12 — Number System
+
+Find the missing number:
+
+```text
+2, 6, 12, 20, 30, ?, 56
+```
+
+Give the pattern.
+
+---
+
+### Q13 — Age
+
+The present age of a father is **3 times** the age of his son.
+
+After 10 years, the father's age will be **twice** the son's age.
+
+Find their present ages.
+
+---
+
+# SECTION C — Write C Programs
+
+### Only 3 programs
+
+## Q14 — Basic Loop Program
+
+Write a C program to input `N` and print the sum:
+
+```text
+1 + 2 + 3 + ... + N
+```
+
+Use a `for` loop.
+
+---
+
+## Q15 — Array Program
+
+Write a C program to find the **largest element** in:
+
+```text
+12 5 28 7 19
+```
+
+Use an array.
+
+---
+
+## Q16 — Pattern Program
+
+Write a C program to print:
+
+```text
+*
+**
+***
+****
+*****
+```
+
+Use nested loops.
+
+---
+
+# SECTION D — Short C Concepts & Debugging
+
+### Q17–Q21
+
+### Q17
+
+What is the difference between:
+
+```c
+arr[i]
+*(arr + i)
+arr + i
+```
+
+Give the meaning of each.
+
+---
+
+### Q18
+
+For:
+
+```c
+char str[] = "CAT";
+```
+
+Give:
+
+```text
+sizeof(str) = ?
+strlen(str) = ?
+```
+
+Why are they different?
+
+---
+
+### Q19
+
+What is the exact problem here?
+
+```c
+int *p = malloc(sizeof(int));
+
+*p = 20;
+
+free(p);
+
+*p = 30;
+```
+
+Name the problem.
+
+---
+
+### Q20
+
+What is the difference between:
+
+```c
+free(p);
+p = NULL;
+```
+
+Answer:
+
+* Which one releases heap memory?
+* Which one changes the pointer?
+* Does `p = NULL` free memory?
+
+---
+
+### Q21
+
+Complete the missing line:
+
+```c
+int *p = malloc(3 * sizeof(int));
+
+int *temp = realloc(p, 6 * sizeof(int));
+
+if(temp == NULL)
+{
+    return 1;
+}
+
+____________________;
+```
+
+---
+
+# SECTION E — Short Code Tracing
+
+### Q22–Q25
+
+### Q22
+
+What is the output?
+
+```c
+int x = 5;
+
+if(x = 0)
+    printf("YES");
+else
+    printf("NO");
+
+printf(" %d", x);
+```
+
+---
+
+### Q23
+
+What is the output?
+
+```c
+int x = 1;
+
+for(int i = 1; i <= 3; i++)
+{
+    x *= 2;
+}
+
+printf("%d", x);
+```
+
+---
+
+### Q24
+
+Give the output:
+
+```c
+int i, sum = 0;
+
+for(i = 1; i <= 5; i++)
+{
+    sum += i;
+}
+
+printf("%d %d", i, sum);
+```
+
+---
+
+### Q25 — Final Challenge
+
+Trace **every iteration**:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int x = 5;
+
+    for(int i = 1; i <= 4; i++)
+    {
+        x += i;
+
+        if(x % 2 == 0)
+            x /= 2;
+        else
+            x += 2;
+    }
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+Write:
+
+```text
+Iteration 1: x = ?
+Iteration 2: x = ?
+Iteration 3: x = ?
+Iteration 4: x = ?
+
+Final output: ?
+```
+
+---
+
+# ⏱️ Exam Conditions
+
+**Start a 35-minute timer.**
+
+### Your answer sheet should look roughly like:
+
+```text
+Q1. ______
+Q2. ______
+Q3. ______
+...
+Q13. ______
+
+Q14. [program]
+
+Q15. [program]
+
+Q16. [program]
+
+Q17. ______
+...
+Q25. ______
+```
+
+Don't write long explanations unless specifically requested.
+
+### Scoring
+
+I'll use:
+
+* **Q1–Q13:** 1 mark each
+* **Q14–Q16:** 2 marks each
+* **Q17–Q25:** 1 mark each
+
+**Total = 28 marks**
+
+Target:
+
+* **25–28:** excellent exam readiness
+* **22–24:** strong, repair remaining mistakes
+* **19–21:** targeted revision required
+* **≤18:** identify weak areas before another full mock
+
+**Do this one on paper.** When you're finished, photograph the answer sheet(s) and upload them. I'll evaluate the actual written work, including **C syntax, logic, handwriting-readability issues, and how efficiently you're using the page**.
