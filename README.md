@@ -134,6 +134,8 @@ Day59       |     01/10/26         |  Completing day 4 of Final Preparation.
 
 Day60       |     02/10/26         |  Completing day 5 of Final Preparation.
 
+Day61       |     03/10/26         |  Completing day 6 of Final Preparation.
+
 Everything mention above is uploaded by day name in my repository.
 
 If there is date missing between file upload, Which means I am working on previous file on upload missing date.
