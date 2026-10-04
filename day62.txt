@@ -1,0 +1,568 @@
+# 🔥 STEP — Demo-Style Mock 3
+
+We're now in the **final-week phase**. The previous mock exposed that your basic output and aptitude accuracy is strong, so this paper will increase the **quality of traps**, not the amount of code.
+
+**Date:** 3 October 2026
+**Exam:** 10 October 2026
+**Questions:** 25
+**Time:** **35 minutes**
+**Practice constraint:** One A4 answer sheet
+**Complete-program questions:** **Only 3**
+**Target:** **23+/25**
+
+### Rules
+
+* Do this on paper.
+* No compiler/calculator/notes.
+* For output questions, write only the output.
+* For concepts, answer briefly.
+* For programs, write complete C code.
+* Don't spend excessive time making the code pretty—the real test rewards correct logic.
+
+---
+
+# Section A — Predict the Output
+
+### Q1–Q8
+
+### Q1 — Integer Division
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a = 17, b = 4;
+
+    printf("%d %d %.2f", a / b, a % b, (float)a / b);
+
+    return 0;
+}
+```
+
+---
+
+### Q2 — Assignment Trap
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int x = 8;
+
+    if(x = 0)
+        printf("YES");
+    else
+        printf("NO");
+
+    printf(" %d", x);
+
+    return 0;
+}
+```
+
+---
+
+### Q3 — Loop State
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int x = 1;
+
+    for(int i = 1; i <= 4; i++)
+    {
+        x += i;
+
+        if(x % 2 == 0)
+            x++;
+    }
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+Give the **value of `x` after each iteration** as well as the final output.
+
+---
+
+### Q4 — `break` / `continue`
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    for(int i = 1; i <= 6; i++)
+    {
+        if(i == 2)
+            continue;
+
+        if(i == 5)
+            break;
+
+        printf("%d ", i);
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Q5 — Array + Pointer
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int arr[] = {10, 20, 30, 40, 50};
+
+    printf("%d %d %d",
+           arr[2],
+           *(arr + 4),
+           *(arr + 1));
+
+    return 0;
+}
+```
+
+---
+
+### Q6 — String
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str[] = "STEP";
+
+    printf("%c %c %d",
+           str[0],
+           *(str + 2),
+           strlen(str));
+
+    return 0;
+}
+```
+
+---
+
+### Q7 — `switch`
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int x = 2;
+
+    switch(x)
+    {
+        case 1:
+            printf("A");
+            break;
+
+        case 2:
+            printf("B");
+
+        case 3:
+            printf("C");
+
+        default:
+            printf("D");
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Q8 — `sizeof`
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char str[] = "HELLO";
+
+    printf("%d %d",
+           (int)sizeof(str),
+           (int)(sizeof(str) - 1));
+
+    return 0;
+}
+```
+
+---
+
+# Section B — Basic Mathematics & Aptitude
+
+### Q9–Q13
+
+### Q9 — Percentage
+
+A student's marks increase from **480 to 552**.
+
+Find the percentage increase.
+
+---
+
+### Q10 — Profit & Loss
+
+An article is purchased for **₹1,200** and sold for **₹1,380**.
+
+Find:
+
+1. Profit
+2. Profit percentage
+
+---
+
+### Q11 — Time & Work
+
+A completes a job in **15 days** and B completes it in **10 days**.
+
+How many days will they take together?
+
+---
+
+### Q12 — Number System
+
+Find the missing number:
+
+```text
+4, 10, 18, 28, 40, ?, 70
+```
+
+Give the pattern.
+
+---
+
+### Q13 — HCF / Number System
+
+Find the HCF of:
+
+```text
+84 and 126
+```
+
+---
+
+# Section C — Complete C Programs
+
+### Only 3 programs
+
+## Q14 — Prime Number
+
+Write a complete C program that takes an integer as input and determines whether it is prime.
+
+It must correctly handle:
+
+```text
+-5
+0
+1
+2
+3
+```
+
+You may use:
+
+```c
+i * i <= num
+```
+
+---
+
+## Q15 — Array Program
+
+Write a C program to find the **second-largest distinct element** in:
+
+```text
+10 5 8 20 15
+```
+
+Expected answer:
+
+```text
+15
+```
+
+Do not sort the array.
+
+---
+
+## Q16 — Pattern
+
+Write a C program to print:
+
+```text
+    *
+   ***
+  *****
+ *******
+*********
+```
+
+Use nested loops.
+
+---
+
+# Section D — Short C Concepts & Debugging
+
+### Q17–Q21
+
+### Q17 — Strings
+
+For:
+
+```c
+char str[] = "HELLO";
+```
+
+Give:
+
+```text
+sizeof(str) = ?
+strlen(str) = ?
+```
+
+Also explain **why** they differ.
+
+---
+
+### Q18 — `NULL` vs `'\0'`
+
+Give one precise line for each:
+
+```text
+NULL
+'\0'
+```
+
+Do not use the word "empty" in your answer.
+
+---
+
+### Q19 — Memory Error
+
+What is the exact problem?
+
+```c
+int *p = malloc(sizeof(int));
+
+*p = 50;
+
+free(p);
+
+*p = 100;
+```
+
+Name the problem and explain why it is invalid.
+
+---
+
+### Q20 — `free()` and `NULL`
+
+Consider:
+
+```c
+free(p);
+p = NULL;
+```
+
+Answer:
+
+1. Which statement releases heap memory?
+2. Which statement changes the pointer?
+3. Does `p = NULL` release the memory?
+
+---
+
+### Q21 — `realloc()`
+
+Complete the missing line:
+
+```c
+int *p = malloc(3 * sizeof(int));
+
+if(p == NULL)
+    return 1;
+
+int *temp = realloc(p, 6 * sizeof(int));
+
+if(temp == NULL)
+{
+    return 1;
+}
+
+____________________;
+```
+
+---
+
+# Section E — Short Tracing & C Logic
+
+### Q22–Q25
+
+### Q22 — Array Traversal
+
+What is the output?
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int arr[] = {2, 4, 6, 8};
+
+    for(int i = 0; i < 4; i++)
+    {
+        printf("%d ", arr[i] / 2);
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Q23 — String Traversal
+
+What is the output?
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char str[] = "CODE";
+
+    for(int i = 0; str[i] != '\0'; i++)
+    {
+        if(i % 2 == 0)
+            printf("%c", str[i]);
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Q24 — Loop + Condition
+
+Trace carefully:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int x = 2;
+
+    for(int i = 1; i <= 4; i++)
+    {
+        x += i;
+
+        if(x % 2 == 0)
+            x /= 2;
+        else
+            x += 1;
+    }
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+Give:
+
+```text
+Iteration 1: x = ?
+Iteration 2: x = ?
+Iteration 3: x = ?
+Iteration 4: x = ?
+
+Final output: ?
+```
+
+---
+
+### Q25 — Final STEP Trap
+
+What is the exact output?
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a = 5;
+    int b = 2;
+
+    if(a / b == 2)
+        printf("A");
+
+    if(a % b == 1)
+        printf("B");
+    else
+        printf("C");
+
+    return 0;
+}
+```
+
+---
+
+# ⏱️ Exam Conditions
+
+**Start the 35-minute timer before Q1.**
+
+Your answer sheet should stay compact:
+
+```text
+Q1. ...
+Q2. ...
+...
+Q13. ...
+
+Q14. [program]
+
+Q15. [program]
+
+Q16. [program]
+
+Q17. ...
+...
+Q25. ...
+```
+
+### Scoring
+
+* Q1–Q13 → **1 mark each**
+* Q14–Q16 → **2 marks each**
+* Q17–Q25 → **1 mark each**
+
+**Total = 28 marks**
+
+### Target
+
+**26–28:** excellent
+**23–25:** strong
+**20–22:** targeted repair
+**<20:** focused revision before Mock #3
+
+This mock is deliberately closer to the **space-efficient written-test format** you requested: only three full programs, with the rest testing the C knowledge through short answers and output/tracing.
