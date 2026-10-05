@@ -1,0 +1,297 @@
+# 🔥 STEP Day 13 — Precision Repair Drill
+
+**Date:** 4 October 2026  
+**Exam:** 10 October 2026  
+**Time:** **25 minutes**  
+**Questions:** 15  
+**Target:** **14/15**
+
+Your Mock #2 showed that your **programming + maths are strong**, but you lost marks mainly through **tracing**, not lack of knowledge. So today is deliberately focused on:
+
+- Loop tracing
+- String indexing
+- `break` / `continue`
+- `NULL` vs `'\0'`
+- Memory errors
+- One short coding problem
+- A small maths section
+
+**Do this on paper.**
+
+---
+
+# Section A — Loop Accuracy
+
+### Q1
+
+Trace:
+
+```c
+int x = 1;
+
+for(int i = 1; i <= 4; i++)
+{
+    x += i;
+
+    if(x % 2 == 0)
+        x++;
+}
+```
+
+Give `x` after every iteration and the final value.
+
+---
+
+### Q2
+
+```c
+int x = 2;
+
+for(int i = 1; i <= 4; i++)
+{
+    x += i;
+
+    if(x % 2 == 0)
+        x /= 2;
+    else
+        x += 1;
+}
+```
+
+Give:
+
+```text
+Iteration 1:
+Iteration 2:
+Iteration 3:
+Iteration 4:
+Final:
+```
+
+---
+
+### Q3
+
+What is the exact output?
+
+```c
+for(int i = 1; i <= 6; i++)
+{
+    if(i == 2)
+        continue;
+
+    if(i == 5)
+        break;
+
+    printf("%d ", i);
+}
+```
+
+---
+
+### Q4
+
+What is the output?
+
+```c
+int sum = 0;
+
+for(int i = 1; i <= 5; i++)
+{
+    sum += i;
+    printf("%d ", sum);
+}
+```
+
+---
+
+# Section B — Strings & Arrays
+
+### Q5
+
+For:
+
+```c
+char str[] = "CODE";
+```
+
+Give the character at:
+
+```text
+str[0]
+str[2]
+*(str + 3)
+```
+
+---
+
+### Q6
+
+What is the output?
+
+```c
+char str[] = "CODE";
+
+for(int i = 0; str[i] != '\0'; i++)
+{
+    if(i % 2 == 0)
+        printf("%c", str[i]);
+}
+```
+
+---
+
+### Q7
+
+For:
+
+```c
+int arr[] = {10, 20, 30, 40, 50};
+```
+
+Give:
+
+```text
+arr[3]
+*(arr + 0)
+*(arr + 4)
+```
+
+---
+
+# Section C — C Precision
+
+### Q8
+
+Explain precisely:
+
+```text
+NULL
+'\0'
+```
+
+**One line each.**
+
+---
+
+### Q9
+
+What is the exact problem?
+
+```c
+int *p = malloc(sizeof(int));
+
+*p = 20;
+
+free(p);
+
+*p = 30;
+```
+
+---
+
+### Q10
+
+What is the exact problem here?
+
+```c
+int *p = malloc(sizeof(int));
+
+*p = 20;
+
+free(p);
+p = NULL;
+
+*p = 30;
+```
+
+Are Q9 and Q10 the **same memory error**? Explain the difference.
+
+---
+
+### Q11
+
+Complete the safe `realloc()` pattern:
+
+```c
+int *temp = realloc(p, 10 * sizeof(int));
+
+if(________________)
+{
+    __________________;
+    return 1;
+}
+
+__________________;
+```
+
+---
+
+# Section D — One Program Only
+
+### Q12 — String Counting
+
+Write a complete C program using `fgets()` to count **vowels and consonants** in:
+
+```text
+Hello World
+```
+
+Rules:
+
+- Ignore spaces.
+- Ignore non-alphabetic characters.
+- Handle uppercase/lowercase.
+- Traverse until `'\0'`.
+
+**Only one complete program today.**
+
+---
+
+# Section E — Maths Accuracy
+
+### Q13 — Percentage
+
+A price increases from **₹800 to ₹920**.
+
+Find the percentage increase.
+
+---
+
+### Q14 — Time & Work
+
+A can complete a job in **15 days** and B in **10 days**.
+
+How many days together?
+
+---
+
+### Q15 — Number System
+
+Find the missing number:
+
+```text
+3, 8, 15, 24, 35, ?, 63
+```
+
+Give the pattern.
+
+---
+
+## ⏱️ Rules
+
+**Maximum: 25 minutes**
+
+But today I want:
+
+> **Accuracy > speed**
+
+Especially for Q1, Q2, Q6 and Q10.
+
+For tracing questions, physically write the variable state after each iteration instead of calculating everything mentally.
+
+### Target
+
+**14/15 = excellent**
+
+After you submit, I'll evaluate it and decide whether Day 14 should be another targeted repair or our next full STEP simulation.
