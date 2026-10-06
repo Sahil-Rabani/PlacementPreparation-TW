@@ -1,0 +1,229 @@
+# 🔥 NEXT TASK — Day 15: C Challenge Lab
+
+**Time: 40 minutes**
+
+This is **not another 25-question repetitive mock**.
+
+There will be **12 problems**, and each one is substantially different.
+
+### Part A — Number Logic
+
+**Q1. Decimal → Binary**
+
+Write a C program that converts a positive decimal integer into its binary representation **without using any built-in conversion function**.
+
+Example:
+
+```text
+Input: 13
+Output: 1101
+```
+
+---
+
+**Q2. Palindrome Number**
+
+Write a C program to determine whether a number is a palindrome.
+
+```text
+121 → Palindrome
+123 → Not Palindrome
+```
+
+---
+
+**Q3. Perfect Number**
+
+Write a C program to determine whether a number is a perfect number.
+
+Example:
+
+```text
+6 = 1 + 2 + 3
+```
+
+Therefore:
+
+```text
+6 → Perfect Number
+```
+
+---
+
+### Part B — Arrays
+
+**Q4. Ascending Order**
+
+Write a C program to arrange:
+
+```text
+{7, 2, 9, 1, 5}
+```
+
+in ascending order.
+
+Expected:
+
+```text
+1 2 5 7 9
+```
+
+You may use a simple sorting technique such as selection sort or bubble sort.
+
+---
+
+**Q5. Array Frequency**
+
+Given:
+
+```text
+{2, 3, 2, 5, 3, 2}
+```
+
+Print the frequency of every distinct element.
+
+Expected conceptually:
+
+```text
+2 → 3
+3 → 2
+5 → 1
+```
+
+Do not simply hard-code the answer.
+
+---
+
+**Q6. Array Rotation**
+
+Rotate:
+
+```text
+1 2 3 4 5
+```
+
+to the **right by 2 positions**.
+
+Expected:
+
+```text
+4 5 1 2 3
+```
+
+Write the C program.
+
+---
+
+### Part C — Patterns
+
+**Q7. Floyd's Triangle**
+
+Print:
+
+```text
+1
+2 3
+4 5 6
+7 8 9 10
+```
+
+---
+
+**Q8. Character Pattern**
+
+Print:
+
+```text
+A
+AB
+ABC
+ABCD
+ABCDE
+```
+
+---
+
+**Q9. Hollow Square**
+
+Print:
+
+```text
+*****
+*   *
+*   *
+*   *
+*****
+```
+
+For this one, the important part is deciding when to print `*` versus a space.
+
+---
+
+### Part D — String Challenge
+
+**Q10. Character Frequency**
+
+Input:
+
+```text
+programming
+```
+
+Write a C program to find the frequency of each character.
+
+You don't need to print characters that don't occur.
+
+---
+
+### Part E — Number Conversion Reasoning
+
+**Q11. Without running the program**, convert:
+
+```text
+Decimal  → Binary
+25       → ?
+```
+
+Then explain the repeated-division-by-2 process.
+
+---
+
+**Q12. Binary → Decimal**
+
+Convert:
+
+```text
+101101₂
+```
+
+to decimal.
+
+Then write the C logic you would use to perform this conversion.
+
+---
+
+# 🧠 Challenge rule
+
+For Q1–Q10, **actually write the solution**, even if you recognize the pattern.
+
+Don't search for a memorized program.
+
+If you get stuck, write your algorithm first:
+
+```text
+Input
+↓
+Processing
+↓
+Output
+```
+
+Then convert it to C.
+
+### Time target: **40 minutes**
+
+This is intentionally longer than our old 20–25 minute drills because these problems require actual construction rather than recognition.
+
+And after you submit it, I will **not automatically give you another nearly identical paper**. I'll look at which categories you genuinely struggle with and build the next task around those.
+
+We're now training your ability to **solve unfamiliar C problems**, which is much closer to what you need for the STEP written test.
