@@ -1,0 +1,490 @@
+# 🔥 STEP Day 16 — Unfamiliar Problem Challenge
+
+You asked for harder, less repetitive questions. So today we're **not doing another prime/Armstrong/percentage/realloc paper**.
+
+The focus is on **problem-solving variety** while staying within the C + basic mathematics scope.
+
+### ⏱️ Time: 45 minutes
+### 🎯 Target: 80%+
+### 📝 Paper + pen
+### ❌ No compiler, calculator, notes, or internet
+
+---
+
+# Part A — Number Manipulation
+
+### Q1 — Sum of Digits
+
+Write a C program that reads an integer and finds the **sum of its digits**.
+
+Example:
+
+```text
+Input: 5832
+Output: 18
+```
+
+Your program should work using arithmetic operations, not strings.
+
+---
+
+### Q2 — Count Digits
+
+Write a C program that counts the number of digits in an integer.
+
+Examples:
+
+```text
+Input: 5832
+Output: 4
+
+Input: 7
+Output: 1
+```
+
+Also consider what your program should do for `0`.
+
+---
+
+### Q3 — Decimal → Octal
+
+Without using a conversion library, write the C logic to convert:
+
+```text
+Decimal: 83
+```
+
+to octal.
+
+First calculate the answer manually, then write the C program.
+
+---
+
+# Part B — Arrays
+
+### Q4 — Smallest and Second Smallest
+
+Given:
+
+```text
+{18, 7, 25, 3, 14, 9}
+```
+
+Write a C program to find:
+
+```text
+Smallest = ?
+Second smallest = ?
+```
+
+Do **not** sort the array.
+
+---
+
+### Q5 — Move Zeros to the End
+
+Write a C program that transforms:
+
+```text
+{0, 5, 0, 3, 8, 0, 2}
+```
+
+into:
+
+```text
+{5, 3, 8, 2, 0, 0, 0}
+```
+
+### Constraint
+
+Maintain the relative order of the non-zero elements.
+
+---
+
+### Q6 — Find Missing Number
+
+An array contains numbers from **1 to 7**, but one number is missing:
+
+```text
+{1, 2, 3, 5, 6, 7}
+```
+
+Write a C program to find the missing number.
+
+Expected:
+
+```text
+4
+```
+
+Try to solve it without sorting.
+
+---
+
+# Part C — More Difficult Patterns
+
+### Q7 — Floyd's Triangle Variant
+
+Print:
+
+```text
+1
+23
+456
+78910
+```
+
+Use nested loops.
+
+---
+
+### Q8 — Palindromic Number Pattern
+
+Print:
+
+```text
+1
+121
+12321
+1234321
+123454321
+```
+
+This is a **thinking problem**: determine how the increasing and decreasing parts should be generated.
+
+---
+
+### Q9 — Hollow Rectangle
+
+Print:
+
+```text
+******
+*    *
+*    *
+******
+```
+
+Use nested loops.
+
+Your program should work for configurable rows and columns rather than hard-coding every row.
+
+---
+
+# Part D — Strings
+
+### Q10 — Reverse String In-Place
+
+Using `fgets()`, read a string and reverse it **in-place**.
+
+Example:
+
+```text
+Input:  HELLO
+Output: OLLEH
+```
+
+Do not create another character array for the reversed string.
+
+---
+
+### Q11 — Palindrome String
+
+Write a C program to determine whether a string is a palindrome.
+
+Examples:
+
+```text
+madam → Palindrome
+hello → Not Palindrome
+```
+
+Ignore the newline inserted by `fgets()`.
+
+---
+
+### Q12 — Remove Spaces
+
+Write a C program that removes all spaces from:
+
+```text
+I love C programming
+```
+
+Expected:
+
+```text
+IloveCprogramming
+```
+
+Use the same array; don't create a second string.
+
+---
+
+# Part E — C Reasoning
+
+### Q13 — Predict the Output
+
+Don't run it.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a = 10;
+    int *p = &a;
+
+    *p += 5;
+
+    printf("%d %d", a, *p);
+
+    return 0;
+}
+```
+
+---
+
+### Q14 — Array Pointer Reasoning
+
+Given:
+
+```c
+int arr[] = {10, 20, 30, 40};
+int *p = arr + 1;
+```
+
+What are:
+
+```text
+*p
+*(p + 1)
+*(p + 2)
+p - arr
+```
+
+Explain the last expression.
+
+---
+
+### Q15 — `sizeof` Challenge
+
+What is the output?
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int arr[] = {10, 20, 30, 40, 50};
+
+    printf("%d", (int)(sizeof(arr) / sizeof(arr[0])));
+
+    return 0;
+}
+```
+
+Explain what this expression calculates.
+
+---
+
+# 🧮 Part F — Mathematics Challenge
+
+Today the maths is deliberately different.
+
+### Q16 — Ratio
+
+The ratio of boys to girls in a class is:
+
+```text
+3 : 2
+```
+
+If there are **25 students**, how many are boys and how many are girls?
+
+---
+
+### Q17 — Average
+
+The average of five numbers is **24**.
+
+Four of the numbers are:
+
+```text
+18, 21, 27, 30
+```
+
+Find the fifth number.
+
+---
+
+### Q18 — Simple Interest
+
+Find the simple interest on:
+
+```text
+Principal = ₹5,000
+Rate = 8% per year
+Time = 2 years
+```
+
+Also find the total amount.
+
+---
+
+### Q19 — Speed & Distance
+
+A car travels at **60 km/h**.
+
+How far will it travel in **2 hours 30 minutes**?
+
+---
+
+### Q20 — Remainder
+
+Find the remainder when:
+
+```text
+257
+```
+
+is divided by:
+
+```text
+13
+```
+
+---
+
+# 🔴 Part G — Final Problem-Solving Challenge
+
+### Q21 — Array Transformation
+
+Given:
+
+```text
+{1, 2, 3, 4, 5, 6}
+```
+
+transform it into:
+
+```text
+{2, 4, 6, 1, 3, 5}
+```
+
+The rule is:
+
+> Move all even numbers first, followed by all odd numbers, while preserving the original relative order within each group.
+
+Write the C program.
+
+---
+
+### Q22 — Digit Frequency
+
+Write a C program that reads an integer and counts how many times each digit `0–9` occurs.
+
+Example:
+
+```text
+Input: 1223331
+```
+
+Expected:
+
+```text
+1 → 2
+2 → 2
+3 → 3
+```
+
+Don't use strings.
+
+---
+
+### Q23 — Matrix
+
+Given:
+
+```text
+1 2 3
+4 5 6
+7 8 9
+```
+
+Write a C program to calculate the **sum of both diagonals**.
+
+Be careful: the center element belongs to **both diagonals**.
+
+---
+
+### Q24 — Matrix Transpose
+
+Write a C program to transpose:
+
+```text
+1 2 3
+4 5 6
+```
+
+Expected:
+
+```text
+1 4
+2 5
+3 6
+```
+
+You may use a second matrix.
+
+---
+
+### Q25 — 🔥 Final Unfamiliar Challenge
+
+Given:
+
+```text
+int arr[] = {12, 5, 7, 12, 9, 5, 7, 12};
+```
+
+Write a C program that prints **only the elements that occur exactly once**.
+
+Expected:
+
+```text
+9
+```
+
+Don't hard-code the answer.
+
+---
+
+## ⏱️ Strategy
+
+This is intentionally **25 questions**, but unlike the old mocks, there are many different problem types.
+
+Suggested allocation:
+
+```text
+Q1–Q6     → 12 min
+Q7–Q12    → 12 min
+Q13–Q15   → 5 min
+Q16–Q20   → 8 min
+Q21–Q25   → 13 min
+```
+
+**Total: 50 minutes maximum.**
+
+Don't worry if you cannot finish every program. I'd rather see **15 genuinely attempted problems** than 25 rushed, memorized answers.
+
+### Today's priority
+
+**Don't ask yourself:**
+
+> "Have I seen this exact program?"
+
+Ask:
+
+> **"What information do I need to maintain to solve this?"**
+
+That's the skill that will help you when the actual STEP paper gives you something you haven't practiced word-for-word.
