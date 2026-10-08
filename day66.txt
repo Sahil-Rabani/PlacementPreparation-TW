@@ -1,0 +1,336 @@
+# STEP Day 17 — Exam-Style Challenge Test 🔥
+
+Today is **not a repetition drill**. We’ll test whether you can handle unfamiliar questions under time pressure.
+
+**Time limit: 45 minutes**  
+**Total: 25 questions**  
+**Target: ≥ 22/25**  
+**No internet / no solutions**
+
+---
+
+## Part A — C Output & Tracing
+
+### Q1
+```c
+int x = 5;
+
+if (x++ > 5)
+    printf("%d", x);
+else
+    printf("%d", x);
+
+printf(" %d", x);
+```
+
+### Q2
+```c
+int a = 3, b = 4;
+
+printf("%d ", a + b * 2);
+printf("%d", (a + b) * 2);
+```
+
+### Q3
+```c
+int x = 1;
+
+for (int i = 1; i <= 4; i++) {
+    x = x * 2 - i;
+    printf("%d ", x);
+}
+```
+
+### Q4
+```c
+int arr[] = {2, 4, 6, 8, 10};
+int *p = arr + 2;
+
+printf("%d %d %d", *p, *(p - 1), *(p + 2));
+```
+
+### Q5
+```c
+char str[] = "STEP";
+
+printf("%c %c %d", str[0], *(str + 2), sizeof(str));
+```
+
+---
+
+## Part B — C Concepts / Debugging
+
+### Q6
+What is wrong with this code?
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+if (p == NULL)
+    printf("Failed");
+
+p[0] = 10;
+```
+
+Give the **precise issue**.
+
+### Q7
+What is the difference between:
+
+```c
+free(p);
+```
+
+and
+
+```c
+p = NULL;
+```
+
+### Q8
+What is the output/error behavior?
+
+```c
+char str[20] = "HELLO";
+
+printf("%d %d", sizeof(str), strlen(str));
+```
+
+Also mention the required header.
+
+### Q9
+Identify the bug:
+
+```c
+int *p = malloc(5 * sizeof(int));
+
+free(p);
+
+printf("%d", *p);
+```
+
+Name the exact type of error/undefined behavior.
+
+---
+
+## Part C — Programming
+
+### Q10 — Rotate Array Left by 2
+
+Write a C program to rotate:
+
+```text
+1 2 3 4 5 6
+```
+
+to:
+
+```text
+3 4 5 6 1 2
+```
+
+Use an array and loops.
+
+---
+
+### Q11 — Ascending Order
+
+Write a C program to arrange an array in **ascending order**.
+
+Example:
+
+```text
+Input:  7 2 9 1 5
+Output: 1 2 5 7 9
+```
+
+---
+
+### Q12 — First Repeating Element
+
+Write a C program to find the **first element that appears more than once**.
+
+Example:
+
+```text
+Input:  5 3 8 3 2 8
+Output: 3
+```
+
+---
+
+## Part D — Strings
+
+### Q13 — Count Words
+
+Using `fgets()`, write a C program to count the number of words in:
+
+```text
+C programming is interesting
+```
+
+Expected:
+
+```text
+4
+```
+
+You may assume words are separated by spaces.
+
+---
+
+### Q14 — Remove Duplicate Characters
+
+Write a C program that removes repeated characters while keeping the **first occurrence**.
+
+Example:
+
+```text
+Input:  programming
+Output: progamin
+```
+
+---
+
+### Q15 — Character Frequency
+
+Write a C program to find the frequency of a given character in a string.
+
+Example:
+
+```text
+String: banana
+Character: a
+Output: 3
+```
+
+---
+
+## Part E — Number Logic
+
+### Q16 — Reverse Without Extra Integer Array
+
+Write a C program to reverse the digits of an integer.
+
+```text
+Input: 12340
+Output: 4321
+```
+
+### Q17 — Perfect Number
+
+Write a C program to check whether a number is perfect.
+
+Example:
+
+```text
+6 → Perfect
+8 → Not Perfect
+```
+
+### Q18 — Decimal to Binary
+
+Write a C program to convert a decimal number to binary **without using library conversion functions**.
+
+Example:
+
+```text
+10 → 1010
+```
+
+---
+
+## Part F — Class 10 Maths
+
+### Q19 — Percentage
+
+A student's marks increase from **240 to 276**.
+
+Find the percentage increase.
+
+### Q20 — Profit & Loss
+
+An article is bought for ₹800 and sold for ₹920.
+
+Find the **profit percentage**.
+
+### Q21 — Time & Work
+
+A can complete a job in 12 days and B can complete it in 18 days.
+
+How many days will they take together?
+
+### Q22 — Number System
+
+Find the **HCF and LCM** of:
+
+```text
+36 and 48
+```
+
+### Q23 — Ratio
+
+A sum of ₹840 is divided between A and B in the ratio:
+
+```text
+3 : 4
+```
+
+Find each person's share.
+
+---
+
+## Part G — Final STEP Traps
+
+### Q24 — Trace Carefully
+
+```c
+int x = 2;
+
+for (int i = 1; i <= 3; i++) {
+    x += i;
+
+    if (x % 2 == 0)
+        x /= 2;
+    else
+        x += 2;
+}
+
+printf("%d", x);
+```
+
+Give the **final value of x**.
+
+---
+
+### Q25 — Array + Pointer
+
+```c
+int arr[] = {10, 20, 30, 40, 50};
+int *p = arr + 1;
+
+printf("%d ", *p);
+p++;
+printf("%d ", *p + 5);
+printf("%d", p - arr);
+```
+
+Give the exact output.
+
+---
+
+### 🎯 Day 17 targets
+
+| Area | Target |
+|---|---:|
+| C Output/Tracing | 5/5 |
+| Concepts/Debugging | 4/4 |
+| Programming | 5/6 |
+| Strings | 3/3 |
+| Number Logic | 3/3 |
+| Maths | 5/5 |
+| Final Traps | 2/2 |
+
+**Target score: 22+/25.**
+
+This is deliberately weighted toward **unfamiliar problems, arrays, strings, pointers, memory precision, and tracing**—the areas most likely to separate a prepared candidate from someone who has only memorized basic programs.
