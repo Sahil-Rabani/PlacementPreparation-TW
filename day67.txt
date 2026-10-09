@@ -1,0 +1,443 @@
+# Thoughtworks STEP Program — Final Mock Test 🚀
+### Day 18 | Last-Day Exam Simulation
+
+Tomorrow is your exam. Today, we stop learning new topics and focus on **accuracy, speed, output prediction, and writing correct C programs under pressure**.
+
+You've already performed well in previous mocks. Your biggest risk now is not a lack of knowledge—it's losing marks through small mistakes in conditions, loop tracing, string handling, and program syntax.
+
+**Today's strategy:** Simulate the exam, evaluate mistakes, revise only weak areas, and get adequate sleep.
+
+## Mock Test Instructions
+
+| Detail | Instructions |
+|---|---|
+| Total questions | 25 |
+| Time limit | 40 minutes |
+| Total marks | 30 |
+| Difficulty | Exam-level, with a few traps |
+| Equipment | Paper and pen |
+| Programming questions | 3 complete programs |
+| Negative marking | None assumed; follow the actual exam instructions |
+
+**Rules**
+- No Google, compiler, or help.
+- Attempt every question.
+- Write complete programs for Q14–Q16.
+- For output questions, provide the exact output.
+- Don't spend more than 3 minutes stuck on one question.
+- Start a timer before attempting Q1.
+
+---
+
+# Section A — C Output Prediction
+**Q1–Q8 | 8 marks | Suggested time: 8 minutes**
+
+### Q1. Increment operators
+
+Predict the output.
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+
+    printf("%d ", x++);
+    printf("%d", ++x);
+
+    return 0;
+}
+```
+
+### Q2. Integer division
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 17, b = 5;
+
+    printf("%d %d", a / b, a % b);
+
+    return 0;
+}
+```
+
+### Q3. Conditions
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 0;
+
+    if (x = 5)
+        printf("YES");
+    else
+        printf("NO");
+
+    printf(" %d", x);
+
+    return 0;
+}
+```
+
+Identify the exact output.
+
+### Q4. Loop tracing
+
+```c
+#include <stdio.h>
+
+int main() {
+    int i, sum = 0;
+
+    for (i = 1; i <= 5; i++) {
+        if (i == 3)
+            continue;
+
+        sum += i;
+    }
+
+    printf("%d", sum);
+
+    return 0;
+}
+```
+
+### Q5. Nested loops
+
+```c
+#include <stdio.h>
+
+int main() {
+    int i, j, count = 0;
+
+    for (i = 1; i <= 3; i++) {
+        for (j = 1; j <= i; j++) {
+            count++;
+        }
+    }
+
+    printf("%d", count);
+
+    return 0;
+}
+```
+
+### Q6. Switch fall-through
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n = 2;
+
+    switch (n) {
+        case 1:
+            printf("A");
+        case 2:
+            printf("B");
+        case 3:
+            printf("C");
+            break;
+        default:
+            printf("D");
+    }
+
+    return 0;
+}
+```
+
+### Q7. Arrays
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a[] = {10, 20, 30, 40, 50};
+
+    printf("%d %d", a[1], *(a + 3));
+
+    return 0;
+}
+```
+
+### Q8. Strings
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[] = "STEP";
+
+    printf("%d %d", (int)sizeof(str), (int)strlen(str));
+
+    return 0;
+}
+```
+
+---
+
+# Section B — Basic Mathematics
+**Q9–Q13 | 5 marks | Suggested time: 7 minutes**
+
+Show the calculation, not just the final answer.
+
+### Q9. Percentage increase
+
+A student's marks increase from 320 to 368.
+
+Calculate the percentage increase.
+
+### Q10. Profit and loss
+
+An article is purchased for ₹750 and sold for ₹900.
+
+Calculate the profit percentage.
+
+### Q11. Time and work
+
+A can complete a job in 12 days, while B can complete it in 18 days.
+
+How many days will they take to complete the job together?
+
+Give your answer as a fraction or decimal.
+
+### Q12. Number system
+
+Convert decimal number **45** into binary.
+
+### Q13. HCF and LCM
+
+Find the HCF and LCM of 24 and 36.
+
+---
+
+# Section C — Write Complete C Programs
+**Q14–Q16 | 12 marks | Suggested time: 15 minutes**
+
+These three questions simulate the limited space available in a written programming test. Write concise, complete, syntactically correct C programs.
+
+### Q14. Array rotation — 4 marks
+
+Write a C program to rotate an array **right by 2 positions**.
+
+Example:
+
+```text
+Input:
+6
+1 2 3 4 5 6
+
+Output:
+5 6 1 2 3 4
+```
+
+Requirements:
+- Read `n` and the array elements.
+- Use loops.
+- Do not print a hardcoded answer.
+- Assume `2 <= n <= 100`.
+
+### Q15. Second-largest distinct element — 4 marks
+
+Write a C program to find the **second-largest distinct element** in an array without sorting it.
+
+Example:
+
+```text
+Input:
+6
+8 3 5 1 9 3
+
+Output:
+Second largest = 8
+```
+
+Requirements:
+- Use a single traversal if possible.
+- Handle duplicate values correctly.
+- Assume the array contains at least two distinct values.
+
+### Q16. String analysis — 4 marks
+
+Write a C program to count the vowels and consonants in a line of text.
+
+Example:
+
+```text
+Input:
+Hello World
+
+Output:
+Vowels = 3
+Consonants = 7
+```
+
+Requirements:
+- Use `fgets()` so spaces are accepted.
+- Count only alphabetic characters.
+- Ignore spaces, digits, punctuation, and the newline.
+- Treat uppercase and lowercase vowels equally.
+
+---
+
+# Section D — C Fundamentals and Error Detection
+**Q17–Q21 | 5 marks | Suggested time: 5 minutes**
+
+### Q17. Memory allocation
+
+Which function allocates memory dynamically and initializes the allocated bytes to zero?
+
+A. `malloc()`  
+B. `calloc()`  
+C. `realloc()`  
+D. `free()`
+
+### Q18. String termination
+
+What does `'\0'` represent in C?
+
+A. A null pointer  
+B. The integer zero only  
+C. The null character used to terminate a C string  
+D. An empty string object
+
+### Q19. Pointer error
+
+Identify the precise problem:
+
+```c
+int *p = NULL;
+*p = 10;
+```
+
+### Q20. Dynamic memory
+
+What is the purpose of `free(p)`?
+
+Answer in one sentence.
+
+### Q21. `realloc()` safety
+
+Complete the following code so that the original allocation is not lost if reallocation fails.
+
+```c
+int *temp = realloc(p, 10 * sizeof(int));
+
+if (________________) {
+    __________________;
+}
+```
+
+Fill in both blanks.
+
+---
+
+# Section E — Final Accuracy Check
+**Q22–Q25 | 4 marks | Suggested time: 5 minutes**
+
+### Q22. Prime number
+
+What is the correct result?
+
+```c
+int n = 1;
+int prime = 1;
+```
+
+Should `1` be classified as prime or not prime? State the condition a program should use to reject numbers that are not prime.
+
+### Q23. Array indexing
+
+Given:
+
+```c
+int a[] = {4, 7, 9, 12};
+```
+
+What are the values of:
+
+```c
+a[2]
+*(a + 1)
+```
+
+### Q24. Assignment versus comparison
+
+What is the difference between:
+
+```c
+if (x = 10)
+```
+
+and
+
+```c
+if (x == 10)
+```
+
+### Q25. Final output trap
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 2;
+
+    while (x < 10) {
+        x += 3;
+
+        if (x % 2 == 0)
+            x++;
+    }
+
+    printf("%d", x);
+
+    return 0;
+}
+```
+
+Give the exact output.
+
+---
+
+# Answer Submission Format
+
+For fast evaluation, submit your answers like this:
+
+```text
+Q1. ...
+Q2. ...
+...
+Q13. ...
+
+Q14.
+[Complete program]
+
+Q15.
+[Complete program]
+
+Q16.
+[Complete program]
+
+Q17. ...
+...
+Q25. ...
+```
+
+You can also upload clear photographs of your handwritten answers.
+
+## After the mock: Final revision plan
+
+Once I check your paper, I'll identify any remaining errors and give you a short, targeted revision list. Don't spend tonight attempting another full mock.
+
+Your final revision should focus on:
+1. C operators, conditions, loops, arrays, and strings.
+2. Writing the three programs above without syntax errors.
+3. `malloc()`, `calloc()`, `realloc()`, and `free()`.
+4. Percentages, profit and loss, HCF/LCM, number conversion, and time and work.
+
+**One final instruction:** Stop studying at a reasonable time and get a full night's sleep. Tomorrow, read each question carefully, trace outputs line by line, and reserve the last few minutes to check your answers.
