@@ -148,6 +148,8 @@ Day66       |     08/10/26         |  Completing day 11 of Final Preparation.
 
 Day67       |     09/10/26         |  Completing day 12 of Final Preparation.
 
+---------------------------- FIRST ROUND IS COMPLETE -----------------------------
+
 Everything mention above is uploaded by day name in my repository.
 
 If there is date missing between file upload, Which means I am working on previous file on upload missing date.
